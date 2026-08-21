@@ -1,0 +1,88 @@
+modLoader="neoforge"
+loaderVersion="[26.2.0,)"
+license="MIT"
+issueTrackerURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers/-/issues"
+[[mods]]
+modId="vault_drawers"
+version="${file.jarVersion}"
+displayName="Vault Drawers"
+displayURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers"
+credits="Original mod: Storage Drawers by Texelsaur (MIT). Port by Stalking Dragons."
+authors="Stalking Dragons"
+description='''
+Interactive compartment storage for your workshops.
+
+A faithful port of Storage Drawers to Minecraft 26.2 / NeoForge 26.2.0.57.
+
+Features:
+- Storage Drawers (1/2/4 compartments, all wood types)
+- Full & Half block variants
+- Trim system (wood/metal)
+- Upgrades: Capacity, Void, Speed
+- Controller network (512 drawer limit)
+- JEI, JADE, TOP, FTB Chunks, FTB Teams integration
+- Full configuration support
+'''
+
+[[dependencies.vault_drawers]]
+modId="neoforge"
+mandatory=true
+versionRange="[26.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="minecraft"
+mandatory=true
+versionRange="[26.2,26.3)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="jei"
+mandatory=false
+versionRange="[20.1.0,)"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.vault_drawers]]
+modId="jade"
+mandatory=false
+versionRange="[5591256,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="theoneprobe"
+mandatory=false
+versionRange="[6106998,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="architectury"
+mandatory=false
+versionRange="[5786327,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="ftblibrary"
+mandatory=false
+versionRange="[6807431,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="ftbchunks"
+mandatory=false
+versionRange="[6504893,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.vault_drawers]]
+modId="ftbteams"
+mandatory=false
+versionRange="[6119437,)"
+ordering="AFTER"
+side="BOTH"

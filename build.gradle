@@ -1,0 +1,59 @@
+plugins {
+    id("net.neoforged.moddev") version "0.1.74"
+    id("com.modrinth.minotaur")
+    id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
+}
+
+version = project.gradle.gradleVersion
+
+neoForge {
+    version = "26.2.0.57"
+    runs {
+        register("client") {
+            client()
+        }
+        register("server") {
+            server()
+            programArgument("--nogui")
+        }
+    }
+
+    mods {
+        register("vault_drawers") {
+            sourceSet(sourceSets.main.get())
+        }
+    }
+}
+
+dependencies {
+    // JEI
+    runtimeOnly("mezz.jei:jei-26.2-neoforge:20.1.0")
+    // JADE
+    implementation("curse.maven:jade-324717:5591256")
+    implementation("curse.maven:the-one-probe-245211:6106998")
+
+    implementation("curse.maven:architectury-api-419699:5786327")
+    implementation("curse.maven:ftb-library-forge-404465:6807431")
+    implementation("curse.maven:ftb-chunks-forge-314906:6504893")
+    implementation("curse.maven:ftb-teams-forge-404468:6119437")
+}
+
+repositories {
+    mavenCentral()
+    maven { url = uri("https://maven.neoforged.net/releases") }
+    maven { url = uri("https://maven.neoforged.net/snapshots") }
+    maven { url = uri("https://mavendev.modrinth.net") }
+    maven { url = uri("https://mvn.modrinth.net") }
+}
+
+tasks.named("jar") {
+    archiveBaseName.set("vault_drawers-26.2-neoforge-26.2.0.57")
+    manifest {
+        attributes(
+            "Implementation-Title" to "Vault Drawers",
+            "Implementation-Version" to project.version,
+            "Implementation-Vendor" to "Stalking Dragons",
+            "Mod-ID" to "vault_drawers"
+        )
+    }
+}
