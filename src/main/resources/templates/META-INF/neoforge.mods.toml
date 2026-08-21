@@ -1,14 +1,14 @@
 modLoader="neoforge"
-loaderVersion="[26.2.0,)"
-license="MIT"
+loaderVersion="${neo_version_range}"
+license="${mod_license}"
 issueTrackerURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers/-/issues"
 [[mods]]
-modId="vault_drawers"
-version="${file.jarVersion}"
-displayName="Vault Drawers"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 displayURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers"
 credits="Original mod: Storage Drawers by Texelsaur (MIT). Port by Stalking Dragons."
-authors="Stalking Dragons"
+authors="${mod_authors}"
 description='''
 Interactive compartment storage for your workshops.
 
@@ -24,63 +24,63 @@ Features:
 - Full configuration support
 '''
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="neoforge"
 mandatory=true
-versionRange="[26.2.0,)"
+versionRange="${neo_version_range}"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="minecraft"
 mandatory=true
-versionRange="[26.2,26.3)"
+versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="jei"
 mandatory=false
-versionRange="[20.1.0,)"
+versionRange="[${jei_version},)"
 ordering="AFTER"
 side="CLIENT"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="jade"
 mandatory=false
-versionRange="[5591256,)"
+versionRange="[${jade_fileid},)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="theoneprobe"
 mandatory=false
 versionRange="[6106998,)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="architectury"
 mandatory=false
 versionRange="[5786327,)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="ftblibrary"
 mandatory=false
 versionRange="[6807431,)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="ftbchunks"
 mandatory=false
 versionRange="[6504893,)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.vault_drawers]]
+[[dependencies.${mod_id}]]
 modId="ftbteams"
 mandatory=false
 versionRange="[6119437,)"

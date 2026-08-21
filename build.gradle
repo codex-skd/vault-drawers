@@ -1,59 +1,128 @@
 plugins {
-    id("net.neoforged.moddev") version "0.1.74"
-    id("com.modrinth.minotaur")
-    id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.142'
+    id 'idea'
 }
 
-version = project.gradle.gradleVersion
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+}
+
+repositories {
+    maven { url "https://maven.isxander.dev/releases" }
+    maven { url "https://maven.isxander.dev/snapshots" }
+    exclusiveContent {
+        forRepository { maven { url "https://api.modrinth.com/maven" } }
+        filter { includeGroup "maven.modrinth" }
+    }
+}
+
+base {
+    archivesName = "${mod_id}-${minecraft_version}-neoforge-${neo_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-    version = "26.2.0.57"
+    version = project.neo_version
+
     runs {
-        register("client") {
+        client {
             client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
-        register("server") {
+        server {
             server()
-            programArgument("--nogui")
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        data {
+            serverData()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
         }
     }
 
     mods {
-        register("vault_drawers") {
-            sourceSet(sourceSets.main.get())
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
         }
     }
 }
 
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
 dependencies {
     // JEI
-    runtimeOnly("mezz.jei:jei-26.2-neoforge:20.1.0")
+    runtimeOnly "mezz.jei:jei-${jei_mc}-neoforge:${jei_version}"
     // JADE
-    implementation("curse.maven:jade-324717:5591256")
-    implementation("curse.maven:the-one-probe-245211:6106998")
-
-    implementation("curse.maven:architectury-api-419699:5786327")
-    implementation("curse.maven:ftb-library-forge-404465:6807431")
-    implementation("curse.maven:ftb-chunks-forge-314906:6504893")
-    implementation("curse.maven:ftb-teams-forge-404468:6119437")
+    implementation "curse.maven:jade-${jade_projid}:${jade_fileid}"
+    implementation "curse.maven:the-one-probe-245211:6106998"
+    implementation "curse.maven:architectury-api-419699:5786327"
+    implementation "curse.maven:ftb-library-forge-404465:6807431"
+    implementation "curse.maven:ftb-chunks-forge-314906:6504893"
+    implementation "curse.maven:ftb-teams-forge-404468:6119437"
 }
 
-repositories {
-    mavenCentral()
-    maven { url = uri("https://maven.neoforged.net/releases") }
-    maven { url = uri("https://maven.neoforged.net/snapshots") }
-    maven { url = uri("https://mavendev.modrinth.net") }
-    maven { url = uri("https://mvn.modrinth.net") }
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            jei_version            : jei_version,
+            jade_fileid            : jade_fileid,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/resources/templates"
+    into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
 }
 
-tasks.named("jar") {
-    archiveBaseName.set("vault_drawers-26.2-neoforge-26.2.0.57")
-    manifest {
-        attributes(
-            "Implementation-Title" to "Vault Drawers",
-            "Implementation-Version" to project.version,
-            "Implementation-Vendor" to "Stalking Dragons",
-            "Mod-ID" to "vault_drawers"
-        )
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
     }
 }
