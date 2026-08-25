@@ -64,19 +64,30 @@ public class ConfigItemList
 
     protected void logRegisterNamespace (@NotNull String namespace) { }
 
-    public boolean registerItem (@NotNull ItemStack item) {
-        if (item.isEmpty())
+    public boolean registerItem (@NotNull Item item) {
+        if (item == null || item == net.minecraft.world.item.Items.AIR)
             return false;
 
-        unregisterItem(item);
-        listedItems.add(item.getItem());
+        listedItems.remove(item);
+        listedItems.add(item);
 
         logRegisterItem(item);
 
         return true;
     }
 
-    protected void logRegisterItem (@NotNull ItemStack item) { }
+    public boolean registerItem (@NotNull ItemStack item) {
+        if (item.isEmpty())
+            return false;
+
+        return registerItem(item.getItem());
+    }
+
+    protected void logRegisterItem (@NotNull Item item) { }
+
+    protected void logRegisterItem (@NotNull ItemStack item) {
+        logRegisterItem(item.getItem());
+    }
 
     public void register (List<String> entries) {
         entries.forEach(this::register);
@@ -95,7 +106,7 @@ public class ConfigItemList
         Identifier resource = Identifier.parse(entry);
         Item item = BuiltInRegistries.ITEM.get(resource).map(net.minecraft.core.Holder::value).orElse(null);
 
-        return registerItem(new ItemStack(item));
+        return registerItem(item);
     }
 
     public boolean unregisterNamespace (@NotNull String namespace) {

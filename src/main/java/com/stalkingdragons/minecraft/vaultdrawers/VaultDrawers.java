@@ -20,6 +20,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
@@ -50,6 +51,7 @@ public class VaultDrawers
         ModRecipes.init(regContext);
 
         modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::loadComplete);
         modEventBus.addListener(this::onModConfigEvent);
         modEventBus.addListener(ModCreativeTabs::init);
         modEventBus.addListener(PlatformCapabilities::register);
@@ -61,14 +63,25 @@ public class VaultDrawers
     }
 
     private void setup (final FMLCommonSetupEvent event) {
-        CompTierRegistry.INSTANCE.initialize();
-        StorageBlacklist.INSTANCE.initialize();
-        MaterialBlacklist.INSTANCE.initialize();
-        ConversionRegistry.INSTANCE.initialize();
+    }
 
-        LocalIntegrationRegistry.initialize();
-        LocalIntegrationRegistry.instance().init();
-        LocalIntegrationRegistry.instance().postInit();
+    private void loadComplete (final FMLLoadCompleteEvent event) {
+        // Runs on FMLLoadCompleteEvent + enqueueWork as an extra safety margin: the real fix
+        // for the "Components not bound yet" crash these registries used to trigger was making
+        // CompTierRegistry (and friends) store Item references instead of eagerly constructing
+        // ItemStacks of vanilla items during mod loading — vanilla item Holders aren't
+        // guaranteed to have their DataComponentMap bound until later in the lifecycle, so
+        // ItemStack construction is now deferred (lazily, inside Record) until actual use.
+        event.enqueueWork(() -> {
+            CompTierRegistry.INSTANCE.initialize();
+            StorageBlacklist.INSTANCE.initialize();
+            MaterialBlacklist.INSTANCE.initialize();
+            ConversionRegistry.INSTANCE.initialize();
+
+            LocalIntegrationRegistry.initialize();
+            LocalIntegrationRegistry.instance().init();
+            LocalIntegrationRegistry.instance().postInit();
+        });
     }
 
     private void onModConfigEvent(final ModConfigEvent event) {

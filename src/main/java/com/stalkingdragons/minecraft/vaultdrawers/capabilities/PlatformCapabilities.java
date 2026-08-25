@@ -11,8 +11,11 @@ import net.neoforged.neoforge.items.IItemHandler;
 
 public class PlatformCapabilities
 {
+    // Distinct id from Capabilities.ITEM_HANDLER (which wraps the mod's own chameleon
+    // IItemHandler abstraction) — this one wraps NeoForge's native IItemHandler, replacing
+    // the removed shared `Capabilities.ItemHandler.BLOCK` constant from pre-26.2 NeoForge.
     public static final ChameleonCapability<IItemHandler> ITEM_HANDLER =
-        new NeoforgeCapability<>(VaultDrawers.rl("item_handler"), IItemHandler.class, Direction.class);
+        new NeoforgeCapability<>(VaultDrawers.rl("platform_item_handler"), IItemHandler.class, Direction.class);
 
     static <T, C> NeoforgeCapability<T, C> cast(ChameleonCapability<T> cap) {
         return (NeoforgeCapability<T, C>) cap;

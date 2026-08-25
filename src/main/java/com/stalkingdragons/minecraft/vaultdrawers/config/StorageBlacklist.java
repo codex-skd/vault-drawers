@@ -27,8 +27,8 @@ public class StorageBlacklist extends ConfigItemList
     }
 
     @Override
-    protected void logRegisterItem (@NotNull ItemStack item) {
+    protected void logRegisterItem (@NotNull Item item) {
         if (ModCommonConfig.INSTANCE.GENERAL.logStartupActivity.get())
-            VaultDrawers.log.info("New denied storage item " + item.getItem());
+            VaultDrawers.log.info("New denied storage item " + item);
     }
 }
