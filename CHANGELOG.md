@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.3] - 2026-08-25
+
+### Corregido
+- **Crítico**: el cliente crasheaba al arrancar (`NullPointerException: Components not bound yet`) — la beta.2 nunca llegaba al menú principal. Causado por construir `ItemStack` de items vanilla demasiado pronto durante la carga del mod; arreglado guardando referencias a `Item` y construyendo el stack de forma perezosa en el primer uso real
+- Colisión de ID en el registro de una capability que podía crashear su setup
+
+### Estado
+- ✅ Verificado: el mod arranca al menú principal y una partida de un jugador carga y funciona sin crashear
+- ⚠️ Quedan huecos cosméticos menores (texturas de algunos bloques indicador/overlay e iconos de varios tiers de upgrade de almacenamiento) — no afectan a la funcionalidad, pendiente de pulido
+
 ## [0.0.0-beta.2] - 2026-08-25
 
 ### Añadido
