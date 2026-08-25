@@ -27,7 +27,27 @@ construction, and more).
 - First beta JAR uploaded to CurseForge: `0.0.0-beta.1` (project 1668019).
 - Mod icon (128×128 + 64×64) generated and wired into `neoforge.mods.toml`.
 
-## Phase 3: Game Assets & Data 🔄 NOT STARTED — biggest remaining gap
+## Phase 3: Game Assets & Data ✅ COMPLETED (2026-08-25)
+
+All 1057 asset/data files ported and namespaced (see CHANGELOG). Details below kept for reference.
+
+## Phase 2.5: Main class wiring ✅ COMPLETED (2026-08-25)
+
+`VaultDrawers.java` was a stub with all registry init() calls commented out — the mod
+compiled but registered ZERO content at runtime. Fully wired now: config registration,
+all registry init() calls, creative tab, capabilities, networking, event listeners.
+Also ported 18 previously-unported support classes (ModRecipes + 5 custom recipes,
+ModCreativeTabs, PlatformCapabilities + item handlers, ModNetworking, PlayerEventListener,
+LocalIntegrationRegistry + integration base classes, PlatformResourceFactory + ServiceLoader
+wiring) and fixed several more 26.2 API changes (mods.toml `type=` vs `mandatory=`, missing
+`modLoader` field, `BlockBehaviour/Item.Properties.setId()`, `BlockCapability` construction,
+`ClientPacketDistributor.sendToServer`, JEI maven repo + version).
+
+**Verified**: `./gradlew.bat compileJava` and `./gradlew.bat runData` both pass with 0
+errors — the mod fully constructs and registers all content. `runClient`/`runServer`
+(actual gameplay) not yet tested.
+
+### (historical) Phase 3 gap analysis — biggest remaining gap
 
 **The mod currently has ZERO game assets or data.** `src/main/resources/assets/vault_drawers/`
 only contains `icon.png`/`icon_64.png`. Without this phase the mod will not actually work
@@ -89,14 +109,12 @@ in place first.
 
 ## Next Steps (priority order)
 
-1. **Port Phase 3 (assets & data)** — largest remaining chunk by file count, mechanical
-   but must preserve correctness (namespace + registry name matching). Good candidate for
-   OpenCode delegation given the volume.
-2. **Runtime smoke test** (`runClient`) once assets exist — catch missing-texture/model
-   errors immediately.
-3. **Phase 4/5 verification** — client rendering and integration modules, now testable.
-4. **Phase 6 full testing checklist.**
-5. **Next CurseForge beta** once in-game basics are confirmed working.
+1. **Runtime smoke test** (`runClient`) — first actual graphical launch of this port.
+   Catch missing-texture/model/rendering errors immediately.
+2. **Phase 4/5 verification** — client rendering and integration modules, now testable.
+3. **Phase 6 full testing checklist** — drawer placement, upgrades, controller network,
+   config sync, JEI recipe display.
+4. **Next CurseForge beta** once in-game basics are confirmed working.
 
 ---
 
