@@ -2125,8 +2125,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787689257.0782294,
-    "ast_hash": "d572c39635f316c99f7bc72c3c30481b",
+    "mtime": 1787692222.4455059,
+    "ast_hash": "5fb8b70c460725201283731cfdcf9776",
     "semantic_hash": ""
   },
   "README.md": {
@@ -2135,8 +2135,8 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1787681832.0453467,
-    "ast_hash": "44eea7a5947f51c18bf9d81881b4212b",
+    "mtime": 1787692305.0143476,
+    "ast_hash": "9be860c0575916d581c14266217215b9",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_VAULT_DRAWERS_26-2.md": {
@@ -5510,38 +5510,38 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_full_drawers_1.json": {
-    "mtime": 1787673604.1442642,
-    "ast_hash": "b31eafee9c0cce912ab5b46be3d5f198",
+    "mtime": 1787691860.525035,
+    "ast_hash": "b2ab491f72904731583faf1e7a257591",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_full_drawers_2.json": {
-    "mtime": 1787673604.1525104,
-    "ast_hash": "4f26a3b16c0c47f71e70b860353dc5ad",
+    "mtime": 1787691860.526349,
+    "ast_hash": "22d1f3cb614cc059a4365053e72756ed",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_full_drawers_4.json": {
-    "mtime": 1787673604.164927,
-    "ast_hash": "2a1b5008a1c8f11d466587074da6318b",
+    "mtime": 1787691860.5273485,
+    "ast_hash": "d18b989c6101bfb40e12feb6eae85ac3",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_half_drawers_1.json": {
-    "mtime": 1787673604.1754916,
-    "ast_hash": "b962b131ee133cbddc587d63cee86d32",
+    "mtime": 1787691860.5303385,
+    "ast_hash": "70326c5b293cea779dbf8a8d622e70f8",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_half_drawers_2.json": {
-    "mtime": 1787673604.1844163,
-    "ast_hash": "70eff2c7d4490531a4a30d66a22799a1",
+    "mtime": 1787691860.5313358,
+    "ast_hash": "7e7082b0986cc15c50cc6ef1b6348983",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_half_drawers_4.json": {
-    "mtime": 1787673604.194985,
-    "ast_hash": "7b91a0b0f41f52c3bb20af51cb8819d1",
+    "mtime": 1787691860.5313358,
+    "ast_hash": "1850c89b2b4066680b8e864a01468a95",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/acacia_trim.json": {
-    "mtime": 1787673604.2070875,
-    "ast_hash": "7959556720c8c133456fa68adf58ec6f",
+    "mtime": 1787691860.5328393,
+    "ast_hash": "85518e2295801cc312215d9093261795",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/add_detached_upgrade.json": {
@@ -5555,333 +5555,333 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/balanced_fill_upgrade.json": {
-    "mtime": 1787673604.2493227,
-    "ast_hash": "0c6f2e08983b29afe2c6d48fc34f7f8b",
+    "mtime": 1787691860.5358484,
+    "ast_hash": "44e358d0a53855644873fccbb5eb059a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_full_drawers_1.json": {
-    "mtime": 1787673604.2609296,
-    "ast_hash": "8a99f89c6c09cac91ae3f7ca9e2a7ffd",
+    "mtime": 1787691860.5368612,
+    "ast_hash": "18abd985cd80a0a049eefa5ceeba6b0e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_full_drawers_2.json": {
-    "mtime": 1787673604.2741644,
-    "ast_hash": "f79c2d2c43814beba5b23ef5b91e5946",
+    "mtime": 1787691860.5378568,
+    "ast_hash": "c8029fd12b9175f7ccc49072a64c4e01",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_full_drawers_4.json": {
-    "mtime": 1787673604.2859235,
-    "ast_hash": "133236a19698a9647ff83c759409438c",
+    "mtime": 1787691860.539851,
+    "ast_hash": "ecfab80a19708517ea9bc1f50a218bcc",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_half_drawers_1.json": {
-    "mtime": 1787673604.3016052,
-    "ast_hash": "71b0ff33e8859c12e283342a645302db",
+    "mtime": 1787691860.5408463,
+    "ast_hash": "b756596632536c8badd071eeaac52b0e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_half_drawers_2.json": {
-    "mtime": 1787673604.3130748,
-    "ast_hash": "535bf986986703970a592534cedf295f",
+    "mtime": 1787691860.541843,
+    "ast_hash": "6b59c396725e74441be8e8da1b2a0a46",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_half_drawers_4.json": {
-    "mtime": 1787673604.3219013,
-    "ast_hash": "9be8682b4fa16c87a72463a3530bab1c",
+    "mtime": 1787691860.5428393,
+    "ast_hash": "b366ef582870d451b41eed34be2f576b",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/bamboo_trim.json": {
-    "mtime": 1787673604.332337,
-    "ast_hash": "5530c3d5e2cff1d6b4f640d572cf261b",
+    "mtime": 1787691860.5428393,
+    "ast_hash": "8ed3238c122a9f1abbf933e9e467133c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_full_drawers_1.json": {
-    "mtime": 1787673604.345326,
-    "ast_hash": "4c87a3be78c55c28db48dabf849b914f",
+    "mtime": 1787691860.5438395,
+    "ast_hash": "7d387ff90c88f40b36058ca30cab76d8",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_full_drawers_2.json": {
-    "mtime": 1787673604.3587022,
-    "ast_hash": "2c113b25e96315a360595d2667e21707",
+    "mtime": 1787691860.5438395,
+    "ast_hash": "3da30391a211703372a50ea14f519148",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_full_drawers_4.json": {
-    "mtime": 1787673604.3672204,
-    "ast_hash": "d2687b6a3ea7cdcb83d7a85e552ac8ad",
+    "mtime": 1787691860.5453393,
+    "ast_hash": "b5f459f0c6875081d7a4186fa0c83c70",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_half_drawers_1.json": {
-    "mtime": 1787673604.3789992,
-    "ast_hash": "7a671967c240046b480fccc176238d15",
+    "mtime": 1787691860.5453393,
+    "ast_hash": "f909800015411bcdb3436eab06c7ad8d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_half_drawers_2.json": {
-    "mtime": 1787673604.3878279,
-    "ast_hash": "614a2b180101b5755f135fd9fd4e8f78",
+    "mtime": 1787691860.5463388,
+    "ast_hash": "06eed7de85ecccd73497f8dc5ef9d30d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_half_drawers_4.json": {
-    "mtime": 1787673604.3968894,
-    "ast_hash": "6cbde8ea1ad7f3f0af9c18c9c3531639",
+    "mtime": 1787691860.5473402,
+    "ast_hash": "61e4c5165405ee96fb651f5a8a90cd61",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/birch_trim.json": {
-    "mtime": 1787673604.406124,
-    "ast_hash": "5ca6a059fa601d568855f7b1b531bd05",
+    "mtime": 1787691860.5483346,
+    "ast_hash": "802aed8660f297819d0bce607aaa4b0d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_full_drawers_1.json": {
-    "mtime": 1787673604.4163244,
-    "ast_hash": "69e1f783e620e953d08fd3ea0ee2a7d6",
+    "mtime": 1787691860.5483346,
+    "ast_hash": "edce59a29f2bbf5b6478055705a38bfc",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_full_drawers_2.json": {
-    "mtime": 1787673604.425258,
-    "ast_hash": "c91070597de3d771c1f2c46abe9ec60a",
+    "mtime": 1787691860.5493326,
+    "ast_hash": "1df771f90b7490791452bc1a170984ad",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_full_drawers_4.json": {
-    "mtime": 1787673604.4337983,
-    "ast_hash": "4327d12957c187993434e094a1a965fc",
+    "mtime": 1787691860.5493326,
+    "ast_hash": "b2fd753cb8bd6db8c977c799d79e71af",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_half_drawers_1.json": {
-    "mtime": 1787673604.4446735,
-    "ast_hash": "1a19e597aed25b1722533b3d8ae93ca8",
+    "mtime": 1787691860.550328,
+    "ast_hash": "e3a2d5e4909c6b121afc1c5bf4f44b2b",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_half_drawers_2.json": {
-    "mtime": 1787673604.455956,
-    "ast_hash": "6b6aa86e920e155797865fdb776cc41d",
+    "mtime": 1787691860.5513244,
+    "ast_hash": "12dd616054312f69e88bd05b9d178592",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_half_drawers_4.json": {
-    "mtime": 1787673604.466238,
-    "ast_hash": "3a48298e66fd5f2acea42ce795c5eaa8",
+    "mtime": 1787691860.552322,
+    "ast_hash": "c6efd4bae4a797e67db55c9f4bfd886f",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/cherry_trim.json": {
-    "mtime": 1787673604.4752612,
-    "ast_hash": "4271583f9c2e6b0c18e1e9fe9e95ebac",
+    "mtime": 1787691860.5528252,
+    "ast_hash": "2b1f24877eaf33a50a5ea06fddf702b4",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/compacting_drawers_2.json": {
-    "mtime": 1787673604.4860504,
-    "ast_hash": "8ce1db19fdf7bc748c5540b0d005f2b8",
+    "mtime": 1787691860.5538251,
+    "ast_hash": "3a5741cd175509dbb8ad3d831af7925c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/compacting_drawers_3.json": {
-    "mtime": 1787673604.4963424,
-    "ast_hash": "87ab35f53c28169f2f2d53a8f77fe9b1",
+    "mtime": 1787691860.5573256,
+    "ast_hash": "e067e0701705784a05aa45fa22706f51",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/compacting_half_drawers_2.json": {
-    "mtime": 1787673604.5063517,
-    "ast_hash": "7aa6d1e1cf2f91a6f0a530b0222aa648",
+    "mtime": 1787691860.5583224,
+    "ast_hash": "76700873e6e1994b3d7ca219a907f540",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/compacting_half_drawers_3.json": {
-    "mtime": 1787673604.5164511,
-    "ast_hash": "1bea89cc17415d4230a2c83f18aeed5b",
+    "mtime": 1787691860.561312,
+    "ast_hash": "52cdb24bce8258b104385b0abff66687",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/concealment_key.json": {
-    "mtime": 1787673604.523562,
-    "ast_hash": "a09b5c5856e29ac0a5e01e3b1b65e16b",
+    "mtime": 1787691860.5628161,
+    "ast_hash": "2654d21dc41e403f0e930d9b48e51bd7",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/controller.json": {
-    "mtime": 1787673604.5329661,
-    "ast_hash": "1d3ec479cd2d18591acc0b8baedb375d",
+    "mtime": 1787691860.5628161,
+    "ast_hash": "12766b6dab5e7a779c08e1c2b693d3fa",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/controller_io.json": {
-    "mtime": 1787673604.5408187,
-    "ast_hash": "8b123060d324bb4ccdaa5aedd0b1061c",
+    "mtime": 1787691860.5638177,
+    "ast_hash": "208f876641ea03fb7866895fc6bb891f",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/conversion_upgrade.json": {
-    "mtime": 1787673604.5521472,
-    "ast_hash": "c68a2c826aad05dc386607353ab9608e",
+    "mtime": 1787691860.5653186,
+    "ast_hash": "224cf5bc89eb1994acd6efc4a219734c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/copper_storage_upgrade.json": {
-    "mtime": 1787673604.5622673,
-    "ast_hash": "2fa1d3302c25fe02a33805091fcb9e56",
+    "mtime": 1787691860.5663178,
+    "ast_hash": "3501232134618ea716f5ea0f9cbdbdfe",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_full_drawers_1.json": {
-    "mtime": 1787673604.5720322,
-    "ast_hash": "5326e504bc22a8282bbb690f34f82b3e",
+    "mtime": 1787691860.5673149,
+    "ast_hash": "4b9c0f4739957cab0b5158e3cc16e06d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_full_drawers_2.json": {
-    "mtime": 1787673604.5828598,
-    "ast_hash": "073cccff44162599a4e0425e9325037e",
+    "mtime": 1787691860.5673149,
+    "ast_hash": "7ad742848722ebe7b6e412ffc4f30c10",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_full_drawers_4.json": {
-    "mtime": 1787673604.5926013,
-    "ast_hash": "5be8a34c5540f68a6fa15274f419ecbd",
+    "mtime": 1787691860.568316,
+    "ast_hash": "f69959c1b38ed4639c59392267c4f9f2",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_half_drawers_1.json": {
-    "mtime": 1787673604.6011102,
-    "ast_hash": "1cf76d67d25604132a512b34798cb032",
+    "mtime": 1787691860.5703087,
+    "ast_hash": "66ef7d83e80d6ad03e10a71386b35f2d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_half_drawers_2.json": {
-    "mtime": 1787673604.6091697,
-    "ast_hash": "ee8a20854c6b47bfcee4ba8ad297cfa4",
+    "mtime": 1787691860.57281,
+    "ast_hash": "3176392e9e396e85a77d269c161f819a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_half_drawers_4.json": {
-    "mtime": 1787673604.6190307,
-    "ast_hash": "610225054e49dedd7b42698f2380fd3a",
+    "mtime": 1787691860.5738108,
+    "ast_hash": "92aa6e2ba1f27183e3301db33e66bcb6",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/crimson_trim.json": {
-    "mtime": 1787673604.6291237,
-    "ast_hash": "ed1034d33d9582f7464ac5afe6430b20",
+    "mtime": 1787691860.5748084,
+    "ast_hash": "04a238cd5e9b181d1c11c9959a42dfe7",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_full_drawers_1.json": {
-    "mtime": 1787673604.6382551,
-    "ast_hash": "c0645739029fb382fdb84d989728bf0a",
+    "mtime": 1787691860.5758178,
+    "ast_hash": "e967afd6edc56968d4636e5ea752e96a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_full_drawers_2.json": {
-    "mtime": 1787673604.6499162,
-    "ast_hash": "9de3ea366951ee933f5dc36817e0b696",
+    "mtime": 1787691860.5783193,
+    "ast_hash": "a348f5b2a23c94aac70d3836e3e9cde4",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_full_drawers_4.json": {
-    "mtime": 1787673604.658931,
-    "ast_hash": "62cf726bc4db73c8fea371de90b635bf",
+    "mtime": 1787691860.5783193,
+    "ast_hash": "7f598f6eeb0eaa8d29cd580d18687910",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_half_drawers_1.json": {
-    "mtime": 1787673604.6701465,
-    "ast_hash": "32dba4adc7cc8a678522b5ddd2bab042",
+    "mtime": 1787691860.5793207,
+    "ast_hash": "4f5daf87e4e5e6a7354867e22e47f88a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_half_drawers_2.json": {
-    "mtime": 1787673604.6801949,
-    "ast_hash": "d726de0b91e71b4c393c056ca65a3252",
+    "mtime": 1787691860.5803168,
+    "ast_hash": "5f26f94a0ffd1f466545a20babe210e6",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_half_drawers_4.json": {
-    "mtime": 1787673604.6889234,
-    "ast_hash": "5d5df827a028793701b2e9934d108620",
+    "mtime": 1787691860.5813131,
+    "ast_hash": "72ee022a576056300fca17621a592206",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/dark_oak_trim.json": {
-    "mtime": 1787673604.698888,
-    "ast_hash": "9a2e66157c3d1f8495b3f797726d0a4c",
+    "mtime": 1787691860.582816,
+    "ast_hash": "8c30a4d3845a0c96292a1e975d7770e6",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/detached_drawer.json": {
-    "mtime": 1787673604.7077854,
-    "ast_hash": "49c88085868eac228dc3b46cdffb7e6a",
+    "mtime": 1787691860.582816,
+    "ast_hash": "45b0a3b48101df203f95d445d376ce12",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/diamond_storage_upgrade.json": {
-    "mtime": 1787673604.7177763,
-    "ast_hash": "202e0c9b46cdbea76ae46c77a07c682d",
+    "mtime": 1787691860.5848126,
+    "ast_hash": "2db86cc2f55064db79e9fb2c61776aa6",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/drawer_key.json": {
-    "mtime": 1787673604.7288299,
-    "ast_hash": "e63d25d04ec4281ac7a5c89a48ddac30",
+    "mtime": 1787691860.5853162,
+    "ast_hash": "8ff986d9cb8b9c96eb96f0da394b2dcf",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/drawer_puller.json": {
-    "mtime": 1787673604.737281,
-    "ast_hash": "1788b65c4cce50e8e0e7c1d92e752d33",
+    "mtime": 1787691860.5853162,
+    "ast_hash": "f81747b78dae31824eddcc286ea35fe4",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/emerald_storage_upgrade.json": {
-    "mtime": 1787673604.7473376,
-    "ast_hash": "d2f4675c7f51f8d53fb6c606727c0064",
+    "mtime": 1787691860.5863163,
+    "ast_hash": "129a08d740712b9e40aabcc9f4faea5a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/fill_level_upgrade.json": {
-    "mtime": 1787673604.7570386,
-    "ast_hash": "9140556d5b65a9bd7d1627e29dc93749",
+    "mtime": 1787691860.5883138,
+    "ast_hash": "17b58c7fa00fa2c8694598857e7c648b",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/framing_table.json": {
-    "mtime": 1787673604.7686117,
-    "ast_hash": "1a48055e82714f1fea69e42a8e7639ae",
+    "mtime": 1787691860.590307,
+    "ast_hash": "f5b52bdeea111acc6e2779dbc397cdde",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/gold_storage_upgrade.json": {
-    "mtime": 1787673604.7790413,
-    "ast_hash": "a3c5a09647ceec80db82d003b1d69213",
+    "mtime": 1787691860.590307,
+    "ast_hash": "5678ee189f0ffa4331b628d16d7dfd2a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/hopper_upgrade.json": {
-    "mtime": 1787673604.7912076,
-    "ast_hash": "45f87fad0c5486b206915d6a6fee9958",
+    "mtime": 1787691860.591303,
+    "ast_hash": "923386ce076edd7b53a627cc1b584f11",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/illumination_upgrade.json": {
-    "mtime": 1787673604.8036861,
-    "ast_hash": "d4e4bae7d93f9bf2a795f2eadaf0dbfd",
+    "mtime": 1787691860.5938087,
+    "ast_hash": "15dc740f8dc961a2f5480e18245b5df3",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/iron_storage_upgrade.json": {
-    "mtime": 1787673604.813931,
-    "ast_hash": "eb4715a990dd87eb392fd0570fc162dc",
+    "mtime": 1787691860.5953104,
+    "ast_hash": "9dfb80926485dc1985c0641e1a94d74e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_full_drawers_1.json": {
-    "mtime": 1787673604.820971,
-    "ast_hash": "0b876ef950bff0c158d55dc8d0a19bec",
+    "mtime": 1787691860.5953104,
+    "ast_hash": "70e3fc88517e193f9d032a62f24a11ec",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_full_drawers_2.json": {
-    "mtime": 1787673604.8327394,
-    "ast_hash": "4e2531975c3378c599c28cfc703d2fed",
+    "mtime": 1787691860.5963101,
+    "ast_hash": "2552d4963aebcb02bae875bb38de4621",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_full_drawers_4.json": {
-    "mtime": 1787673604.8424,
-    "ast_hash": "516ab4b050ecbd004e92c87dc9dbeeda",
+    "mtime": 1787691860.59731,
+    "ast_hash": "064aa3e217d9026704d1e48c4eefe1c9",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_half_drawers_1.json": {
-    "mtime": 1787673604.851799,
-    "ast_hash": "263355b87d4446e5227f5035608396ae",
+    "mtime": 1787691860.5983076,
+    "ast_hash": "159103ba44b98802f1371e07e9eb9ad4",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_half_drawers_2.json": {
-    "mtime": 1787673604.8605032,
-    "ast_hash": "b258641b7984e4aa2c4c9383992c6f10",
+    "mtime": 1787691860.5983076,
+    "ast_hash": "f83316048f447dd0f71eb293cf72081e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_half_drawers_4.json": {
-    "mtime": 1787673604.8705447,
-    "ast_hash": "8b779876dcb7bc95b0752d9e3f0e466a",
+    "mtime": 1787691860.5993042,
+    "ast_hash": "8542c26d26c8aafb106afd9cc8aec9da",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/jungle_trim.json": {
-    "mtime": 1787673604.8810983,
-    "ast_hash": "47a3607ec6e6f9975ab834c8d79cc63d",
+    "mtime": 1787691860.5993042,
+    "ast_hash": "593b30ae0d20a359e4da5e54f5bc6e58",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/keybutton_concealment.json": {
-    "mtime": 1787673604.8884265,
-    "ast_hash": "1fca2abca68aeb6bfd057d7faedf7358",
+    "mtime": 1787691860.6003008,
+    "ast_hash": "ceea4699ba930a86b758c4158128df91",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/keybutton_drawer.json": {
-    "mtime": 1787673604.8972301,
-    "ast_hash": "113bfdff3f345906b07d556e4a56bdac",
+    "mtime": 1787691860.6012976,
+    "ast_hash": "d10cfaab7a6c818c7cf5471b9b7a0a5c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/keybutton_quantify.json": {
-    "mtime": 1787673604.904825,
-    "ast_hash": "0139e422dceccf7d6937738581203874",
+    "mtime": 1787691860.6012976,
+    "ast_hash": "01d84253341cb0f1f57bac6cddb5114c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/keyring.json": {
@@ -5890,123 +5890,123 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/magnet_upgrade.json": {
-    "mtime": 1787673604.9271839,
-    "ast_hash": "470aec1b005c3f5206810f751818ab9e",
+    "mtime": 1787691860.6063044,
+    "ast_hash": "8dee4d23b4b2b403ee6647887ac58f9d",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/magnet_upgrade_2.json": {
-    "mtime": 1787673604.9354303,
-    "ast_hash": "81fa1f80569f7bf44b4300a4653a3eea",
+    "mtime": 1787691860.607304,
+    "ast_hash": "48a3ce8a716e0b76f71b1208e720f524",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/magnet_upgrade_3.json": {
-    "mtime": 1787673604.9445555,
-    "ast_hash": "e4e223a7f8361d08c2266ee4ebf8c667",
+    "mtime": 1787691860.6083014,
+    "ast_hash": "1f4e71f62e1d1ae709554fffc2653913",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_full_drawers_1.json": {
-    "mtime": 1787673604.952773,
-    "ast_hash": "698a7dafe910e72e868987a08c49fd4a",
+    "mtime": 1787691860.6092975,
+    "ast_hash": "e87442f7aa670a2d757277773efd8915",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_full_drawers_2.json": {
-    "mtime": 1787673604.9634137,
-    "ast_hash": "d5ab54334c78ee87f303240637d93772",
+    "mtime": 1787691860.6092975,
+    "ast_hash": "f746f0c3a1ff258a5ef2d3cf0011d6a9",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_full_drawers_4.json": {
-    "mtime": 1787673604.9735687,
-    "ast_hash": "c424fdc172a6a1ba6457b71b7d3c84b0",
+    "mtime": 1787691860.6102953,
+    "ast_hash": "4cd4e7bfa1c796877578cedb4aee237a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_half_drawers_1.json": {
-    "mtime": 1787673604.984424,
-    "ast_hash": "895af8525b08e1a71e3b34a53143edc7",
+    "mtime": 1787691860.6102953,
+    "ast_hash": "6a60da53a03610b8e3f9a65756b76b06",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_half_drawers_2.json": {
-    "mtime": 1787673604.9929712,
-    "ast_hash": "7f5fd533d26c3615975294d69f215fb5",
+    "mtime": 1787691860.6127942,
+    "ast_hash": "f505c4278e3889629154cec7b0625726",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_half_drawers_4.json": {
-    "mtime": 1787673605.0039768,
-    "ast_hash": "64a4af305ce53924da5c4922fb1f4ec1",
+    "mtime": 1787691860.6127942,
+    "ast_hash": "a9a52366e905526f0c8f52efe1eeafd1",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/mangrove_trim.json": {
-    "mtime": 1787673605.0138445,
-    "ast_hash": "a96f39f9b5e186dafb7b026b6c6f78a7",
+    "mtime": 1787691860.6137955,
+    "ast_hash": "8a7622aa6e7cba4fa16c821e787da148",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/max_redstone_upgrade.json": {
-    "mtime": 1787673605.0208876,
-    "ast_hash": "c733e9edf529d3478cdeb17a88a52624",
+    "mtime": 1787691860.6147928,
+    "ast_hash": "e692ed3d96e74ed639425bc415adab34",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/min_redstone_upgrade.json": {
-    "mtime": 1787673605.030275,
-    "ast_hash": "6a17c28f4414df790cb6c258193b0d14",
+    "mtime": 1787691860.6162956,
+    "ast_hash": "53539afd834cdf955ee90eaba2abd6f8",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/netherite_storage_upgrade.json": {
-    "mtime": 1787673605.0382385,
-    "ast_hash": "8903f43d8fa23e93f97ade185d426177",
+    "mtime": 1787691860.6162956,
+    "ast_hash": "a1e7951a76e91a44cd7e67776bf83257",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_full_drawers_1.json": {
-    "mtime": 1787673605.0391898,
-    "ast_hash": "be73afc2311199234bcde26d9dd5d30c",
+    "mtime": 1787691860.6172962,
+    "ast_hash": "24a029776f2aeff70f5abcd149afed31",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_full_drawers_2.json": {
-    "mtime": 1787673605.0491915,
-    "ast_hash": "741ca43784628af835a8c1fa11e02c91",
+    "mtime": 1787691860.6182933,
+    "ast_hash": "e78d7c10d732aaf115cd50ef447a11e0",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_full_drawers_4.json": {
-    "mtime": 1787673605.0571625,
-    "ast_hash": "53478eaf111b74c8039a22442888a40e",
+    "mtime": 1787691860.6182933,
+    "ast_hash": "bda195a5c63959c8e0f5aeb36f79ac29",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_half_drawers_1.json": {
-    "mtime": 1787673605.067029,
-    "ast_hash": "76fc118f9d9ff795371d619a9f522fc0",
+    "mtime": 1787691860.6195748,
+    "ast_hash": "ba1237cf1e817928572b1d7ee1d9d9fb",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_half_drawers_2.json": {
-    "mtime": 1787673605.0779054,
-    "ast_hash": "e1f89b2d31c0a0bec810c96585af93b2",
+    "mtime": 1787691860.6195748,
+    "ast_hash": "818a1802ca1ff5d97f94967fbb398e01",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_half_drawers_4.json": {
-    "mtime": 1787673605.0866,
-    "ast_hash": "67aaa057b8d187b8b45a01d1d9492849",
+    "mtime": 1787691860.620808,
+    "ast_hash": "ea3c1fe238c6f12046e19cc5ed787122",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/oak_trim.json": {
-    "mtime": 1787673605.097588,
-    "ast_hash": "30a47560a0180746a0c8c6102c3c2707",
+    "mtime": 1787691860.623801,
+    "ast_hash": "48400802b021425e869aa4696490acde",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/obsidian_storage_upgrade.json": {
-    "mtime": 1787673605.1081882,
-    "ast_hash": "881aaf1b9d11f4af923e69763f1c4a71",
+    "mtime": 1787691860.623801,
+    "ast_hash": "5982f69e0678a9d48f194c86d7465ffe",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/one_stack_upgrade.json": {
-    "mtime": 1787673605.1202276,
-    "ast_hash": "c1c15c1e19d7832d005632b7a6f70f3c",
+    "mtime": 1787691860.624797,
+    "ast_hash": "4e0bc0daacfa69f7606d130586e5ce25",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/personal_key.json": {
-    "mtime": 1787673605.1301398,
-    "ast_hash": "14c83cde16f998b48699fb8765db8461",
+    "mtime": 1787691860.6253006,
+    "ast_hash": "107f27434ec35c2bb55581707f61477b",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/personal_key_cofh.json": {
-    "mtime": 1787673605.1424837,
-    "ast_hash": "d7666a60f5ac959c8ec240fb75fda0dd",
+    "mtime": 1787691860.6253006,
+    "ast_hash": "5cf12b3d506f74e48e2b6647b8290a96",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/personal_key_cycle.json": {
@@ -6015,28 +6015,28 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/portability_upgrade.json": {
-    "mtime": 1787673605.1641035,
-    "ast_hash": "dc68b71cb4de0a231cc0b14b586f1f44",
+    "mtime": 1787691860.626562,
+    "ast_hash": "6bcaae581df517ac61455b9994ad9128",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/priority_key.json": {
-    "mtime": 1787673605.174583,
-    "ast_hash": "df581628b6cd1d210264095303543ae9",
+    "mtime": 1787691860.626562,
+    "ast_hash": "18434e65374b82af67cf67db3da95397",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/quantify_key.json": {
-    "mtime": 1787673605.1834545,
-    "ast_hash": "fceff8791229da6b4d811a7dac721ba6",
+    "mtime": 1787691860.627954,
+    "ast_hash": "0eb8cda634e48c6474d660f570d61bb4",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/redstone_upgrade.json": {
-    "mtime": 1787673605.1930113,
-    "ast_hash": "a8ddb428941844c510534f0dad729a81",
+    "mtime": 1787691860.627954,
+    "ast_hash": "66a421dee2f847eecede53c131cb2e87",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/remote_group_upgrade.json": {
-    "mtime": 1787673605.2007368,
-    "ast_hash": "f44e80c86abfe6470e8046626ccbc629",
+    "mtime": 1787691860.628994,
+    "ast_hash": "f90cdcb1b7539ab1c8d92ec1032acd2b",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/remote_group_upgrade_bound.json": {
@@ -6045,98 +6045,98 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/remote_group_upgrade_inc.json": {
-    "mtime": 1787673605.2205167,
-    "ast_hash": "08e4e0d42d71f9dc9f8167353ca8ff34",
+    "mtime": 1787691860.6301968,
+    "ast_hash": "1dc3a7c96c801bd3161c34cb4d51b25e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/remote_upgrade.json": {
-    "mtime": 1787673605.2319555,
-    "ast_hash": "bc5a86fd6cd08e8c0fbc72d83b430c24",
+    "mtime": 1787691860.6307008,
+    "ast_hash": "a296a63a65fba51d7cb2421af7ec139e",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_full_drawers_1.json": {
-    "mtime": 1787673605.2411852,
-    "ast_hash": "2b07fb2f7b47952b589f4ad6e76e6fee",
+    "mtime": 1787691860.6307008,
+    "ast_hash": "916caafeb0dbad4c3f6f551ee1711bd3",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_full_drawers_2.json": {
-    "mtime": 1787673605.254532,
-    "ast_hash": "e62ff8fa7fbee737f291e5144fd6180d",
+    "mtime": 1787691860.6317112,
+    "ast_hash": "2575437901093555a37e8cea8b636941",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_full_drawers_4.json": {
-    "mtime": 1787673605.2657785,
-    "ast_hash": "1f1326819c52b28fb66fa4d7c6b11ec5",
+    "mtime": 1787691860.6327078,
+    "ast_hash": "68ba2118c46ad7c9ef57a0cb43562b99",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_half_drawers_1.json": {
-    "mtime": 1787673605.276602,
-    "ast_hash": "a23f05595707800fd281b2c7247d8342",
+    "mtime": 1787691860.6327078,
+    "ast_hash": "a3fe5247c8621a663514c4701ec12f3c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_half_drawers_2.json": {
-    "mtime": 1787673605.2860641,
-    "ast_hash": "98584bca2f909d81a05b9afc797a7e53",
+    "mtime": 1787691860.6337082,
+    "ast_hash": "ee38adb8a368c3ea1e699a265c854b2c",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_half_drawers_4.json": {
-    "mtime": 1787673605.2970889,
-    "ast_hash": "db3a09fe564d0c16e99ed4809b8ff37b",
+    "mtime": 1787691860.6347046,
+    "ast_hash": "bc7281484a3d9c2f1a753f0dced1ae44",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/spruce_trim.json": {
-    "mtime": 1787673605.3084,
-    "ast_hash": "b9d528071f981c1a62d5532d74986a32",
+    "mtime": 1787691860.6347046,
+    "ast_hash": "40c10c587a1f2f77da8d839370411b61",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/suspend_key.json": {
-    "mtime": 1787673605.3209324,
-    "ast_hash": "09d41d0a2d22d21b7c14fe09524307e2",
+    "mtime": 1787691860.6357207,
+    "ast_hash": "2f8eff48da430192ad88b6eb1d6551bf",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/upgrade_template.json": {
-    "mtime": 1787673605.330881,
-    "ast_hash": "7e83581ce02ea8cb31d50354c9d7a8f2",
+    "mtime": 1787691860.636726,
+    "ast_hash": "04478f1553487b511f06644fe31ebab6",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/void_upgrade.json": {
-    "mtime": 1787673605.3442776,
-    "ast_hash": "b80259a14eacc6a946e5b323c10d81c1",
+    "mtime": 1787691860.636726,
+    "ast_hash": "3f9f8b8fea1993606f3e011407190845",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_full_drawers_1.json": {
-    "mtime": 1787673605.3536422,
-    "ast_hash": "036f77e8c80d3eca3aa0ec1abc03fe6d",
+    "mtime": 1787691860.63887,
+    "ast_hash": "2c4c645305c9387f09a29a59e13d431a",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_full_drawers_2.json": {
-    "mtime": 1787673605.3637443,
-    "ast_hash": "d969d04c97996f11e502c88092e4698e",
+    "mtime": 1787691860.63887,
+    "ast_hash": "01df0e431ec57a6b70a999dba99049c5",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_full_drawers_4.json": {
-    "mtime": 1787673605.3734198,
-    "ast_hash": "bf35fd29ee790a672ed1de09a89ae06d",
+    "mtime": 1787691860.6403754,
+    "ast_hash": "0fb3bfa3968c8090989fbc7cc5e64594",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_half_drawers_1.json": {
-    "mtime": 1787673605.3853736,
-    "ast_hash": "9aa6ba3bc086cffe58546c783a3afb27",
+    "mtime": 1787691860.640907,
+    "ast_hash": "a6ddf7251bd9e108941b65f7504e5319",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_half_drawers_2.json": {
-    "mtime": 1787673605.3941545,
-    "ast_hash": "b7609549a99ee763fad9730605c1cd15",
+    "mtime": 1787691860.6429303,
+    "ast_hash": "78d3f74cd5ae290e8e31509f19012aef",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_half_drawers_4.json": {
-    "mtime": 1787673605.401976,
-    "ast_hash": "8650ac3f4485d60d93d081df10b737fb",
+    "mtime": 1787691860.6429303,
+    "ast_hash": "523ccee2e6a79cf61108957ce6e23475",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/warped_trim.json": {
-    "mtime": 1787673605.413207,
-    "ast_hash": "240455b0a1c5129436c1d3ceae56e0bc",
+    "mtime": 1787691860.64393,
+    "ast_hash": "5a7b95f141d1f30ee3565ce2e6055a08",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/tags/block/drawers.json": {
@@ -7552,6 +7552,811 @@
   "docs/curseforge/versions/0.0.0-beta.3.md": {
     "mtime": 1787689246.7781644,
     "ast_hash": "22b7b49c41547d0fbc238801c5cbafa7",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_full_drawers_1.json": {
+    "mtime": 1787691342.331164,
+    "ast_hash": "ee67f6d664da8a9f62978df76b272273",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_full_drawers_2.json": {
+    "mtime": 1787691342.3785393,
+    "ast_hash": "fda8de3bc0641065df608268de76f87a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_full_drawers_4.json": {
+    "mtime": 1787691342.425826,
+    "ast_hash": "8f62e3e1799fd59b79176882544e9f4c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_half_drawers_1.json": {
+    "mtime": 1787691342.4766614,
+    "ast_hash": "5784f45d2cafc6556159befd556d2dfe",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_half_drawers_2.json": {
+    "mtime": 1787691342.4981945,
+    "ast_hash": "4f2db88a674351e2363ae5dac9d5fa75",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_half_drawers_4.json": {
+    "mtime": 1787691342.5368154,
+    "ast_hash": "fbf54df5bdc7c1e30c3917a2b79a6783",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/acacia_trim.json": {
+    "mtime": 1787691342.578714,
+    "ast_hash": "a3d5b99fd28554c2dfc2d32f65474fb1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/balance_fill_upgrade.json": {
+    "mtime": 1787691342.627052,
+    "ast_hash": "1ec55d520218599455a938d8d0f58fa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_full_drawers_1.json": {
+    "mtime": 1787691342.6722975,
+    "ast_hash": "baede398b6087552156025c234acba4e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_full_drawers_2.json": {
+    "mtime": 1787691342.7036707,
+    "ast_hash": "d998dff15ad01334dfc76aedb63fc028",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_full_drawers_4.json": {
+    "mtime": 1787691342.7386427,
+    "ast_hash": "f95031c49a0850f56727fe53fef7b457",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_half_drawers_1.json": {
+    "mtime": 1787691342.7868354,
+    "ast_hash": "a208696a988c06fd83382f3d7572ba86",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_half_drawers_2.json": {
+    "mtime": 1787691342.8310792,
+    "ast_hash": "9e811880e1df026dafa5c34bc169c94c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_half_drawers_4.json": {
+    "mtime": 1787691342.875722,
+    "ast_hash": "3303e535009f43f2a7ad570446f023f6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/bamboo_trim.json": {
+    "mtime": 1787691342.925548,
+    "ast_hash": "80efd429f405d2be9f778d622363c2f9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_full_drawers_1.json": {
+    "mtime": 1787691342.9766247,
+    "ast_hash": "95c0e56441d48c50eab7a67a855ddc60",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_full_drawers_2.json": {
+    "mtime": 1787691343.019068,
+    "ast_hash": "ca2267669d5390db04d59658728c82f2",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_full_drawers_4.json": {
+    "mtime": 1787691343.0646074,
+    "ast_hash": "763f2d8d4733d9e07dd4fd9d005b31b7",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_half_drawers_1.json": {
+    "mtime": 1787691343.1100028,
+    "ast_hash": "99afcf215d1b25b1bb43ff7c4414c9c5",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_half_drawers_2.json": {
+    "mtime": 1787691343.157943,
+    "ast_hash": "7f40f923c067ba376b38a7911e110c09",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_half_drawers_4.json": {
+    "mtime": 1787691343.2087288,
+    "ast_hash": "670575a916568d865ef6c09f488606ea",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/birch_trim.json": {
+    "mtime": 1787691343.2510655,
+    "ast_hash": "9a0ea6fba5a428e6e43f4e3a8b813709",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_full_drawers_1.json": {
+    "mtime": 1787691343.2975912,
+    "ast_hash": "bff32053f3248376bfd6984b028d8c70",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_full_drawers_2.json": {
+    "mtime": 1787691343.341293,
+    "ast_hash": "e21cb63fa474d0e3dc030cadda218724",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_full_drawers_4.json": {
+    "mtime": 1787691343.3914678,
+    "ast_hash": "fe99895292f2397fc8421b2eb3f99d96",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_half_drawers_1.json": {
+    "mtime": 1787691343.4378934,
+    "ast_hash": "bfe575af188ec028c98d6ef67fedddc6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_half_drawers_2.json": {
+    "mtime": 1787691343.4872303,
+    "ast_hash": "caf35755c77b523b1dce6fb35a726769",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_half_drawers_4.json": {
+    "mtime": 1787691343.5301056,
+    "ast_hash": "e3245e860a781607ae5bf7244aa733ed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/cherry_trim.json": {
+    "mtime": 1787691343.5767338,
+    "ast_hash": "a5a53b133dadf330b4179caa86a7fb65",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/compacting_drawers_2.json": {
+    "mtime": 1787691343.6254568,
+    "ast_hash": "b88df5089367bdd7b3c95fdf9fe86e1e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/compacting_drawers_3.json": {
+    "mtime": 1787691343.6740775,
+    "ast_hash": "b7f03e2a4b5055661d01b7b0ff40a7ed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/compacting_half_drawers_2.json": {
+    "mtime": 1787691343.717444,
+    "ast_hash": "ac17ebcae7b0e76df8f8aaf6ddfcfd1a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/compacting_half_drawers_3.json": {
+    "mtime": 1787691343.7489133,
+    "ast_hash": "15cf718f58e1b3b625423b08cca8c59a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/controller.json": {
+    "mtime": 1787691343.7965426,
+    "ast_hash": "dc9bdab82164d77679b6f9e1272568a6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/controller_io.json": {
+    "mtime": 1787691343.8433456,
+    "ast_hash": "246e592af1984b30f19e59385e54e853",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/conversion_upgrade.json": {
+    "mtime": 1787691343.89463,
+    "ast_hash": "2d6f4a6f3e6e3311ad138712549e8d45",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/copper_storage_upgrade.json": {
+    "mtime": 1787691343.941089,
+    "ast_hash": "abe19c7811f27625650d60000f259286",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/creative_storage_upgrade.json": {
+    "mtime": 1787691344.005509,
+    "ast_hash": "61fd132385cc56c0c20b4f6fd91dca23",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/creative_vending_upgrade.json": {
+    "mtime": 1787691344.0444908,
+    "ast_hash": "f096407a86eb214e62aa9d3a6c0e7a52",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_full_drawers_1.json": {
+    "mtime": 1787691344.0935385,
+    "ast_hash": "6d0379661d5bd4f62ce0f7d93e196ce1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_full_drawers_2.json": {
+    "mtime": 1787691344.116616,
+    "ast_hash": "c87f017ad34f2ea78f708c7284843750",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_full_drawers_4.json": {
+    "mtime": 1787691344.152336,
+    "ast_hash": "af950188b0ee5c793e496357bff3752b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_half_drawers_1.json": {
+    "mtime": 1787691344.187438,
+    "ast_hash": "073b89e12cc759d0e5bd3cc720b69fe0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_half_drawers_2.json": {
+    "mtime": 1787691344.239085,
+    "ast_hash": "dd84f9e5fef42d622c17ea397b6d793c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_half_drawers_4.json": {
+    "mtime": 1787691344.2808194,
+    "ast_hash": "13a961a7ceaab1204436341afa80b0b5",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/crimson_trim.json": {
+    "mtime": 1787691344.3269036,
+    "ast_hash": "f4cfde19cfb7d0eebfd30bca439a8913",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_full_drawers_1.json": {
+    "mtime": 1787691344.375378,
+    "ast_hash": "95122c5648dca3ba412c29eb00ec7f58",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_full_drawers_2.json": {
+    "mtime": 1787691344.4243784,
+    "ast_hash": "88a196493e040f342cd41b7df4d1ccb8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_full_drawers_4.json": {
+    "mtime": 1787691344.4686046,
+    "ast_hash": "c84b24a5711bdce29546a11c40052d99",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_half_drawers_1.json": {
+    "mtime": 1787691344.5156896,
+    "ast_hash": "28d96b026b3014882da3f6b155cc50eb",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_half_drawers_2.json": {
+    "mtime": 1787691344.5617263,
+    "ast_hash": "c1348c7dc3a84d14dc43ee13eb9f28a0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_half_drawers_4.json": {
+    "mtime": 1787691344.610813,
+    "ast_hash": "7934754abf25cc219f5f7f7823089271",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/dark_oak_trim.json": {
+    "mtime": 1787691344.6602907,
+    "ast_hash": "47a7fe4741743740ca6db3451fd3ae31",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/detached_drawer.json": {
+    "mtime": 1787691344.700225,
+    "ast_hash": "64c081b8fe2a1adb532c477f339fc085",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/detached_drawer_full.json": {
+    "mtime": 1787691344.747794,
+    "ast_hash": "1ef2895ba1c358d8ffe55ffaa6a6791b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/diamond_storage_upgrade.json": {
+    "mtime": 1787691344.794871,
+    "ast_hash": "a3e7731b3fe386714f03e8427ac35998",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/drawer_key.json": {
+    "mtime": 1787691344.8407676,
+    "ast_hash": "b07909ade74a46657bfadf478ef3aab8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/drawer_puller.json": {
+    "mtime": 1787691344.9011748,
+    "ast_hash": "7c165df9165887e6e91af38555c70d7c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/emerald_storage_upgrade.json": {
+    "mtime": 1787691344.9486468,
+    "ast_hash": "3b44ac78e3192224120fbe6ec5ee514b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/fill_level_upgrade.json": {
+    "mtime": 1787691344.999256,
+    "ast_hash": "61e21b47e2ac5ce61de34c1f86e3b9ae",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_compacting_drawers_2.json": {
+    "mtime": 1787691345.0435357,
+    "ast_hash": "c760f00fbf6663ab5ca954663f87ba61",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_compacting_drawers_3.json": {
+    "mtime": 1787691345.0919514,
+    "ast_hash": "7c55b2df32e9901d482ac774d504ac05",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_compacting_half_drawers_2.json": {
+    "mtime": 1787691345.1146894,
+    "ast_hash": "9797345e6cdf210e91005033dcfe2551",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_compacting_half_drawers_3.json": {
+    "mtime": 1787691345.1488044,
+    "ast_hash": "72df304594376ea8f2e3cee979030933",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_controller.json": {
+    "mtime": 1787691345.1824603,
+    "ast_hash": "d9d67fde5c298a3074f76195e2608780",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_controller_io.json": {
+    "mtime": 1787691345.2289968,
+    "ast_hash": "89a3e91b48e813bae27a4e88cff97a32",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_full_drawers_1.json": {
+    "mtime": 1787691345.2791054,
+    "ast_hash": "8403d321c7a9bfe7a7fc8066f937757a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_full_drawers_2.json": {
+    "mtime": 1787691345.3245635,
+    "ast_hash": "cd27ff1d8b324fd91b1f835f3524a211",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_full_drawers_4.json": {
+    "mtime": 1787691345.373832,
+    "ast_hash": "3d44410bb4e15835311f82f68469d58a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_half_drawers_1.json": {
+    "mtime": 1787691345.415367,
+    "ast_hash": "1f092814da6d0f8cd3b71279d9006e24",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_half_drawers_2.json": {
+    "mtime": 1787691345.4606955,
+    "ast_hash": "e3b22343d3cbf5eb0d232ec49935f550",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_half_drawers_4.json": {
+    "mtime": 1787691345.5084932,
+    "ast_hash": "ec45a79ba7717563a7d946a040c778ed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framed_trim.json": {
+    "mtime": 1787691345.5574036,
+    "ast_hash": "5c9320b84eb256bd4daf98bd9415cd8f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/framing_table.json": {
+    "mtime": 1787691345.598172,
+    "ast_hash": "0a7a534b518a1d615f44f40a30ceb0ed",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/gold_storage_upgrade.json": {
+    "mtime": 1787691345.6311474,
+    "ast_hash": "a0896f21d61307480b48ce794212a45e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/hopper_upgrade.json": {
+    "mtime": 1787691345.6645412,
+    "ast_hash": "547ba5870d0ff2d8c24ac0ddf1dd22b7",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/illumination_upgrade.json": {
+    "mtime": 1787691345.7110438,
+    "ast_hash": "61668a2cc149795ddbc540ca28b766e1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/iron_storage_upgrade.json": {
+    "mtime": 1787691345.7583482,
+    "ast_hash": "503a0128469464e1fb1b3f9a8c6ca68c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_full_drawers_1.json": {
+    "mtime": 1787691345.8036215,
+    "ast_hash": "987cc0a06cff9ea63b74dcb4bb075315",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_full_drawers_2.json": {
+    "mtime": 1787691345.8505733,
+    "ast_hash": "4eceabc5dd1ed978c4688b56e3756622",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_full_drawers_4.json": {
+    "mtime": 1787691345.8976781,
+    "ast_hash": "e676a2f6107fcb56a265927755256d9a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_half_drawers_1.json": {
+    "mtime": 1787691345.9458928,
+    "ast_hash": "e6c7a116867c219c4b2562e932bde6bb",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_half_drawers_2.json": {
+    "mtime": 1787691345.9947064,
+    "ast_hash": "55a3f05ab07960cd130697a07ffb5de4",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_half_drawers_4.json": {
+    "mtime": 1787691346.044372,
+    "ast_hash": "46afcb90a6637278d1fcdc4673639bc3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/jungle_trim.json": {
+    "mtime": 1787691346.0912368,
+    "ast_hash": "704fc79f0cb0d61ef2739a2fda46301d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keybutton_concealment.json": {
+    "mtime": 1787691346.134267,
+    "ast_hash": "e264d46b7528c5523ed6b76261ebc11f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keybutton_drawer.json": {
+    "mtime": 1787691346.179611,
+    "ast_hash": "8567824260889a1c24720149d5420cdc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keybutton_quantify.json": {
+    "mtime": 1787691346.2472367,
+    "ast_hash": "b9dc64710934c2b6feedd4e05d4ae728",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring.json": {
+    "mtime": 1787691346.2895648,
+    "ast_hash": "286b298a05a5aab6c11fd4308175ee13",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_drawer.json": {
+    "mtime": 1787691346.334162,
+    "ast_hash": "622a5e22f621d668256a187eb870f67a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_personal.json": {
+    "mtime": 1787691346.365405,
+    "ast_hash": "4248a0113dd04616ba9b936974f67ddb",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_personal_cofh.json": {
+    "mtime": 1787691346.4138381,
+    "ast_hash": "25d1dcfafcbcfd3dde3ba6615f574405",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_personal_ftb.json": {
+    "mtime": 1787691346.458491,
+    "ast_hash": "2c236bab5559699cb9992a75e106d8a9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_personal_unlock.json": {
+    "mtime": 1787691346.5269444,
+    "ast_hash": "d514e5b0f6ceda9b92c83b2a54701118",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_priority.json": {
+    "mtime": 1787691346.5680428,
+    "ast_hash": "c7f432adbb41411892f10a78eb19b299",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_priority_n1.json": {
+    "mtime": 1787691346.619986,
+    "ast_hash": "cdfef1a292a948cfdf1932f5b485d704",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_priority_n2.json": {
+    "mtime": 1787691346.66351,
+    "ast_hash": "f6acd6be094cdb52a1e3a97c907c2dfa",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_priority_p1.json": {
+    "mtime": 1787691346.709204,
+    "ast_hash": "bb04351dccf2ef395f07ff27f6666d91",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_priority_p2.json": {
+    "mtime": 1787691346.7636366,
+    "ast_hash": "d8fb12c5b1418a49856b903da92297f1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_puller.json": {
+    "mtime": 1787691346.8019037,
+    "ast_hash": "f668418345216cb6efed203a4069bec4",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_quantify.json": {
+    "mtime": 1787691346.85104,
+    "ast_hash": "fbc0a7f5d1360d4b8f8fab1214406e5d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_shroud.json": {
+    "mtime": 1787691346.8948498,
+    "ast_hash": "bc603864ca6b5ee5d3be1adaadf12c89",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/keyring_suspend.json": {
+    "mtime": 1787691346.9455924,
+    "ast_hash": "1b7051304e677e44685889271a76ed2f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/magnet_upgrade.json": {
+    "mtime": 1787691346.9900148,
+    "ast_hash": "5b2f654767fdccc7b0d0419fda7eb323",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/magnet_upgrade_2.json": {
+    "mtime": 1787691347.0489287,
+    "ast_hash": "4f178508cd2fc9f7f426273344981f1e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/magnet_upgrade_3.json": {
+    "mtime": 1787691347.0816183,
+    "ast_hash": "4a10ed8b0510f62eac1591cb0d68c445",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_full_drawers_1.json": {
+    "mtime": 1787691347.129182,
+    "ast_hash": "424f564dd5204989b326029acbb9b8ef",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_full_drawers_2.json": {
+    "mtime": 1787691347.1787677,
+    "ast_hash": "133fdea439d81d65bb7921366e6e6e49",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_full_drawers_4.json": {
+    "mtime": 1787691347.225016,
+    "ast_hash": "1c9ef7ce18314fa0aeda26112743450c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_half_drawers_1.json": {
+    "mtime": 1787691347.2791338,
+    "ast_hash": "b2201ebaa30d5440403d0fc1b7aafa34",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_half_drawers_2.json": {
+    "mtime": 1787691347.3240733,
+    "ast_hash": "17852ce2a192b93a0be7dff0e263f919",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_half_drawers_4.json": {
+    "mtime": 1787691347.361889,
+    "ast_hash": "20e37cf2a090fb7dbce7c49253b304c4",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/mangrove_trim.json": {
+    "mtime": 1787691347.4110787,
+    "ast_hash": "abd12c207dd90d59d6c4f1646b8d852f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/max_redstone_upgrade.json": {
+    "mtime": 1787691347.457607,
+    "ast_hash": "a9a53a363cce083cf22d5903eff88af4",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/min_redstone_upgrade.json": {
+    "mtime": 1787691347.4988616,
+    "ast_hash": "193792fe894549b0d90f2a5ebaad15a6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/netherite_storage_upgrade.json": {
+    "mtime": 1787691347.5316088,
+    "ast_hash": "2c075c1304ee099081f154c0887b2a67",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_full_drawers_1.json": {
+    "mtime": 1787691347.580987,
+    "ast_hash": "4038d66442cc1c2c6274726080038a71",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_full_drawers_2.json": {
+    "mtime": 1787691347.626707,
+    "ast_hash": "412b04d8a487234fa4e0d3e065cf13e0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_full_drawers_4.json": {
+    "mtime": 1787691347.6736877,
+    "ast_hash": "29abd76378a0bfc881eca7e634f89d54",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_half_drawers_1.json": {
+    "mtime": 1787691347.7185814,
+    "ast_hash": "1d13a349c759d8f0079e28c95966a24f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_half_drawers_2.json": {
+    "mtime": 1787691347.7639866,
+    "ast_hash": "5728aa3affea15a27cffd63762769829",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_half_drawers_4.json": {
+    "mtime": 1787691347.8144917,
+    "ast_hash": "077783c860c43cfce2c985457449edc0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/oak_trim.json": {
+    "mtime": 1787691347.8580577,
+    "ast_hash": "6b849f8d41642de6a8795a12a93174c6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/obsidian_storage_upgrade.json": {
+    "mtime": 1787691347.9037447,
+    "ast_hash": "20a5a1b1542d919e4a5ca1c86dca09ea",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/one_stack_upgrade.json": {
+    "mtime": 1787691347.951911,
+    "ast_hash": "d2a88f3a345b4f61f222a3b7a2375d66",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/personal_key.json": {
+    "mtime": 1787691347.9986725,
+    "ast_hash": "893b4614583d7d86c06837e069faf0f7",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/personal_key_cofh.json": {
+    "mtime": 1787691348.0476835,
+    "ast_hash": "0371794d7eb2e44f73f77a2b92b333cf",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/personal_key_ftb.json": {
+    "mtime": 1787691348.0981436,
+    "ast_hash": "c0cec379d73db4c5ca212c50018d4eab",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/personal_key_unlock.json": {
+    "mtime": 1787691348.1448088,
+    "ast_hash": "ede22dff55e43f72bb2a25216b36da71",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/portability_upgrade.json": {
+    "mtime": 1787691348.191075,
+    "ast_hash": "31c9dfddd4e473275062a83a3badcc26",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/priority_key.json": {
+    "mtime": 1787691348.2374673,
+    "ast_hash": "9f4ea556ff2e207cefdd067d3dee3ba8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/priority_key_n1.json": {
+    "mtime": 1787691348.283821,
+    "ast_hash": "f2cb6c5e39ca0f0738e4d880faeef441",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/priority_key_n2.json": {
+    "mtime": 1787691348.32986,
+    "ast_hash": "745da5498303af9cffc9cc3eb62d32f0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/priority_key_p1.json": {
+    "mtime": 1787691348.3783815,
+    "ast_hash": "358075c50eab601cfd2fe5a5f88d05fd",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/priority_key_p2.json": {
+    "mtime": 1787691348.42271,
+    "ast_hash": "d0ffb5bb975279564a61a53671472b63",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/quantify_key.json": {
+    "mtime": 1787691348.4686518,
+    "ast_hash": "961051da653defb3e385fdd0d273da6c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/redstone_upgrade.json": {
+    "mtime": 1787691348.5164976,
+    "ast_hash": "3c705c4c8ca5e44065438c7e3a18ce9e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/remote_group_upgrade.json": {
+    "mtime": 1787691348.5644495,
+    "ast_hash": "f31d89015cf554a70de733a9940297f0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/remote_group_upgrade_bound.json": {
+    "mtime": 1787691348.6153464,
+    "ast_hash": "7f9a3cff946cb3ecf32364c0dcfcd900",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/remote_upgrade.json": {
+    "mtime": 1787691348.6596107,
+    "ast_hash": "a7c1775459cbf00f21eb6321c274f777",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/remote_upgrade_bound.json": {
+    "mtime": 1787691348.708586,
+    "ast_hash": "549587575b692b5962ff76481af17dfc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/shroud_key.json": {
+    "mtime": 1787691348.752543,
+    "ast_hash": "778b1aa90a0339db7344cd9a8d76d7d3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_full_drawers_1.json": {
+    "mtime": 1787691348.8075242,
+    "ast_hash": "66f4a128e108562507a940724a80b570",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_full_drawers_2.json": {
+    "mtime": 1787691348.9585423,
+    "ast_hash": "250f6eb1631a5f222e009e5ca1f2d9a6",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_full_drawers_4.json": {
+    "mtime": 1787691349.0635905,
+    "ast_hash": "8697899f777312aa81b8ea18d92d3377",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_half_drawers_1.json": {
+    "mtime": 1787691349.1517177,
+    "ast_hash": "fb4af765b5ea3c706732f254a05cacfa",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_half_drawers_2.json": {
+    "mtime": 1787691349.228009,
+    "ast_hash": "eae0022edb7b74524c26fb1da2ffec6b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_half_drawers_4.json": {
+    "mtime": 1787691349.2920363,
+    "ast_hash": "aa9043c97386f36406e347cbf67f7a47",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/spruce_trim.json": {
+    "mtime": 1787691349.381758,
+    "ast_hash": "9f8118d9dff289b9131791a4844d91b8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/suspend_key.json": {
+    "mtime": 1787691349.4354055,
+    "ast_hash": "724fb792a7e71b1facce3b9e5377d432",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/upgrade_template.json": {
+    "mtime": 1787691349.4986517,
+    "ast_hash": "9b38c71627d8b3ec4773e6eafe18df9f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/void_upgrade.json": {
+    "mtime": 1787691349.5822678,
+    "ast_hash": "c824e7bdfef5eed6da48e2669238eb41",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_full_drawers_1.json": {
+    "mtime": 1787691349.6444702,
+    "ast_hash": "2d5e1224bc37028735c60bcee80cfd11",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_full_drawers_2.json": {
+    "mtime": 1787691349.7021468,
+    "ast_hash": "6956c607e7e8c35a7256be9055211fa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_full_drawers_4.json": {
+    "mtime": 1787691349.7634783,
+    "ast_hash": "1b96365ade11452f74a2a11bb12b3b58",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_half_drawers_1.json": {
+    "mtime": 1787691349.8318088,
+    "ast_hash": "0352de43c852e308a77de77010259ddc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_half_drawers_2.json": {
+    "mtime": 1787691349.9066331,
+    "ast_hash": "764098191ba89efc9ddd1c450fa62dd4",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_half_drawers_4.json": {
+    "mtime": 1787691349.9586082,
+    "ast_hash": "212f0c512e62c4065e58beb76a8130dd",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/vault_drawers/items/warped_trim.json": {
+    "mtime": 1787691350.015652,
+    "ast_hash": "7aa6ab0691cd7221e8ff666482aeec45",
+    "semantic_hash": ""
+  },
+  "src/main/resources/data/cofh_core/tags/item/crafting/locks.json": {
+    "mtime": 1787692038.0054193,
+    "ast_hash": "272781809d839a91e6a30a6bb2d8ec00",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.4.md": {
+    "mtime": 1787692213.6975932,
+    "ast_hash": "c021d5208e1d238be0ff9ddf150ce6a2",
     "semantic_hash": ""
   }
 }

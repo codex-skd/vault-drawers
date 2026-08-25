@@ -54,10 +54,22 @@ references and building stacks lazily) and a capability ID collision. `./gradlew
 runClient` now boots to the main menu and a singleplayer world loads and runs without
 crashing. Released as `0.0.0-beta.3` on CurseForge.
 
-Known minor gaps (cosmetic, not blocking): missing textures for a handful of
-indicator/overlay meta-block models, and missing item models for several storage-upgrade
-tiers (obsidian/copper/iron/gold/emerald) — likely a Phase 3 asset-port oversight, worth
-a follow-up pass.
+**2026-08-25 update — recipes and item icons fixed**: what looked like minor cosmetic gaps
+turned out to be two real, mod-wide bugs:
+- All 159 items showed "Missing item model" (no icon anywhere) — 26.2 requires a new
+  `assets/vault_drawers/items/<id>.json` "item definition" file per item, introduced after
+  the 1.21.1 base. Generated all 159 missing files.
+- ALL crafting recipes (121 of 126 files) failed to parse — the 1.21.1 object-form
+  ingredient syntax (`{"item": "x"}` / `{"tag": "y"}`) is no longer valid in 26.2; fixed by
+  converting to the current plain-string / `#`-prefixed tag shorthand format. Also added an
+  empty fallback tag for the optional CoFH Core compat recipe so it doesn't error when CoFH
+  Core isn't installed.
+- The "missing texture: particle" warnings on ~30 indicator/overlay meta-block models are
+  confirmed pre-existing behavior from the original 1.21.1 mod (not a port bug) — no fix
+  needed.
+
+Released as `0.0.0-beta.4` on CurseForge. Verified: 0 recipe-parse errors, 0 missing item
+icons, no crash — a real playtest session ran cleanly.
 
 ### (historical) Phase 3 gap analysis — biggest remaining gap
 
@@ -121,12 +133,18 @@ in place first.
 
 ## Next Steps (priority order)
 
-1. **Runtime smoke test** (`runClient`) — first actual graphical launch of this port.
-   Catch missing-texture/model/rendering errors immediately.
-2. **Phase 4/5 verification** — client rendering and integration modules, now testable.
-3. **Phase 6 full testing checklist** — drawer placement, upgrades, controller network,
-   config sync, JEI recipe display.
-4. **Next CurseForge beta** once in-game basics are confirmed working.
+1. **Phase 6 full testing checklist** — drawer placement, item insert/extract, upgrades,
+   trim, controller network, config sync, JEI recipe display. Needs real interactive
+   play (manual or desktop-automation), not just log inspection.
+2. **Phase 5 integrations** (JEI/JADE/The One Probe/FTB Chunks/FTB Teams) — currently
+   NOT implemented at all beyond 2 stub interfaces; real compat modules exist unported in
+   `client_backup/integration/`, and their compile dependencies (Jade, TOP, FTB, Architectury)
+   aren't even resolved in `build.gradle` yet (only JEI is). Sizeable follow-up, optional/
+   non-blocking for core functionality.
+3. **Phase 4 client rendering deep-dive** — dynamic drawer face rendering, custom block
+   entity renderers, model decorators; loads without error but not yet visually verified
+   in detail (e.g. does the drawer front actually preview the stored item?).
+4. **Next CurseForge beta** as the above complete.
 
 ---
 
@@ -141,4 +159,6 @@ in place first.
 
 ---
 
-*Last updated: 2026-08-25 — Phase 2 (Java source) complete, Phase 3 (assets/data) not started.*
+*Last updated: 2026-08-25 — Phases 1-3 complete, main class wired, runClient verified
+playable (recipes + item icons fixed). Phases 4 (deep verification), 5 (integrations), 6
+(full gameplay testing checklist) remain.*
