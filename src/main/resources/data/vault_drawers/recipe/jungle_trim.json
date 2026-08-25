@@ -6,8 +6,11 @@
         "X/X"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "X": { "item": "minecraft:jungle_planks" }
+        "/": "#c:rods/wooden",
+        "X": "minecraft:jungle_planks"
     },
-    "result": { "id": "vault_drawers:jungle_trim", "count": 4 }
+    "result": {
+        "id": "vault_drawers:jungle_trim",
+        "count": 4
+    }
 }

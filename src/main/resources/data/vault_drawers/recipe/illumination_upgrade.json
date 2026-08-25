@@ -6,9 +6,12 @@
         "R/R"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "R": { "tag": "c:dusts/glowstone" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "R": "#c:dusts/glowstone",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:illumination_upgrade", "count": 8 }
+    "result": {
+        "id": "vault_drawers:illumination_upgrade",
+        "count": 8
+    }
 }

@@ -6,10 +6,12 @@
         "#G#"
     ],
     "key": {
-        "#": { "item": "minecraft:stone" },
-        "C": { "item": "minecraft:comparator" },
-        "X": { "tag": "vault_drawers:drawers" },
-        "G": { "tag": "c:ingots/gold" }
+        "#": "minecraft:stone",
+        "C": "minecraft:comparator",
+        "X": "#vault_drawers:drawers",
+        "G": "#c:ingots/gold"
     },
-    "result": { "id": "vault_drawers:controller_io" }
+    "result": {
+        "id": "vault_drawers:controller_io"
+    }
 }

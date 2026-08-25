@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "#": { "tag": "c:ingots/copper" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "#": "#c:ingots/copper",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:copper_storage_upgrade" }
+    "result": {
+        "id": "vault_drawers:copper_storage_upgrade"
+    }
 }

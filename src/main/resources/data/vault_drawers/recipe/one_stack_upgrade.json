@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "#": { "item": "minecraft:flint" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "#": "minecraft:flint",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:one_stack_upgrade" }
+    "result": {
+        "id": "vault_drawers:one_stack_upgrade"
+    }
 }

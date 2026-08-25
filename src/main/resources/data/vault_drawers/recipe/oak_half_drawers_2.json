@@ -6,8 +6,11 @@
         "/X/"
     ],
     "key": {
-        "/": { "item": "minecraft:oak_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:oak_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:oak_half_drawers_2", "count": 2 }
+    "result": {
+        "id": "vault_drawers:oak_half_drawers_2",
+        "count": 2
+    }
 }

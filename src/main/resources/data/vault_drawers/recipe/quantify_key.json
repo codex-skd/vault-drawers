@@ -1,8 +1,10 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        { "item": "vault_drawers:drawer_key" },
-        { "item": "minecraft:writable_book" }
+        "vault_drawers:drawer_key",
+        "minecraft:writable_book"
     ],
-    "result": { "id": "vault_drawers:quantify_key" }
+    "result": {
+        "id": "vault_drawers:quantify_key"
+    }
 }

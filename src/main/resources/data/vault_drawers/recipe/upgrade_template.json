@@ -6,8 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "X": { "tag": "vault_drawers:drawers" }
+        "/": "#c:rods/wooden",
+        "X": "#vault_drawers:drawers"
     },
-    "result": { "id": "vault_drawers:upgrade_template", "count": 4 }
+    "result": {
+        "id": "vault_drawers:upgrade_template",
+        "count": 4
+    }
 }

@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "#": { "tag": "c:ingots/netherite" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "#": "#c:ingots/netherite",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:netherite_storage_upgrade" }
+    "result": {
+        "id": "vault_drawers:netherite_storage_upgrade"
+    }
 }

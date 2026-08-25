@@ -5,9 +5,11 @@
         "XXX"
     ],
     "key": {
-        "#": { "tag": "c:chests/wooden" },
-        "X": { "tag": "minecraft:wooden_slabs" },
-        "/": { "tag": "c:rods/wooden" }
+        "#": "#c:chests/wooden",
+        "X": "#minecraft:wooden_slabs",
+        "/": "#c:rods/wooden"
     },
-    "result": { "id": "vault_drawers:detached_drawer" }
+    "result": {
+        "id": "vault_drawers:detached_drawer"
+    }
 }

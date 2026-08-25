@@ -1,8 +1,10 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        { "item": "vault_drawers:quantify_key" },
-        { "item": "minecraft:stone_button" }
+        "vault_drawers:quantify_key",
+        "minecraft:stone_button"
     ],
-    "result": { "id": "vault_drawers:keybutton_quantify" }
+    "result": {
+        "id": "vault_drawers:keybutton_quantify"
+    }
 }

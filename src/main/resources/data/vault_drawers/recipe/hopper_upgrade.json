@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "H": { "item": "minecraft:hopper" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "H": "minecraft:hopper",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:hopper_upgrade" }
+    "result": {
+        "id": "vault_drawers:hopper_upgrade"
+    }
 }

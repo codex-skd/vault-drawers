@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "#": { "item": "minecraft:shulker_shell" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "#": "minecraft:shulker_shell",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:portability_upgrade" }
+    "result": {
+        "id": "vault_drawers:portability_upgrade"
+    }
 }

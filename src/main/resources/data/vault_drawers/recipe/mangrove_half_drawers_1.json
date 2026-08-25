@@ -6,8 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "item": "minecraft:mangrove_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:mangrove_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:mangrove_half_drawers_1", "count": 1 }
+    "result": {
+        "id": "vault_drawers:mangrove_half_drawers_1",
+        "count": 1
+    }
 }

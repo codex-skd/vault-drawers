@@ -6,8 +6,11 @@
         "X/X"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "X": { "item": "minecraft:bamboo_planks" }
+        "/": "#c:rods/wooden",
+        "X": "minecraft:bamboo_planks"
     },
-    "result": { "id": "vault_drawers:bamboo_trim", "count": 4 }
+    "result": {
+        "id": "vault_drawers:bamboo_trim",
+        "count": 4
+    }
 }

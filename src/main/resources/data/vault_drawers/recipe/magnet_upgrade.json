@@ -6,9 +6,11 @@
         "C/C"
     ],
     "key": {
-        "/": { "item": "minecraft:iron_bars" },
-        "C": { "tag": "c:ingots/copper" },
-        "X": { "item": "vault_drawers:hopper_upgrade" }
+        "/": "minecraft:iron_bars",
+        "C": "#c:ingots/copper",
+        "X": "vault_drawers:hopper_upgrade"
     },
-    "result": { "id": "vault_drawers:magnet_upgrade" }
+    "result": {
+        "id": "vault_drawers:magnet_upgrade"
+    }
 }

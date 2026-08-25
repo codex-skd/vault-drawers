@@ -6,8 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "item": "minecraft:crimson_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:crimson_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:crimson_half_drawers_1", "count": 1 }
+    "result": {
+        "id": "vault_drawers:crimson_half_drawers_1",
+        "count": 1
+    }
 }

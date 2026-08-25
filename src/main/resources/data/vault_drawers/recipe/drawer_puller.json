@@ -6,8 +6,10 @@
         "X"
     ],
     "key": {
-        "#": { "tag": "c:ingots/iron" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "#": "#c:ingots/iron",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:drawer_puller" }
+    "result": {
+        "id": "vault_drawers:drawer_puller"
+    }
 }

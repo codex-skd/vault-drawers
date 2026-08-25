@@ -6,9 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "R": { "tag": "c:dusts/redstone" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "R": "#c:dusts/redstone",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:max_redstone_upgrade" }
+    "result": {
+        "id": "vault_drawers:max_redstone_upgrade"
+    }
 }

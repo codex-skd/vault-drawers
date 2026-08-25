@@ -6,9 +6,11 @@
         "#/#"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "#": { "item": "minecraft:lapis_lazuli" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "#": "minecraft:lapis_lazuli",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:conversion_upgrade" }
+    "result": {
+        "id": "vault_drawers:conversion_upgrade"
+    }
 }

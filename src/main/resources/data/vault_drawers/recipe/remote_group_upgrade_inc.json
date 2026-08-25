@@ -4,8 +4,10 @@
         "EXE"
     ],
     "key": {
-        "E": { "item": "minecraft:ender_pearl" },
-        "X": { "item": "vault_drawers:remote_upgrade" }
+        "E": "minecraft:ender_pearl",
+        "X": "vault_drawers:remote_upgrade"
     },
-    "result": { "id": "vault_drawers:remote_group_upgrade" }
+    "result": {
+        "id": "vault_drawers:remote_group_upgrade"
+    }
 }

@@ -6,8 +6,11 @@
         "/X/"
     ],
     "key": {
-        "/": { "item": "minecraft:spruce_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:spruce_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:spruce_half_drawers_2", "count": 2 }
+    "result": {
+        "id": "vault_drawers:spruce_half_drawers_2",
+        "count": 2
+    }
 }

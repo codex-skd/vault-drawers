@@ -6,8 +6,11 @@
         "/X/"
     ],
     "key": {
-        "/": { "item": "minecraft:birch_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:birch_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:birch_half_drawers_2", "count": 2 }
+    "result": {
+        "id": "vault_drawers:birch_half_drawers_2",
+        "count": 2
+    }
 }

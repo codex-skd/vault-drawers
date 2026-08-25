@@ -6,8 +6,11 @@
         "///"
     ],
     "key": {
-        "/": { "item": "minecraft:cherry_slab" },
-        "X": { "tag": "c:chests/wooden" }
+        "/": "minecraft:cherry_slab",
+        "X": "#c:chests/wooden"
     },
-    "result": { "id": "vault_drawers:cherry_half_drawers_1", "count": 1 }
+    "result": {
+        "id": "vault_drawers:cherry_half_drawers_1",
+        "count": 1
+    }
 }

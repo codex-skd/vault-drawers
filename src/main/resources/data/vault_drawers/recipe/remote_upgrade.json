@@ -6,10 +6,12 @@
         "///"
     ],
     "key": {
-        "/": { "tag": "c:rods/wooden" },
-        "E": { "item": "minecraft:ender_pearl" },
-        "R": { "tag": "c:dusts/redstone" },
-        "X": { "item": "vault_drawers:upgrade_template" }
+        "/": "#c:rods/wooden",
+        "E": "minecraft:ender_pearl",
+        "R": "#c:dusts/redstone",
+        "X": "vault_drawers:upgrade_template"
     },
-    "result": { "id": "vault_drawers:remote_upgrade" }
+    "result": {
+        "id": "vault_drawers:remote_upgrade"
+    }
 }
