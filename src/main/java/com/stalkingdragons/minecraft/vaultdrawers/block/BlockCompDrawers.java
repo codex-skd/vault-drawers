@@ -1,0 +1,137 @@
+package com.stalkingdragons.minecraft.vaultdrawers.block;
+
+import com.stalkingdragons.minecraft.vaultdrawers.ModServices;
+import com.stalkingdragons.minecraft.vaultdrawers.api.config.IDrawerConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.api.framing.IFramedBlock;
+import com.stalkingdragons.minecraft.vaultdrawers.api.framing.IFramedSourceBlock;
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.IDrawerGroup;
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.INetworked;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityDrawers;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityDrawersComp;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.util.FrameHelper;
+import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.core.ModBlocks;
+import com.stalkingdragons.minecraft.vaultdrawers.util.WorldUtils;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
+
+public class BlockCompDrawers extends BlockDrawers implements INetworked, IFramedSourceBlock
+{
+    public static final MapCodec<BlockCompDrawers> CODEC = RecordCodecBuilder.mapCodec(instance ->
+        instance.group(
+            Codec.INT.fieldOf("storageUnits").forGetter(BlockDrawers::getStorageUnits),
+            propertiesCodec()
+        ).apply(instance, BlockCompDrawers::new)
+    );
+
+    public static final EnumProperty<EnumCompDrawer> SLOTS = EnumProperty.create("slots", EnumCompDrawer.class);
+
+    public BlockCompDrawers (int drawerCount, boolean halfDepth, IDrawerConfig drawerConfig, BlockBehaviour.Properties properties) {
+        super(drawerCount, halfDepth, drawerConfig, properties);
+    }
+
+    @Deprecated
+    public BlockCompDrawers (int drawerCount, boolean halfDepth, int storageUnits, BlockBehaviour.Properties properties) {
+        super(drawerCount, halfDepth, storageUnits, properties);
+    }
+
+    @Deprecated
+    public BlockCompDrawers (int drawerCount, boolean halfDepth, BlockBehaviour.Properties properties) {
+        super(drawerCount, halfDepth, calcUnits(drawerCount, halfDepth), properties);
+    }
+
+    private static int calcUnits (int drawerCount, boolean halfDepth) {
+        return halfDepth ? 16 : 32;
+    }
+
+    @Deprecated
+    public BlockCompDrawers (int storageUnits, Properties properties) {
+        super(3, false, storageUnits, properties);
+        this.registerDefaultState(defaultBlockState()
+            .setValue(SLOTS, EnumCompDrawer.OPEN1));
+    }
+
+    @Deprecated
+    public BlockCompDrawers (Properties properties) {
+        this(3, false, properties);
+    }
+
+    @Override
+    public MapCodec<BlockCompDrawers> codec() {
+        return CODEC;
+    }
+
+    @Override
+    protected void createBlockStateDefinition (StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
+        builder.add(SLOTS);
+    }
+
+    @Override
+    protected int getFaceSlot (Direction correctSide, @NotNull Vec3 normalizedHit) {
+        if (!hitWithinArea(correctSide, normalizedHit, .0625f, .9375f))
+            return super.getFaceSlot(correctSide, normalizedHit);
+
+        if (hitWithinY(normalizedHit, .5f, 1f))
+            return 0;
+
+        if (getDrawerCount() == 2)
+            return 1;
+
+        if (getDrawerCount() == 3) {
+            if (hitWithinX(correctSide, normalizedHit, 0, .5f))
+                return 1;
+            else
+                return 2;
+        }
+
+        return super.getFaceSlot(correctSide, normalizedHit);
+    }
+
+    @Override
+    public void setPlacedBy (@NotNull Level world, @NotNull BlockPos pos, @NotNull BlockState state, LivingEntity entity, @NotNull ItemStack stack) {
+        super.setPlacedBy(world, pos, state, entity, stack);
+
+        BlockEntityDrawersComp blockEntity = WorldUtils.getBlockEntity(world, pos, BlockEntityDrawersComp.class);
+        if (blockEntity != null) {
+            IDrawerGroup group = blockEntity.getGroup();
+            for (int i = group.getDrawerCount() - 1; i >= 0; i--) {
+                if (!group.getDrawer(i).isEmpty()) {
+                    world.setBlock(pos, state.setValue(SLOTS, EnumCompDrawer.byOpenSlots(i + 1)), 3);
+                    break;
+                }
+            }
+        }
+    }
+
+    @Override
+    public BlockEntityDrawers newBlockEntity (@NotNull BlockPos pos, @NotNull BlockState state) {
+        return ModServices.RESOURCE_FACTORY.createBlockEntityDrawersComp(getDrawerCount()).create(pos, state);
+    }
+
+    @Override
+    public ItemStack makeFramedItem (ItemStack source, ItemStack matSide, ItemStack matTrim, ItemStack matFront) {
+        IFramedBlock frameBlock = switch(getDrawerCount()) {
+            case 2 -> isHalfDepth() ? ModBlocks.FRAMED_COMPACTING_HALF_DRAWERS_2.get() : ModBlocks.FRAMED_COMPACTING_DRAWERS_2.get();
+            case 3 -> isHalfDepth() ? ModBlocks.FRAMED_COMPACTING_HALF_DRAWERS_3.get() : ModBlocks.FRAMED_COMPACTING_DRAWERS_3.get();
+            default -> null;
+        };
+        if (frameBlock == null)
+            return ItemStack.EMPTY;
+
+        return FrameHelper.makeFramedItem(frameBlock, source, matSide, matTrim, matFront);
+    }
+}

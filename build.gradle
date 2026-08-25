@@ -29,7 +29,7 @@ base {
     archivesName = "${mod_id}-${minecraft_version}-neoforge-${neo_version}"
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
     version = project.neo_version
@@ -70,15 +70,16 @@ configurations {
 }
 
 dependencies {
+    implementation files("build/moddev/artifacts/minecraft-patched-${neo_version}.jar")
     // JEI
     runtimeOnly "mezz.jei:jei-${jei_mc}-neoforge:${jei_version}"
-    // JADE
-    implementation "curse.maven:jade-${jade_projid}:${jade_fileid}"
-    implementation "curse.maven:the-one-probe-245211:6106998"
-    implementation "curse.maven:architectury-api-419699:5786327"
-    implementation "curse.maven:ftb-library-forge-404465:6807431"
-    implementation "curse.maven:ftb-chunks-forge-314906:6504893"
-    implementation "curse.maven:ftb-teams-forge-404468:6119437"
+    // JADE / The One Probe / Architectury / FTB - TODO: resolve via CurseForge maven or Modrinth
+    // implementation "curse.maven:jade-${jade_projid}:${jade_fileid}"
+    // implementation "curse.maven:the-one-probe-245211:6106998"
+    // implementation "curse.maven:architectury-api-419699:5786327"
+    // implementation "curse.maven:ftb-library-forge-404465:6807431"
+    // implementation "curse.maven:ftb-chunks-forge-314906:6504893"
+    // implementation "curse.maven:ftb-teams-forge-404468:6119437"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

@@ -1,0 +1,73 @@
+package com.stalkingdragons.minecraft.vaultdrawers.item;
+
+import com.stalkingdragons.minecraft.vaultdrawers.util.ComponentUtil;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.LevelReader;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
+
+public class ItemUpgrade extends Item
+{
+    private static int nextGroupId = 0;
+
+    private boolean allowMultiple;
+    private final int groupId;
+
+    public ItemUpgrade (Properties properties) {
+        this(properties, getNextGroupId());
+    }
+
+    protected ItemUpgrade (Properties properties, int groupId) {
+        super(properties);
+        this.groupId = groupId;
+    }
+
+    protected static int getNextGroupId () {
+        int groupId = nextGroupId;
+        nextGroupId += 1;
+        return groupId;
+    }
+
+    public boolean doesSneakBypassUse (ItemStack stack, LevelReader level, BlockPos pos, Player player) {
+        return true;
+    }
+
+    public int getUpgradeGroup() {
+        return groupId;
+    }
+
+    @Override
+    public void appendHoverText (ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltip, flag);
+        ComponentUtil.appendSplitDescription(tooltip, this);
+
+        if (!isEnabled())
+            tooltip.add(Component.translatable("itemConfig.storagedrawers.disabled_upgrade")
+                .withStyle(ChatFormatting.YELLOW));
+    }
+
+    @NotNull
+    public Component getDescription() {
+        return isEnabled()
+            ? Component.translatable(this.getDescriptionId() + ".desc") : Component.empty();
+    }
+
+    public boolean isEnabled () {
+        return true;
+    }
+
+    public void setAllowMultiple (boolean allow) {
+        allowMultiple = allow;
+    }
+
+    public boolean getAllowMultiple () {
+        return allowMultiple;
+    }
+}

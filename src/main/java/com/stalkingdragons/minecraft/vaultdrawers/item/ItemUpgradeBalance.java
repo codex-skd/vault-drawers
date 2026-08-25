@@ -1,0 +1,26 @@
+package com.stalkingdragons.minecraft.vaultdrawers.item;
+
+import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
+
+public class ItemUpgradeBalance extends ItemUpgrade
+{
+    public ItemUpgradeBalance (Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public boolean isEnabled () {
+        return ModCommonConfig.INSTANCE.UPGRADES.balanceUpgrade.enableUpgrade.get();
+    }
+
+    @Override
+    @NotNull
+    public Component getDescription() {
+        return ModCommonConfig.INSTANCE.UPGRADES.balanceUpgrade.enableUpgrade.get()
+            ? Component.translatable("item.storagedrawers.balance_fill_upgrade.desc")
+            : Component.translatable("itemConfig.storagedrawers.disabled_upgrade").withStyle(ChatFormatting.RED);
+    }
+}

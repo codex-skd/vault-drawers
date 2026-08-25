@@ -1,0 +1,161 @@
+package com.stalkingdragons.minecraft.vaultdrawers.item;
+
+import com.stalkingdragons.minecraft.vaultdrawers.ModServices;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityController;
+import com.stalkingdragons.minecraft.vaultdrawers.components.item.ControllerBinding;
+import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.core.ModDataComponents;
+import com.stalkingdragons.minecraft.vaultdrawers.core.ModItems;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
+import java.util.List;
+
+public class ItemUpgradeRemote extends ItemUpgrade
+{
+    private static final int remoteGroupId;
+    static {
+        remoteGroupId = ItemUpgrade.getNextGroupId();
+    }
+
+    private final boolean groupUpgrade;
+    private final boolean bound;
+
+    public ItemUpgradeRemote (boolean groupUpgrade, boolean bound, Properties properties) {
+        super(properties, remoteGroupId);
+        this.groupUpgrade = groupUpgrade;
+        this.bound = bound;
+    }
+
+    @Override
+    public boolean isEnabled () {
+        if (!ModCommonConfig.INSTANCE.UPGRADES.remoteUpgrade.enableUpgrade.get())
+            return false;
+
+        if (groupUpgrade)
+            return ModCommonConfig.INSTANCE.UPGRADES.remoteUpgrade.enableGroup.get();
+
+        return true;
+    }
+
+    @Override
+    public void appendHoverText (ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltip, flag);
+
+        BlockPos pos = getBoundPosition(stack);
+        if (pos != null)
+            tooltip.add(Component.translatable(getDescriptionId() + ".bound", pos.getX(), pos.getY(), pos.getZ())
+                .withStyle(ChatFormatting.YELLOW));
+    }
+
+    public static BlockPos getBoundPosition (ItemStack itemStack) {
+        if (itemStack == null)
+            return null;
+
+        ControllerBinding binding = itemStack.getOrDefault(ModDataComponents.CONTROLLER_BINDING.get(), ControllerBinding.EMPTY);
+        if (!binding.valid())
+            return null;
+
+        return binding.blockPos();
+    }
+
+    public static ItemStack setBoundController (ItemStack itemStack, BlockEntityController controller) {
+        if (ModCommonConfig.INSTANCE.GENERAL.debugTrace.get())
+            ModServices.log.info("remote upgrade [{}] set bound controller [{}]", itemStack, controller);
+
+        if (itemStack == null || controller == null)
+            return itemStack;
+
+        if (itemStack.getItem() instanceof ItemUpgradeRemote item) {
+            ItemStack newStack = new ItemStack(item.isGroupUpgrade()
+                ? ModItems.REMOTE_GROUP_UPGRADE_BOUND.get()
+                : ModItems.REMOTE_UPGRADE_BOUND.get(), itemStack.getCount());
+
+            newStack.set(ModDataComponents.CONTROLLER_BINDING.get(), new ControllerBinding(controller.getBlockPos()));
+            return newStack;
+        }
+
+        return itemStack;
+    }
+
+    public static ItemStack setUnbound (ItemStack itemStack) {
+        if (ModCommonConfig.INSTANCE.GENERAL.debugTrace.get())
+            ModServices.log.info("remote upgrade [{}] set unbound", itemStack);
+
+        if (itemStack != null && itemStack.getItem() instanceof ItemUpgradeRemote item) {
+            return new ItemStack(item.isGroupUpgrade()
+                ? ModItems.REMOTE_GROUP_UPGRADE.get()
+                : ModItems.REMOTE_UPGRADE.get(), itemStack.getCount());
+        }
+
+        return itemStack;
+    }
+
+    public static ItemStack copyControllerBinding (ItemStack refStack, ItemStack targetStack) {
+        if (refStack == null || targetStack == null)
+            return targetStack;
+
+        if (refStack.getItem() instanceof ItemUpgradeRemote refItem
+            && targetStack.getItem() instanceof ItemUpgradeRemote targetItem) {
+
+            Item newItem;
+            if (targetItem.isGroupUpgrade()) {
+                newItem = refItem.isBound()
+                    ? ModItems.REMOTE_GROUP_UPGRADE_BOUND.get()
+                    : ModItems.REMOTE_GROUP_UPGRADE.get();
+            } else {
+                newItem = refItem.isBound()
+                    ? ModItems.REMOTE_UPGRADE_BOUND.get()
+                    : ModItems.REMOTE_UPGRADE.get();
+            }
+
+            ItemStack newStack = new ItemStack(newItem, targetStack.getCount());
+            newStack.set(ModDataComponents.CONTROLLER_BINDING.get(),
+                refStack.getOrDefault(ModDataComponents.CONTROLLER_BINDING.get(), ControllerBinding.EMPTY));
+
+            return newStack;
+        }
+
+        return targetStack;
+    }
+
+    public static BlockEntityController getBoundController (ItemStack itemStack, LevelAccessor level) {
+        if (level == null)
+            return null;
+
+        BlockPos pos = getBoundPosition(itemStack);
+        if (pos == null)
+            return null;
+
+        BlockEntity entity = level.getBlockEntity(pos);
+        if (entity instanceof BlockEntityController bec)
+            return bec;
+
+        return null;
+    }
+
+    public static void validateInventory (Inventory inventory, Level level) {
+        if (level == null || inventory == null)
+            return;
+
+        for (int i = 0; i < inventory.getContainerSize(); i++) {
+            ItemStack stack = inventory.getItem(i);
+        }
+    }
+
+    public boolean isGroupUpgrade() {
+        return groupUpgrade;
+    }
+
+    public boolean isBound() {
+        return bound;
+    }
+}

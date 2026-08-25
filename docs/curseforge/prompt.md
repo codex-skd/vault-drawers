@@ -1,104 +1,42 @@
-# Vault Drawers — Prompt de Despliegue / Continuidad
+# Vault Drawers — Logo Generation Prompt for CurseForge
 
-## Contexto Rápido para Nueva Sesión
+## AI Image Generation Prompt
 
-> **Proyecto**: Vault Drawers (port de Storage Drawers a MC 26.2 / NeoForge 26.2.0.57)
-> **Mod ID**: `vault_drawers`
-> **Package**: `com.stalkingdragons.minecraft.vaultdrawers`
-> **Rama**: `minecraft/26.2/neoforge-26.2.0.57/production`
-> **Repo**: `https://gitlab.com/stalking-dragons/minecraft/vault-drawers.git`
-> **Directorio**: `G:\Proyectos\Mods_Minecraft\vault-drawers\neoforge\26.2\`
+> **Style**: Clean, modern Minecraft mod icon (64x64 or 128x128), isometric voxel aesthetic, high contrast for small sizes
+> **Subject**: A stylized drawer block with vault-style reinforced framing — 2x2 compartment drawer front with thick metal corners and center lock plate, wood texture (oak) with dark iron banding
+> **Palette**: Oak wood (#8B7355, #6B5B4A), Dark iron/steel (#2F2F2F, #4A4A4A), Gold accent (#FFD700) for lock/keyhole, subtle glow (#FFAA00) on keyhole
+> **Lighting**: Top-left directional light, slight ambient occlusion in compartment seams
+> **Background**: Transparent (for CurseForge icon)
+> **Composition**: Centered, front-facing with slight 3/4 isometric tilt, fills 80% of canvas
+> **Details**: 
+> - 4 equal compartments visible (2x2 grid)
+> - Reinforced metal frame at corners (3px thick)
+> - Center vertical metal strip with keyhole
+> - Subtle drawer pull handles on each compartment (small horizontal bars)
+> - "Vault" aesthetic: heavy, secure, industrial but warm wood
+> **Negative**: No text, no UI elements, no hands, no particles, no realistic photo style, no gradient backgrounds
 
-## Archivos Clave a Leer
+## Variants
 
-1. `docs/WORKFLOW_VAULT_DRAWERS_26-2.md` — Workflow completo (este archivo es la fuente de verdad)
-2. `docs/curseforge/project_vars.md` — IDs, tokens, parámetros de upload
-3. `docs/curseforge/summary.md` — Resumen técnico del port (qué se portó, checklist, riesgos)
-4. `docs/curseforge/project_description.md` — HTML para CurseForge
-5. `gradle.properties` — Versiones, mod_id, group, etc.
-5. `build.gradle` — Config NeoForge 26.2.0.57
-6. `src/main/resources/META-INF/neoforge.mods.toml` — Metadatos del mod
+| Variant | Prompt Adjustment |
+|---------|-------------------|
+| **Main (128x128)** | Full detail as above |
+| **Small (64x64)** | Simplified: remove keyhole detail, thicker lines, bolder contrast |
+| **Banner (468x60)** | Horizontal: 3 drawers side-by-side, "VAULT DRAWERS" text in pixel font below, dark parchment background |
+| **Animated** | Keyhole glows pulse (1s cycle), subtle drawer "breathing" (1px scale) |
 
-## Comandos Esenciales
+## Reference Assets
 
-```bash
-# Build
-./gradlew.bat clean build
+- Original Storage Drawers icon: `lib_ext/StorageDrawers-1.21/StorageDrawers-1.21/common/src/main/resources/assets/storagedrawers/icon.png`
+- Minecraft drawer block texture: `assets/minecraft/textures/block/oak_planks.png` + custom framing overlay
+- NeoForge mod icon guidelines: 128x128 PNG, transparent BG, no text
 
-# Dev client
-./gradlew.bat runClient
+## Generation Notes
 
-# Dev server
-./gradlew.bat runServer
+- Use **GPT-Image-2** (ChatGPT Images 2.0) via `gpt-image-2` skill
+- Iterate: generate → review at 64x64 → refine contrast/readability
+- Final deliverable: `icon.png` (128x128) + `icon_64.png` (64x64) in `src/main/resources/assets/vault_drawers/`
 
-# Verificar JAR
-ls build/libs/
+## Brand Keywords
 
-# Git workflow
-git status
-git add -A
-git commit -m "tipo: descripción
-
-v<version>"
-git push
-
-# Tag release
-git tag -a 26.2-neoforge-<version> -m "v<version>: descripción"
-git push origin <tag>
-
-# Graphify
-GRAPHIFY="C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe"
-"$GRAPHIFY" update . --force
-git add graphify-out/ && git commit -m "chore: update knowledge graph" && git push
-
-# CurseForge upload
-powershell -File ../codex-docs/scripts/curseforge-upload.ps1
-```
-
-## Estado Actual del Port
-
-**Fase**: F1 (Core) — Por empezar
-**Bloqueo**: Ninguno
-**Próxima tarea**: Portar `lib_ext/neoforge/src` + `lib_ext/common_src` → `src/main/` con refactor de package `com.jaquadro.minecraft.storagedrawers` → `com.stalkingdragons.minecraft.vaultdrawers`
-
-## Referencias Originales (lib_ext/)
-
-- `lib_ext/neoforge/src/` — Código NeoForge original (165 archivos .java)
-- `lib_ext/common_src/` — Código common original (mixins, access widener, bloques, items, BEs, caps, red, recetas, config)
-- **Úsalo como referencia exacta** — copiar lógica 1:1, solo cambiar package, mod_id, namespace assets
-
-## Decisiones de Diseño (No Cambiar)
-
-- ✅ Port **idéntico** al original — nada de features nuevas
-- ✅ Mod ID `vault_drawers` (snake_case)
-- ✅ Package `com.stalkingdragons.minecraft.vaultdrawers`
-- ✅ Display name "Vault Drawers" (Title Case)
-- ✅ JAR: `vault_drawers-26.2-neoforge-26.2.0.57-13.11.4.jar`
-- ✅ Assets namespace: `vault_drawers:`
-- ✅ NeoForge 26.2.0.57 fijo
-- ✅ Java 21
-- ✅ MIT License (igual que original)
-- ✅ Créditos a Texelsaur en README, description, credits
-
-## Si el Usuario Pide "Continuar Port"
-
-1. Leer `docs/curseforge/summary.md` → sección "Próximos Pasos Inmediatos"
-2. Empezar por crear `neoforge.mods.toml` si no existe
-3. Refactor package en `src/main/java/...`
-4. Registrar bloques/items/BEs con `DeferredRegister`
-5. Seguir fases F1→F7 en orden
-
-## Si el Usuario Pide "Deploy a CurseForge"
-
-1. Verificar `project_vars.md` tenga `project_id` y `api_token`
-2. `./gradlew.bat clean build`
-3. Crear `docs/curseforge/versions/<version>.md` con HTML changelog
-4. Actualizar `CHANGELOG.md`
-5. Commit + tag + push
-6. `powershell -File ../codex-docs/scripts/curseforge-upload.ps1`
-
-## Contacto / Soporte
-
-- Codex Stalking Dragons: https://codex.skdragons.com/
-- Scripts compartidos: `../codex-docs/scripts/`
-- Referencias: `../codex-docs/reference/` (CURSEFORGE.md, GRAPHIFY.md, REPO_SETUP.md)
+`storage` `drawers` `vault` `secure` `organization` `minecraft` `mod` `neoforge` `wood` `metal` `industrial` `clean` `readable`

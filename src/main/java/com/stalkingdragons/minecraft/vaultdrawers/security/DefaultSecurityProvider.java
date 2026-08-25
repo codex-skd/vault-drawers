@@ -1,0 +1,27 @@
+package com.stalkingdragons.minecraft.vaultdrawers.security;
+
+import com.stalkingdragons.minecraft.vaultdrawers.api.security.ISecurityProvider;
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.attribute.IProtectable;
+import com.mojang.authlib.GameProfile;
+import net.minecraft.world.entity.player.Player;
+
+public class DefaultSecurityProvider implements ISecurityProvider
+{
+    @Override
+    public String getProviderID () {
+        return null;
+    }
+
+    @Override
+    public boolean hasOwnership (GameProfile profile, IProtectable target) {
+        if (target == null || profile == null)
+            return false;
+
+        return target.getOwner() == null || target.getOwner().equals(profile.id());
+    }
+
+    @Override
+    public boolean hasAccess (Player player, IProtectable target) {
+        return hasOwnership(player.getGameProfile(), target);
+    }
+}
