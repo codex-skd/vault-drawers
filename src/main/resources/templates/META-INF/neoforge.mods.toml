@@ -6,6 +6,7 @@ issueTrackerURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers/-/i
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
+logoFile="icon.png"
 displayURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers"
 credits="Original mod: Storage Drawers by Texelsaur (MIT). Port by Stalking Dragons."
 authors="${mod_authors}"
