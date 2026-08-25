@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.4] - 2026-08-25
+
+### Corregido
+- **Todas las recetas de crafteo funcionan**: el formato de receta de 1.21.1 ya no lo acepta el parser de 26.2 — ninguna receta cargaba en las betas anteriores. Convertidas todas al formato de ingredientes actual
+- **Todos los items muestran su icono correcto** en inventario/mano — 26.2 exige un fichero de "item definition" por item que faltaba para todos
+
+### Estado
+- ✅ Verificado: sesión de juego real con 0 errores de parseo de recetas y 0 iconos de item faltantes
+
 ## [0.0.0-beta.3] - 2026-08-25
 
 ### Corregido
