@@ -14,7 +14,7 @@ import snownee.jade.api.ui.Element;
 import snownee.jade.impl.ui.ItemStackElement;
 
 @WailaPlugin(VaultDrawers.MOD_ID)
-public class Waila implements IWailaPlugin
+public class Jade implements IWailaPlugin
 {
     @Override
     public void registerClient (IWailaClientRegistration registration) {
@@ -26,11 +26,11 @@ public class Waila implements IWailaPlugin
         registration.addConfig(VaultDrawers.rl("display.stacklimit"), true);
         registration.addConfig(VaultDrawers.rl("display.status"), true);
 
-        WailaDrawer provider = new WailaDrawer();
+        JadeDrawer provider = new JadeDrawer();
         registration.registerBlockComponent(provider, BlockDrawers.class);
     }
 
-    public static class WailaDrawer implements IBlockComponentProvider
+    public static class JadeDrawer implements IBlockComponentProvider
     {
         @Override
         @NotNull
