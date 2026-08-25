@@ -1,42 +1,21 @@
-# Vault Drawers — Logo Generation Prompt for CurseForge
+# Vault Drawers — CurseForge Logo Image Prompt
 
-## AI Image Generation Prompt
+## Ready-to-use prompt
 
-> **Style**: Clean, modern Minecraft mod icon (64x64 or 128x128), isometric voxel aesthetic, high contrast for small sizes
-> **Subject**: A stylized drawer block with vault-style reinforced framing — 2x2 compartment drawer front with thick metal corners and center lock plate, wood texture (oak) with dark iron banding
-> **Palette**: Oak wood (#8B7355, #6B5B4A), Dark iron/steel (#2F2F2F, #4A4A4A), Gold accent (#FFD700) for lock/keyhole, subtle glow (#FFAA00) on keyhole
-> **Lighting**: Top-left directional light, slight ambient occlusion in compartment seams
-> **Background**: Transparent (for CurseForge icon)
-> **Composition**: Centered, front-facing with slight 3/4 isometric tilt, fills 80% of canvas
-> **Details**: 
-> - 4 equal compartments visible (2x2 grid)
-> - Reinforced metal frame at corners (3px thick)
-> - Center vertical metal strip with keyhole
-> - Subtle drawer pull handles on each compartment (small horizontal bars)
-> - "Vault" aesthetic: heavy, secure, industrial but warm wood
-> **Negative**: No text, no UI elements, no hands, no particles, no realistic photo style, no gradient backgrounds
+```
+A clean, modern Minecraft mod icon in isometric voxel style, centered and filling about 80% of the canvas, on a fully transparent background. The subject is a single stylized storage drawer block viewed at a slight 3/4 isometric angle: a 2x2 grid of four equal square compartments carved into warm oak wood (#8B7355 base, #6B5B4A shadows), each compartment framed by a small horizontal drawer-pull handle. The whole block is reinforced with a "vault" aesthetic — thick dark iron/steel banding (#2F2F2F, #4A4A4A) running along all four outer edges and corners, about 3 pixels thick, with a vertical iron strip down the center holding a glowing gold keyhole (#FFD700 metal, #FFAA00 soft glow) at the middle of the block. Lighting comes from the top-left, with subtle ambient occlusion in the seams between compartments and along the metal banding, giving the wood and metal a slight 3D voxel depth. The overall feel is heavy, secure and industrial but still warm and readable at small sizes. No text, no letters, no UI elements, no hands, no particles, no realistic photo textures, no background gradient or scenery — icon artwork only.
+```
 
-## Variants
+## Target output
 
-| Variant | Prompt Adjustment |
-|---------|-------------------|
-| **Main (128x128)** | Full detail as above |
-| **Small (64x64)** | Simplified: remove keyhole detail, thicker lines, bolder contrast |
-| **Banner (468x60)** | Horizontal: 3 drawers side-by-side, "VAULT DRAWERS" text in pixel font below, dark parchment background |
-| **Animated** | Keyhole glows pulse (1s cycle), subtle drawer "breathing" (1px scale) |
+- `icon.png` — 128×128, primary CurseForge/mod logo
+- `icon_64.png` — same composition, verify it still reads clearly at 64×64 before finalizing
 
-## Reference Assets
+## Usage
 
-- Original Storage Drawers icon: `lib_ext/StorageDrawers-1.21/StorageDrawers-1.21/common/src/main/resources/assets/storagedrawers/icon.png`
-- Minecraft drawer block texture: `assets/minecraft/textures/block/oak_planks.png` + custom framing overlay
-- NeoForge mod icon guidelines: 128x128 PNG, transparent BG, no text
+Generate with the `gpt-image-2` skill (or any image model). After generating, save the result to `src/main/resources/assets/vault_drawers/icon.png`, and produce/verify a 64×64 downscale for CurseForge's small-size thumbnail before uploading.
 
-## Generation Notes
+## Reference
 
-- Use **GPT-Image-2** (ChatGPT Images 2.0) via `gpt-image-2` skill
-- Iterate: generate → review at 64x64 → refine contrast/readability
-- Final deliverable: `icon.png` (128x128) + `icon_64.png` (64x64) in `src/main/resources/assets/vault_drawers/`
-
-## Brand Keywords
-
-`storage` `drawers` `vault` `secure` `organization` `minecraft` `mod` `neoforge` `wood` `metal` `industrial` `clean` `readable`
+- Original Storage Drawers icon (for inspiration only, do not copy 1:1): `lib_ext/StorageDrawers-1.21/StorageDrawers-1.21/common/src/main/resources/assets/storagedrawers/icon.png`
+- CurseForge logo requirements: PNG, transparent background, no text, works at both 128×128 and small thumbnail sizes.

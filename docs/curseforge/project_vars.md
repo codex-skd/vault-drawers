@@ -2,16 +2,16 @@
 
 > Las siguientes variables son leídas automáticamente por `../codex-docs/scripts/curseforge-upload.ps1`
 
-project_id =
-api_token =
+project_id = 1668019
+api_token = ee776b0a-ee95-4850-b554-06be02a8657f
 game_versions = 9638, 9639, 16498, 10150
-release_type = release
+release_type = beta
 
 ## Proyecto
 
 | Variable | Valor |
 |----------|-------|
-| `curseforge_project_id` | `` (pendiente creación) |
+| `curseforge_project_id` | `1668019` |
 | `mod_id` | `vault_drawers` |
 | `display_name` | `Vault Drawers` |
 
@@ -19,8 +19,8 @@ release_type = release
 
 | API | Token | Uso |
 |-----|-------|-----|
-| Upload | `` | Subir archivos JAR |
-| Core (GET) | `` | Consultar datos del mod |
+| Upload | `ee776b0a-ee95-4850-b554-06be02a8657f` | Subir archivos JAR |
+| Core (GET) | `$2a$10$yGwryAfmRkS9ZJsJUDf5YOKZpOIsmHB8Fji2D8JVCKBSZEKYlwmaO` | Consultar datos del mod |
 
 Autenticación Upload: cabecera `X-Api-Token`
 Autenticación Core: cabecera `x-api-key`
@@ -43,30 +43,30 @@ minecraft/26.2/neoforge-26.2.0.57/production
 
 ## Tag
 
-Formato: `<mc-version>-<framework>-<version>`
-Ejemplo: `26.2-neoforge-13.11.4`
+Formato beta: `<mc-version>-<framework>-beta.<X>` · Formato release: `<mc-version>-<framework>-<X.Y.Z>`
+Ejemplo (esta versión): `26.2-neoforge-beta.1`
 
 ## Parámetros del upload
 
 | Campo | Valor | Notas |
 |-------|-------|-------|
-| `displayName` | `Vault Drawers (13.11.4)` | Nombre visible: `display_name (version)` |
+| `displayName` | `Vault Drawers (0.0.0-beta.1)` | Nombre visible: `display_name (version)` |
 | `changelog` | HTML (no Markdown) | Ver estructura abajo |
 | `changelogType` | `html` | Obligatorio para que se vea bien |
-| `releaseType` | `release` | Release estable (port completo) |
+| `releaseType` | `beta` | Primera beta pública del port — aún no probada en juego |
 | `gameVersionNames` | `["Client", "Server", "26.2", "NeoForge"]` | Entorno + MC + modloader |
 
 ## Estructura del changelog (HTML)
 
 ```html
-<h2>v13.11.4 - Initial 26.2 port</h2>
+<h2>v0.0.0-beta.1 - Initial 26.2 port (beta)</h2>
 
 <h3>Notes</h3>
-<blockquote>Port of Storage Drawers 13.11.4 from MC 1.21.1 (NeoForge 21.1.196) to MC 26.2 (NeoForge 26.2.0.57). Mod ID changed to <code>vault_drawers</code>. All original features preserved.</blockquote>
+<blockquote>First beta of the port of Storage Drawers 13.11.4 from MC 1.21.1 (NeoForge 21.1.196) to MC 26.2 (NeoForge 26.2.0.57). Mod ID changed to <code>vault_drawers</code>. Compiles and packages successfully; not yet verified in-game.</blockquote>
 
 <hr>
 
-<p><strong>JAR</strong>: <code>vault_drawers-26.2-neoforge-26.2.0.57-13.11.4.jar</code></p>
+<p><strong>JAR</strong>: <code>vault_drawers-26.2-neoforge-26.2.0.57-0.0.0-beta.1.jar</code></p>
 ```
 
 ## Subir archivo (JAR)

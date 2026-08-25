@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.1] - 2026-08-25
+
+### Añadido
+- Primera beta pública en CurseForge del port de Storage Drawers 13.11.4 a Minecraft 26.2 / NeoForge 26.2.0.57
+- El mod compila y empaqueta correctamente tras completar la migración de API a 26.2 (`ItemStack` CODEC, `appendHoverText`, NBT `Optional`, `BlockEntityType`, etc.)
+
+### Estado
+- ⚠️ Aún no verificado en juego (cliente/servidor, colocación de bloques, upgrades, red de controladores) — beta de compilación, no de funcionalidad probada
+
 ## [13.11.4] - 2024-08-21
 
 ### Added
