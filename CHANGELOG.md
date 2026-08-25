@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.2] - 2026-08-25
+
+### Añadido
+- Todos los assets y datos del mod portados desde Storage Drawers 1.21.1: blockstates, modelos, texturas, lang, recetas, loot tables, tags y advancements (1057 ficheros, namespace `vault_drawers`)
+- Logo del mod
+
+### Corregido
+- **Crítico**: la clase principal tenía todo el registro de contenido comentado — el mod compilaba pero no registraba ningún bloque/item/receta/capacidad en runtime. Cableado completo ahora
+- Varios cambios más de API de 26.2 descubiertos al ejecutar el mod (no solo compilarlo): dependencias opcionales que crasheaban el arranque, resolución de JEI, registro de capabilities, envío de paquetes cliente→servidor
+
+### Estado
+- ⚠️ El mod carga y registra todo su contenido (verificado con generación de datos automatizada), pero aún no se ha probado con el juego real (`runClient`)
+
 ## [0.0.0-beta.1] - 2026-08-25
 
 ### Añadido
