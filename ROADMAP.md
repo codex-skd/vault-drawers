@@ -44,8 +44,20 @@ wiring) and fixed several more 26.2 API changes (mods.toml `type=` vs `mandatory
 `ClientPacketDistributor.sendToServer`, JEI maven repo + version).
 
 **Verified**: `./gradlew.bat compileJava` and `./gradlew.bat runData` both pass with 0
-errors — the mod fully constructs and registers all content. `runClient`/`runServer`
-(actual gameplay) not yet tested.
+errors — the mod fully constructs and registers all content.
+
+**2026-08-25 update — runClient verified**: fixed a client-only crash
+(`NullPointerException: Components not bound yet`, from constructing `ItemStack`s of
+vanilla items too early during mod loading in `CompTierRegistry`/`StorageBlacklist`/
+`MaterialBlacklist`/`ConversionRegistry`/`ConfigItemList` — fixed by storing `Item`
+references and building stacks lazily) and a capability ID collision. `./gradlew.bat
+runClient` now boots to the main menu and a singleplayer world loads and runs without
+crashing. Released as `0.0.0-beta.3` on CurseForge.
+
+Known minor gaps (cosmetic, not blocking): missing textures for a handful of
+indicator/overlay meta-block models, and missing item models for several storage-upgrade
+tiers (obsidian/copper/iron/gold/emerald) — likely a Phase 3 asset-port oversight, worth
+a follow-up pass.
 
 ### (historical) Phase 3 gap analysis — biggest remaining gap
 
