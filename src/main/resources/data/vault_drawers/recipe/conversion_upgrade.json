@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#/#",
+        "/X/",
+        "#/#"
+    ],
+    "key": {
+        "/": { "tag": "c:rods/wooden" },
+        "#": { "item": "minecraft:lapis_lazuli" },
+        "X": { "item": "vault_drawers:upgrade_template" }
+    },
+    "result": { "id": "vault_drawers:conversion_upgrade" }
+}

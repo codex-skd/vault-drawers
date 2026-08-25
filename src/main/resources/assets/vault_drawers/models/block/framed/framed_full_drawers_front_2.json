@@ -1,0 +1,21 @@
+{
+    "textures": {
+        "mat": "vault_drawers:block/base/base_oak",
+        "particle": "vault_drawers:block/base/base_oak"
+    },
+    "elements": [
+        {
+            "from": [1, 1, 1],
+            "to": [15, 7, 2],
+            "faces": {
+                "north": {"uv": [1, 1, 15, 7], "texture": "#mat"}
+            }
+        }, {
+            "from": [1, 9, 1],
+            "to": [15, 15, 2],
+            "faces": {
+                "north": {"uv": [1, 9, 15, 15], "texture": "#mat"}
+            }
+        }
+    ]
+}

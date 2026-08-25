@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        "X X"
+    ],
+    "key": {
+        "X": { "tag": "vault_drawers:trim" }
+    },
+    "result": { "id": "vault_drawers:framing_table", "count": 1 }
+}

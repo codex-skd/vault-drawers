@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "vault_drawers:quantify_key"
+        ]
+    },
+    "criteria": {
+        "has_template": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "vault_drawers:drawer_key"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "vault_drawers:quantify_key"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_template",
+            "has_the_recipe"
+        ]
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "vault_drawers:drawer_key" },
+        { "item": "minecraft:lever" }
+    ],
+    "result": { "id": "vault_drawers:suspend_key" }
+}

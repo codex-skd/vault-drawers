@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "R/R",
+        "/X/",
+        "R/R"
+    ],
+    "key": {
+        "/": { "tag": "c:rods/wooden" },
+        "R": { "tag": "c:dusts/glowstone" },
+        "X": { "item": "vault_drawers:upgrade_template" }
+    },
+    "result": { "id": "vault_drawers:illumination_upgrade", "count": 8 }
+}

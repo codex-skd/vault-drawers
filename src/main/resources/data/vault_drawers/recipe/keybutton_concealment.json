@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "vault_drawers:shroud_key" },
+        { "item": "minecraft:stone_button" }
+    ],
+    "result": { "id": "vault_drawers:keybutton_concealment" }
+}

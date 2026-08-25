@@ -1,0 +1,7 @@
+{
+    "parent": "vault_drawers:block/button/key_button_pressed",
+    "textures": {
+        "texture": "vault_drawers:block/key_button",
+        "label": "vault_drawers:block/button_face_quantify_key"
+    }
+}

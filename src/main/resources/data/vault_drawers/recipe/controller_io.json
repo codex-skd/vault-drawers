@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "CXC",
+        "#G#"
+    ],
+    "key": {
+        "#": { "item": "minecraft:stone" },
+        "C": { "item": "minecraft:comparator" },
+        "X": { "tag": "vault_drawers:drawers" },
+        "G": { "tag": "c:ingots/gold" }
+    },
+    "result": { "id": "vault_drawers:controller_io" }
+}

@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "facing=north,half=false,slots=2": { "model": "vault_drawers:block/full_compdrawers_2_indicator" },
+        "facing=east,half=false,slots=2": { "model": "vault_drawers:block/full_compdrawers_2_indicator", "y": 90 },
+        "facing=south,half=false,slots=2": { "model": "vault_drawers:block/full_compdrawers_2_indicator", "y": 180 },
+        "facing=west,half=false,slots=2": { "model": "vault_drawers:block/full_compdrawers_2_indicator", "y": 270 },
+        "facing=north,half=false,slots=3": { "model": "vault_drawers:block/full_compdrawers_3_indicator" },
+        "facing=east,half=false,slots=3": { "model": "vault_drawers:block/full_compdrawers_3_indicator", "y": 90 },
+        "facing=south,half=false,slots=3": { "model": "vault_drawers:block/full_compdrawers_3_indicator", "y": 180 },
+        "facing=west,half=false,slots=3": { "model": "vault_drawers:block/full_compdrawers_3_indicator", "y": 270 },
+        "facing=north,half=true,slots=2": { "model": "vault_drawers:block/half_compdrawers_2_indicator" },
+        "facing=east,half=true,slots=2": { "model": "vault_drawers:block/half_compdrawers_2_indicator", "y": 90 },
+        "facing=south,half=true,slots=2": { "model": "vault_drawers:block/half_compdrawers_2_indicator", "y": 180 },
+        "facing=west,half=true,slots=2": { "model": "vault_drawers:block/half_compdrawers_2_indicator", "y": 270 },
+        "facing=north,half=true,slots=3": { "model": "vault_drawers:block/half_compdrawers_3_indicator" },
+        "facing=east,half=true,slots=3": { "model": "vault_drawers:block/half_compdrawers_3_indicator", "y": 90 },
+        "facing=south,half=true,slots=3": { "model": "vault_drawers:block/half_compdrawers_3_indicator", "y": 180 },
+        "facing=west,half=true,slots=3": { "model": "vault_drawers:block/half_compdrawers_3_indicator", "y": 270 }
+    }
+}

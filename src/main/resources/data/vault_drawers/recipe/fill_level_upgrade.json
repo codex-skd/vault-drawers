@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "vault_drawers:upgrade_template" },
+        { "item": "minecraft:repeater" }
+    ],
+    "result": { "id": "vault_drawers:fill_level_upgrade" }
+}
