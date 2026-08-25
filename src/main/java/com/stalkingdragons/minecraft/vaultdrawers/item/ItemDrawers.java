@@ -79,14 +79,13 @@ public class ItemDrawers extends BlockItem implements IPortable
             return false;
 
         TypedEntityData<BlockEntityType<?>> data = stack.get(DataComponents.BLOCK_ENTITY_DATA);
-        if (data == null || data.isEmpty())
+        if (data == null)
             return false;
-
 
         var x = new UpgradeData(7);
         try {
-            x.read(provider, data.copyTag());
-        } catch (ClassCastException e) {
+            x.read(provider, data.getUnsafe());
+        } catch (Exception e) {
             return false;
         }
 

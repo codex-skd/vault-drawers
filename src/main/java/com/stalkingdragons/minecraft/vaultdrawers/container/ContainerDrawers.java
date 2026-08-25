@@ -5,6 +5,9 @@ import com.stalkingdragons.minecraft.vaultdrawers.api.storage.IDrawerGroup;
 import com.stalkingdragons.minecraft.vaultdrawers.block.BlockDrawers;
 import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityDrawers;
 import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.InventoryUpgrade;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.SlotDrawer;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.SlotUpgrade;
 import com.stalkingdragons.minecraft.vaultdrawers.item.ItemUpgrade;
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.inventory.content.PositionContent;
 import com.stalkingdragons.minecraft.vaultdrawers.util.WorldUtils;
@@ -48,7 +51,7 @@ public class ContainerDrawers extends AbstractContainerMenu
     }
 
     protected static BlockEntityDrawers getBlockEntity(Inventory playerInv, BlockPos pos) {
-        Level level = playerInv.player.getCommandSenderWorld();
+        Level level = playerInv.player.level();
         BlockEntityDrawers blockEntity = WorldUtils.getBlockEntity(level, pos, BlockEntityDrawers.class);
         if (blockEntity == null)
             ModServices.log.error("Expected a drawers tile entity at " + pos);
@@ -92,7 +95,7 @@ public class ContainerDrawers extends AbstractContainerMenu
         for (int i = 0; i < 9; i++)
             hotbarSlots.add(addSlot(new Slot(playerInventory, i, InventoryX + i * 18, HotbarY)));
 
-        isRemote = playerInventory.player.getCommandSenderWorld().isClientSide;
+        isRemote = playerInventory.player.level().isClientSide();
     }
 
     protected int getStorageSlotX (int slot) {
@@ -141,6 +144,7 @@ public class ContainerDrawers extends AbstractContainerMenu
         if (slot.hasItem()) {
             ItemStack stack = slot.getItem();
             itemStack = stack.copy();
+            ItemStack slotStack = stack.copy();
 
             // Try merge upgrades to inventory
             if (slotIndex >= upgradeStart && slotIndex < upgradeEnd) {
@@ -164,7 +168,7 @@ public class ContainerDrawers extends AbstractContainerMenu
                     } else {
                         slotStack.shrink(1);
                         if (slotStack.getCount() == 0)
-                            slot.setItem(ItemStack.EMPTY);
+                            slot.set(ItemStack.EMPTY);
                         else
                             slot.setChanged();
 
@@ -194,5 +198,6 @@ public class ContainerDrawers extends AbstractContainerMenu
             slot.onTake(player, slotStack);
             return itemStack;
         }
+        return itemStack;
     }
 }

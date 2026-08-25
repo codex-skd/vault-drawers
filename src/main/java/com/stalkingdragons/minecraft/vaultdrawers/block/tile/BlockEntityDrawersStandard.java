@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.UUID;
+
 public class BlockEntityDrawersStandard extends BlockEntityDrawers
 {
     private final StandardDrawerGroup group;
@@ -48,12 +50,32 @@ public class BlockEntityDrawersStandard extends BlockEntityDrawers
         @NotNull
         @Override
         protected StandardDrawerGroup.DrawerData createDrawer (int slot) {
-            return new StandardDrawerGroup.DrawerData(this, slot);
+            return new GroupDrawerData(this, slot);
         }
 
         @Override
         public boolean isGroupValid () {
             return BlockEntityDrawersStandard.this.isGroupValid();
+        }
+
+        @Override
+        public UUID getOwner () {
+            return BlockEntityDrawersStandard.this.getOwner();
+        }
+
+        @Override
+        public boolean setOwner (UUID owner) {
+            return BlockEntityDrawersStandard.this.setOwner(owner);
+        }
+
+        @Override
+        public com.stalkingdragons.minecraft.vaultdrawers.api.security.ISecurityProvider getSecurityProvider () {
+            return BlockEntityDrawersStandard.this.getSecurityProvider();
+        }
+
+        @Override
+        public boolean setSecurityProvider (com.stalkingdragons.minecraft.vaultdrawers.api.security.ISecurityProvider provider) {
+            return BlockEntityDrawersStandard.this.setSecurityProvider(provider);
         }
 
         @Override
@@ -68,6 +90,12 @@ public class BlockEntityDrawersStandard extends BlockEntityDrawers
                 return (T) BlockEntityDrawersStandard.this.getDrawerAttributes();
             }
             return null;
+        }
+
+        private class GroupDrawerData extends StandardDrawerGroup.DrawerData {
+            GroupDrawerData(StandardDrawerGroup group, int slot) {
+                super(group, slot);
+            }
         }
     }
 }

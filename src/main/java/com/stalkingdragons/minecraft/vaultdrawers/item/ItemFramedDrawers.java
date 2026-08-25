@@ -1,6 +1,7 @@
 package com.stalkingdragons.minecraft.vaultdrawers.item;
 
 import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityDrawers;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.tiledata.MaterialData;
 import com.stalkingdragons.minecraft.vaultdrawers.util.WorldUtils;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +23,7 @@ public class ItemFramedDrawers extends ItemDrawers
         BlockEntityDrawers blockEntity = WorldUtils.getBlockEntity(context.getLevel(), context.getClickedPos(), BlockEntityDrawers.class);
         ItemStack stack = context.getItemInHand();
         if (blockEntity != null && !stack.isEmpty())
-            blockEntity.material().read(context.getItemInHand());
+            ((MaterialData) blockEntity.material()).read(context.getItemInHand());
 
         return true;
     }

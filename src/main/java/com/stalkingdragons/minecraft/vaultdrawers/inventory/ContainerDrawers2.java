@@ -1,6 +1,7 @@
 package com.stalkingdragons.minecraft.vaultdrawers.inventory;
 
 import com.stalkingdragons.minecraft.vaultdrawers.block.tile.BlockEntityDrawers;
+import com.stalkingdragons.minecraft.vaultdrawers.container.ContainerDrawers;
 import com.stalkingdragons.minecraft.vaultdrawers.core.ModContainers;
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.inventory.content.PositionContent;
 import net.minecraft.world.entity.player.Inventory;

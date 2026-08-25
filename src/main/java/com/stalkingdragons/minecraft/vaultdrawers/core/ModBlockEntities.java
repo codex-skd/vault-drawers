@@ -36,10 +36,10 @@ public final class ModBlockEntities {
     public static final RegistryEntry<BlockEntityType<BlockEntityControllerIO>> CONTROLLER_IO = registerControllerIOBlockEntityType("controller_io", ModServices.RESOURCE_FACTORY.createBlockEntityControllerIO());
 
     public static final RegistryEntry<BlockEntityType<BlockEntityTrim>> TRIM = BLOCK_ENTITIES.register("trim", () ->
-        BlockEntityType.Builder.of(ModServices.RESOURCE_FACTORY.createBlockEntityTrim(), ModBlocks.FRAMED_TRIM.get()).build(null));
+        new BlockEntityType<>(ModServices.RESOURCE_FACTORY.createBlockEntityTrim(), Set.of(ModBlocks.FRAMED_TRIM.get())));
 
     public static final RegistryEntry<BlockEntityType<BlockEntityFramingTable>> FRAMING_TABLE = BLOCK_ENTITIES.register("framing_table", () ->
-        BlockEntityType.Builder.of(ModServices.RESOURCE_FACTORY.createBlockEntityFramingTable(), ModBlocks.FRAMING_TABLE.get()).build(null));
+        new BlockEntityType<>(ModServices.RESOURCE_FACTORY.createBlockEntityFramingTable(), Set.of(ModBlocks.FRAMING_TABLE.get())));
 
     private ModBlockEntities() {}
 
@@ -51,17 +51,17 @@ public final class ModBlockEntities {
 
     private static <BE extends BaseBlockEntity, B extends BlockDrawers> RegistryEntry<BlockEntityType<BE>> registerBlockEntityType(String name, BlockEntityType.BlockEntitySupplier<BE> blockEntitySupplier, Class<B> drawerBlockClass, int size) {
         return BLOCK_ENTITIES.register(name, () ->
-            BlockEntityType.Builder.of(blockEntitySupplier, ModBlocks.getDrawersOfTypeAndSize(drawerBlockClass, size).toArray(Block[]::new)).build(null));
+            new BlockEntityType<>(blockEntitySupplier, Set.of(ModBlocks.getDrawersOfTypeAndSize(drawerBlockClass, size).toArray(Block[]::new))));
     }
 
     private static <BE extends BaseBlockEntity, B extends BlockDrawers> RegistryEntry<BlockEntityType<BE>> registerControllerBlockEntityType(String name, BlockEntityType.BlockEntitySupplier<BE> blockEntitySupplier) {
         return BLOCK_ENTITIES.register(name, () ->
-            BlockEntityType.Builder.of(blockEntitySupplier, ModBlocks.getControllers().toArray(Block[]::new)).build(null));
+            new BlockEntityType<>(blockEntitySupplier, Set.of(ModBlocks.getControllers().toArray(Block[]::new))));
     }
 
     private static <BE extends BaseBlockEntity, B extends BlockDrawers> RegistryEntry<BlockEntityType<BE>> registerControllerIOBlockEntityType(String name, BlockEntityType.BlockEntitySupplier<BE> blockEntitySupplier) {
         return BLOCK_ENTITIES.register(name, () ->
-            BlockEntityType.Builder.of(blockEntitySupplier, ModBlocks.getControllerIOs().toArray(Block[]::new)).build(null));
+            new BlockEntityType<>(blockEntitySupplier, Set.of(ModBlocks.getControllerIOs().toArray(Block[]::new))));
     }
 
     public static void init(ChameleonInit.InitContext context) {

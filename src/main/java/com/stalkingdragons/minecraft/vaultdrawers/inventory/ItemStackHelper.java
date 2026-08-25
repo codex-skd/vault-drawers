@@ -5,6 +5,7 @@ import com.stalkingdragons.minecraft.vaultdrawers.core.ModDataComponents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -86,21 +87,25 @@ public class ItemStackHelper
 
     @NotNull
     public static ItemStack parseOptional(HolderLookup.Provider provider, CompoundTag tag) {
-        return ItemStack.parseOptional(provider, tag).orElse(ItemStack.EMPTY);
+        return ItemStack.OPTIONAL_CODEC.parse(provider.createSerializationContext(NbtOps.INSTANCE), tag)
+            .result().orElse(ItemStack.EMPTY);
     }
 
     @NotNull
     public static Optional<ItemStack> parseOptional(HolderLookup.Provider provider, Optional<CompoundTag> optTag) {
-        return optTag.flatMap(tag -> ItemStack.parseOptional(Optional.of(provider), tag));
+        return optTag.map(tag -> ItemStack.OPTIONAL_CODEC.parse(provider.createSerializationContext(NbtOps.INSTANCE), tag)
+            .result().orElse(ItemStack.EMPTY));
     }
 
     @NotNull
     public static ItemStack parse(HolderLookup.Provider provider, CompoundTag tag) {
-        return ItemStack.parse(provider, tag);
+        return ItemStack.CODEC.parse(provider.createSerializationContext(NbtOps.INSTANCE), tag)
+            .result().orElse(ItemStack.EMPTY);
     }
 
     @NotNull
     public static Optional<ItemStack> parse(HolderLookup.Provider provider, Optional<CompoundTag> optTag) {
-        return optTag.flatMap(tag -> ItemStack.parse(Optional.of(provider), tag));
+        return optTag.map(tag -> ItemStack.CODEC.parse(provider.createSerializationContext(NbtOps.INSTANCE), tag)
+            .result().orElse(ItemStack.EMPTY));
     }
 }

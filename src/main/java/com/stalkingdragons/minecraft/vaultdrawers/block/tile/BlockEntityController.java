@@ -129,6 +129,30 @@ public class BlockEntityController extends BaseBlockEntity implements IDrawerGro
     public void validateBoundController() {
     }
 
+    public Stream<IDrawer> getBalanceDrawers(@NotNull ItemStack stack, Player player) {
+        return controllerHostData.getRemoteNodes().flatMap(node -> {
+            if (node instanceof IDrawerGroup group) {
+                List<IDrawer> drawers = new ArrayList<>();
+                for (int i = 0; i < group.getDrawerCount(); i++) {
+                    IDrawer drawer = group.getDrawer(i);
+                    if (drawer.isEnabled() && !drawer.isEmpty()
+                        && ItemStack.isSameItemSameComponents(stack, drawer.getStoredItemPrototype())) {
+                        IDrawerAttributes attr = drawer.getAttributes();
+                        if (attr.isBalancedFill() && !attr.isSuspended()) {
+                            if (player != null && group instanceof IProtectable prot) {
+                                if (!SecurityManager.hasAccess(player, prot))
+                                    continue;
+                            }
+                            drawers.add(drawer);
+                        }
+                    }
+                }
+                return drawers.stream();
+            }
+            return Stream.empty();
+        });
+    }
+
     public void printDebugInfo() {
         ModServices.log.info("Controller at " + worldPosition);
         ModServices.log.info("  Range: " + ModCommonConfig.INSTANCE.CONTROLLER.controllerRange.get() + " blocks");

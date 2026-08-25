@@ -251,6 +251,15 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
         // Simplified
     }
 
+    public void clientUpdateCount (final int slot, final int count) {
+        if (getLevel() == null || !getLevel().isClientSide())
+            return;
+
+        IDrawer drawer = getDrawer(slot);
+        if (drawer.isEnabled() && drawer.getStoredItemCount() != count)
+            drawer.setStoredItemCount(count);
+    }
+
     public ItemStack takeItemsFromSlot(int slot, int amount, Player player) {
         return ItemStack.EMPTY;
     }

@@ -50,18 +50,17 @@ public class ItemKey extends Item
             .build();
     }
 
-    @Override
     public boolean canAttackBlock(@NotNull BlockState state, @NotNull Level worldIn, @NotNull BlockPos pos, @NotNull Player player) {
         return !player.isCreative();
     }
 
     @Override
     public void appendHoverText (ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
+        super.appendHoverText(stack, context, display, tooltip, flag);
         ComponentUtil.appendSplitDescription(tooltip, this);
 
         if (!isEnabled())
-            tooltip.add(Component.translatable("itemConfig.storagedrawers.disabled_tool")
+            tooltip.accept(Component.translatable("itemConfig.storagedrawers.disabled_tool")
                 .withStyle(ChatFormatting.YELLOW));
     }
 
@@ -91,7 +90,7 @@ public class ItemKey extends Item
         handleDrawerAttributes((IDrawerAttributesModifiable)attrs);
 
         if (context.getPlayer() != null)
-            context.getPlayer().getCooldowns().addCooldown(this, 5);
+            context.getPlayer().getCooldowns().addCooldown(context.getItemInHand(), 5);
 
         return InteractionResult.SUCCESS;
     }

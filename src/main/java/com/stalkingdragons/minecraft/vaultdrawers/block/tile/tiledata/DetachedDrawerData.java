@@ -5,6 +5,7 @@ import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
 import com.stalkingdragons.minecraft.vaultdrawers.inventory.ItemStackHelper;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
@@ -132,10 +133,10 @@ public class DetachedDrawerData implements IDrawer
         if (protoStack.isEmpty())
             return tag;
 
-        CompoundTag item = new CompoundTag();
-        item = (CompoundTag)protoStack.save(provider, item);
-
-        tag.put("Item", item);
+        Tag encoded = ItemStack.CODEC.encodeStart(
+            provider.createSerializationContext(net.minecraft.nbt.NbtOps.INSTANCE), protoStack
+        ).result().orElse(new CompoundTag());
+        tag.put("Item", encoded);
         tag.putInt("Count", count);
 
         if (heavy)
@@ -152,17 +153,19 @@ public class DetachedDrawerData implements IDrawer
             return;
 
         if (nbt.contains("Item"))
-            tagItem = ItemStack.parseOptional(provider, nbt.getCompound("Item"));
+            tagItem = ItemStack.CODEC.parse(
+                provider.createSerializationContext(net.minecraft.nbt.NbtOps.INSTANCE), nbt.getCompoundOrEmpty("Item")
+            ).result().orElse(ItemStack.EMPTY);
         if (nbt.contains("Count"))
-            tagCount = nbt.getInt("Count");
+            tagCount = nbt.getInt("Count").orElse(0);
 
         if (nbt.contains("StorageMult"))
-            storageMult = nbt.getInt("StorageMult");
+            storageMult = nbt.getInt("StorageMult").orElse(ModCommonConfig.INSTANCE.DRAWERS.baseStackStorage.get() * 8);
         else
             storageMult = ModCommonConfig.INSTANCE.DRAWERS.baseStackStorage.get() * 8;
 
         if (nbt.contains("Heavy"))
-            setIsHeavy(nbt.getBoolean("Heavy"));
+            setIsHeavy(nbt.getBooleanOr("Heavy", false));
 
         setStoredItemRaw(tagItem);
         setStoredItemCountRaw(tagCount);

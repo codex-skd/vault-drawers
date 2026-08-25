@@ -54,10 +54,10 @@ public abstract class StandardDrawerGroup extends BlockEntityDataShim implements
         if (!tag.contains("Drawers"))
             return;
 
-        ListTag itemList = tag.getList("Drawers", Tag.TAG_COMPOUND);
+        ListTag itemList = tag.getListOrEmpty("Drawers");
         for (int i = 0; i < itemList.size(); i++) {
             if (i < slots.length)
-                slots[i].deserializeNBT(provider, itemList.getCompound(i));
+                slots[i].deserializeNBT(provider, itemList.getCompoundOrEmpty(i));
         }
     }
 
@@ -125,6 +125,10 @@ public abstract class StandardDrawerGroup extends BlockEntityDataShim implements
             protoStack = ItemStack.EMPTY;
             matcher = ItemStackMatcher.EMPTY;
             missing = false;
+        }
+
+        protected DrawerData (StandardDrawerGroup group, int slot) {
+            this(group);
         }
 
         protected DrawerData (DrawerData data) {
@@ -408,10 +412,10 @@ public abstract class StandardDrawerGroup extends BlockEntityDataShim implements
             if (protoStack.isEmpty())
                 return tag;
 
-            CompoundTag item = new CompoundTag();
-            item = (CompoundTag)protoStack.save(provider, item);
-
-            tag.put("Item", item);
+            Tag encoded = ItemStack.CODEC.encodeStart(
+                provider.createSerializationContext(net.minecraft.nbt.NbtOps.INSTANCE), protoStack
+            ).result().orElse(new CompoundTag());
+            tag.put("Item", encoded);
             tag.putInt("Count", count);
 
             return tag;
@@ -423,11 +427,13 @@ public abstract class StandardDrawerGroup extends BlockEntityDataShim implements
             boolean tagMissing = false;
 
             if (nbt.contains("Item"))
-                tagItem = ItemStack.parseOptional(provider, nbt.getCompound("Item"));
+                tagItem = ItemStack.CODEC.parse(
+                    provider.createSerializationContext(net.minecraft.nbt.NbtOps.INSTANCE), nbt.getCompoundOrEmpty("Item")
+                ).result().orElse(ItemStack.EMPTY);
             if (nbt.contains("Count"))
-                tagCount = nbt.getInt("Count");
+                tagCount = nbt.getInt("Count").orElse(0);
             if (nbt.contains("Missing"))
-                tagMissing = nbt.getBoolean("Missing");
+                tagMissing = nbt.getBooleanOr("Missing", false);
 
             setStoredItemRaw(tagItem);
             setStoredItemCountRaw(tagCount);

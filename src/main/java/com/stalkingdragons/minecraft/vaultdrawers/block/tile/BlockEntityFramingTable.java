@@ -74,9 +74,21 @@ public class BlockEntityFramingTable extends BaseBlockEntity implements Nameable
         return getCustomName() != null ? getCustomName() : Component.translatable("block.vaultdrawers.framing_table");
     }
 
-    @Override
     public void setCustomName(@Nullable Component name) {
         this.name = name;
+    }
+
+    public static boolean isMaterialSlot(int slotIndex) {
+        return slotIndex == SLOT_SIDE || slotIndex == SLOT_TRIM || slotIndex == SLOT_FRONT;
+    }
+
+    public boolean isItemValidTarget(ItemStack stack) {
+        return !stack.isEmpty() && stack.getItem() instanceof BlockItem blockItem
+            && blockItem.getBlock() instanceof IFramedSourceBlock;
+    }
+
+    public static boolean isItemValidMaterial(ItemStack stack) {
+        return !stack.isEmpty();
     }
 
     public MaterialData getMaterialData() {
@@ -297,7 +309,7 @@ public class BlockEntityFramingTable extends BaseBlockEntity implements Nameable
         @Nullable
         @Override
         public AbstractContainerMenu createMenu (int id, Inventory inventory, Player player) {
-            return new com.stalkingdragons.minecraft.vaultdrawers.container.ContainerFramingTable(com.stalkingdragons.minecraft.vaultdrawers.core.ModContainers.FRAMING_TABLE.get(), id, inventory, entity);
+            return new com.stalkingdragons.minecraft.vaultdrawers.inventory.ContainerFramingTable(com.stalkingdragons.minecraft.vaultdrawers.core.ModContainers.FRAMING_TABLE.get(), id, inventory, entity);
         }
     }
 }

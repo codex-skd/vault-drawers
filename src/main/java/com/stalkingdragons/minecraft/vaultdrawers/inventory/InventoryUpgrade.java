@@ -97,10 +97,8 @@ public class InventoryUpgrade implements Container
         return !(player.distanceToSqr(Vec3.atCenterOf(pos)) > 64.0);
     }
 
-    @Override
     public void startOpen (@NotNull Player player) { }
 
-    @Override
     public void stopOpen (@NotNull Player player) { }
 
     @Override

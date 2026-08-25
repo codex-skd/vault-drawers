@@ -30,7 +30,7 @@ public class ItemTrim extends BlockItem
             }
         }
 
-        return Component.translatableWithFallback(this.getDescriptionId(stack), fallback);
+        return Component.translatableWithFallback(this.getDescriptionId(), fallback);
     }
 
     public boolean doesSneakBypassUse (ItemStack stack, LevelReader level, BlockPos pos, Player player) {

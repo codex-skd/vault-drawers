@@ -53,8 +53,8 @@ public class ContainerFramingTable extends AbstractContainerMenu
         super(type, windowId);
 
         this.blockEntity = blockEntity;
-        tableInventory = blockEntity.inventory();
-        craftResult = blockEntity.inventory();
+        tableInventory = blockEntity.getInventory();
+        craftResult = blockEntity.getInventory();
         access = ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos());
         player = playerInventory.player;
 

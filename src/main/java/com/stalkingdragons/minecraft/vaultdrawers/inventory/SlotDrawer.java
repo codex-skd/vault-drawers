@@ -36,7 +36,6 @@ public class SlotDrawer extends Slot
     @NotNull
     public ItemStack getItem () {
         ItemStack stack = ItemStackHelper.encodeItemStack(drawer.getStoredItemPrototype(), drawer.getStoredItemCount());
-        container.setLastAccessedItem(stack);
         return stack;
     }
 

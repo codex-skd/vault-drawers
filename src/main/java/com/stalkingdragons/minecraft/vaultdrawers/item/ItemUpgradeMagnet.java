@@ -7,10 +7,13 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Item.TooltipContext;
+import net.minecraft.world.item.component.TooltipDisplay;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ItemUpgradeMagnet extends ItemUpgrade
 {
@@ -42,17 +45,17 @@ public class ItemUpgradeMagnet extends ItemUpgrade
     }
 
     @Override
-    public void appendHoverText (ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
+    public void appendHoverText (ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, display, tooltip, flag);
         if (!isEnabled())
             return;
 
         String rangeId = ModItems.MAGNET_UPGRADE.get().getDescriptionId() + ".range";
-        tooltip.add(Component.translatable(rangeId, buildRangeString()).withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.accept(Component.translatable(rangeId, buildRangeString()).withStyle(ChatFormatting.DARK_GRAY));
 
         String rateId = ModItems.MAGNET_UPGRADE.get().getDescriptionId() + ".speed";
         int activeSpeed = getActiveSpeed();
-        tooltip.add(Component.translatable(rateId, 1, activeSpeed).withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.accept(Component.translatable(rateId, 1, activeSpeed).withStyle(ChatFormatting.DARK_GRAY));
     }
 
     private String buildRangeString () {

@@ -15,11 +15,14 @@ import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Item.TooltipContext;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.component.CustomData;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 public class ItemDetachedDrawer extends Item implements IPortable
 {
@@ -42,21 +45,21 @@ public class ItemDetachedDrawer extends Item implements IPortable
     }
 
     @Override
-    public void appendHoverText (@NotNull ItemStack stack, TooltipContext context, @NotNull List<Component> tooltip, @NotNull TooltipFlag flagIn) {
-        super.appendHoverText(stack, context, tooltip, flagIn);
+    public void appendHoverText (@NotNull ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flagIn) {
+        super.appendHoverText(stack, context, display, tooltip, flagIn);
         ComponentUtil.appendSplitDescription(tooltip, this);
 
         if (ModCommonConfig.INSTANCE.DRAWERS.detached.heavyDrawers.get() && isHeavy(context.registries(), stack)) {
-            tooltip.add(Component.translatable("tooltip.storagedrawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
+            tooltip.accept(Component.translatable("tooltip.storagedrawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
         }
     }
 
     @Override
-    public String getDescriptionId () {
+    public Component getName (@NotNull ItemStack stack) {
         if (this == ModItems.DETACHED_DRAWER.get())
-            return super.getDescriptionId();
+            return super.getName(stack);
 
-        return ModItems.DETACHED_DRAWER.get().getDescriptionId();
+        return Component.translatable(ModItems.DETACHED_DRAWER.get().getDescriptionId());
     }
 
     @NotNull

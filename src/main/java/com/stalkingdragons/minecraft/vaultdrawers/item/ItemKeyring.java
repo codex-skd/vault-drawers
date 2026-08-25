@@ -20,12 +20,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Item.TooltipContext;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class ItemKeyring extends Item
@@ -117,7 +120,7 @@ public class ItemKeyring extends Item
         if (key != null) {
             InteractionResult result = key.get().useOn(context);
             if (result == InteractionResult.SUCCESS)
-                context.getPlayer().getCooldowns().addCooldown(this, 5);
+                context.getPlayer().getCooldowns().addCooldown(context.getItemInHand(), 5);
             return result;
         }
 
@@ -141,7 +144,7 @@ public class ItemKeyring extends Item
     }
 
     @Override
-    public void appendHoverText (@NotNull ItemStack itemStack, TooltipContext context, List<Component> list, TooltipFlag advanced) {
+    public void appendHoverText (@NotNull ItemStack itemStack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> list, TooltipFlag advanced) {
         ComponentUtil.appendSplitDescription(list, this);
     }
 
@@ -171,7 +174,7 @@ public class ItemKeyring extends Item
         KeyringContents contents = entity.getItem().get(ModDataComponents.KEYRING_CONTENTS.get());
         if (contents != null) {
             entity.getItem().set(ModDataComponents.KEYRING_CONTENTS.get(), KeyringContents.EMPTY);
-            ItemUtils.onContainerDestroyed(entity, contents.itemsCopy());
+            ItemUtils.onContainerDestroyed(entity, java.util.stream.StreamSupport.stream(contents.itemsCopy().spliterator(), false));
         }
     }
 

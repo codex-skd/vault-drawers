@@ -47,14 +47,14 @@ public class ItemStackTagMatcher extends ItemStackMatcher
 
         tagMatches = ConversionRegistry.INSTANCE.getEquivItems(stack.getItem());
 
-        List<TagKey<Item>> tags = stack.getTags().toList();
+        List<TagKey<Item>> tags = stack.typeHolder().tags().toList();
         for (TagKey<Item> tag : tags) {
             if (!ConversionRegistry.INSTANCE.isEntryValid(tag))
                 continue;
 
-            BuiltInRegistries.ITEM.getOrCreateTag(tag).stream().forEach(e -> {
-                tagMatches.add(new ItemStack(e));
-            });
+            for (var holder : BuiltInRegistries.ITEM.getTagOrEmpty(tag)) {
+                tagMatches.add(new ItemStack(holder));
+            }
         }
 
         if (tagMatches.isEmpty())
