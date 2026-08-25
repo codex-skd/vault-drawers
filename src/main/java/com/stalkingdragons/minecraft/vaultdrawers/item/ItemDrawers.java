@@ -37,18 +37,18 @@ public class ItemDrawers extends BlockItem implements IPortable
     public void appendHoverText (ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, context, display, tooltip, flag);
 
-        Component textCapacity = Component.translatable("tooltip.storagedrawers.drawers.capacity", getCapacityForBlock(stack));
+        Component textCapacity = Component.translatable("tooltip.vault_drawers.drawers.capacity", getCapacityForBlock(stack));
         tooltip.accept(Component.literal("").append(textCapacity).withStyle(ChatFormatting.GRAY));
 
         TypedEntityData<BlockEntityType<?>> blockData = stack.get(DataComponents.BLOCK_ENTITY_DATA);
         CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
         if (blockData != null || customData != null) {
-            Component textSealed = Component.translatable("tooltip.storagedrawers.drawers.sealed");
+            Component textSealed = Component.translatable("tooltip.vault_drawers.drawers.sealed");
             tooltip.accept(Component.literal("").append(textSealed).withStyle(ChatFormatting.YELLOW));
         }
 
         if (ModCommonConfig.INSTANCE.DRAWERS.filled.heavyDrawers.get() && isHeavy(context.registries(), stack)) {
-            tooltip.accept(Component.translatable("tooltip.storagedrawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
+            tooltip.accept(Component.translatable("tooltip.vault_drawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
         }
     }
 

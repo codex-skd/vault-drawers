@@ -164,6 +164,10 @@ public class BlockEntityController extends BaseBlockEntity implements IDrawerGro
         return (pos, state) -> new BlockEntityController(ModBlockEntities.CONTROLLER.get(), pos, state);
     }
 
+    public com.stalkingdragons.minecraft.vaultdrawers.api.capabilities.IItemRepository getItemRepository() {
+        return new DrawerItemRepository(this);
+    }
+
     public BlockController getBlock() {
         Block block = getLevel().getBlockState(getBlockPos()).getBlock();
         if (block instanceof BlockController)

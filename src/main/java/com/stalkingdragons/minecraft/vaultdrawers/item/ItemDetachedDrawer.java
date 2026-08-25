@@ -50,7 +50,7 @@ public class ItemDetachedDrawer extends Item implements IPortable
         ComponentUtil.appendSplitDescription(tooltip, this);
 
         if (ModCommonConfig.INSTANCE.DRAWERS.detached.heavyDrawers.get() && isHeavy(context.registries(), stack)) {
-            tooltip.accept(Component.translatable("tooltip.storagedrawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
+            tooltip.accept(Component.translatable("tooltip.vault_drawers.drawers.too_heavy").withStyle(ChatFormatting.RED));
         }
     }
 
@@ -66,7 +66,7 @@ public class ItemDetachedDrawer extends Item implements IPortable
     public Component getDescription() {
         return ModCommonConfig.INSTANCE.DRAWERS.detached.enable.get()
             ? Component.translatable(this.getDescriptionId() + ".desc")
-            : Component.translatable("itemConfig.storagedrawers.disabled_tool").withStyle(ChatFormatting.RED);
+            : Component.translatable("itemConfig.vault_drawers.disabled_tool").withStyle(ChatFormatting.RED);
     }
 
     @Override

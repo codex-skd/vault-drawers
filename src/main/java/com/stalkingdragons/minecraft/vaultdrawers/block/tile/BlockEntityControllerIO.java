@@ -99,6 +99,13 @@ public class BlockEntityControllerIO extends BaseBlockEntity implements IDrawerG
         return controllerData.getController(this);
     }
 
+    public com.stalkingdragons.minecraft.vaultdrawers.api.capabilities.IItemRepository getItemRepository() {
+        BlockEntityController controller = getController();
+        if (controller == null)
+            return new com.stalkingdragons.minecraft.vaultdrawers.capabilities.DrawerItemRepository(this);
+        return controller.getItemRepository();
+    }
+
     public static BlockEntityType.BlockEntitySupplier<BlockEntityControllerIO> create() {
         return (pos, state) -> new BlockEntityControllerIO(ModBlockEntities.CONTROLLER_IO.get(), pos, state);
     }

@@ -104,6 +104,7 @@ public class BlockFramingTable extends HorizontalDirectionalBlock implements Ent
     @Override
     protected void createBlockStateDefinition (StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
+        builder.add(FACING);
         builder.add(PART);
     }
 

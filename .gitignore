@@ -26,6 +26,7 @@ Thumbs.db
 # Project specific
 temp/
 lib_ext/
+run/
 nul
 *_errors.txt
 TEMPLATE_LICENSE.txt
