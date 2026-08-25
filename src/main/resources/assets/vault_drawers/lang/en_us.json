@@ -153,6 +153,7 @@
     "tooltip.vault_drawers.waila.limit": "Stack Limit: %s (x%s)",
     "tooltip.vault_drawers.waila.locked": "Locked",
     "tooltip.vault_drawers.waila.void": "Void",
+    "tooltip.vault_drawers.waila.balanced": "Balanced",
     "tooltip.vault_drawers.waila.protected": "Protected",
     "tooltip.vault_drawers.waila.suspended": "Paused",
     "tooltip.vault_drawers.waila.magnetic": "Magnetic"
