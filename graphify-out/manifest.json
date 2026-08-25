@@ -1160,8 +1160,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/VaultDrawers.java": {
-    "mtime": 1787677011.0178668,
-    "ast_hash": "375858add78f5bf822fa60cc8de80bf1",
+    "mtime": 1787689166.0153618,
+    "ast_hash": "f093459847ecb3c417b68cf175fc7d19",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/IVaultDrawersApi.java": {
@@ -1745,13 +1745,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/CompTierRegistry.java": {
-    "mtime": 1787453299.1965044,
-    "ast_hash": "7cbbf13854d716a47bfc3ae2c7e30c40",
+    "mtime": 1787685353.88759,
+    "ast_hash": "b1d76166059e9092f00ebc2df77fbbf2",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ConfigItemList.java": {
-    "mtime": 1787453299.2000146,
-    "ast_hash": "ae7d806d31a805ba047a4aedeefb0e19",
+    "mtime": 1787685863.5058115,
+    "ast_hash": "35f70bfd598c9340ec4b58620404d4ce",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ConversionRegistry.java": {
@@ -1760,8 +1760,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/MaterialBlacklist.java": {
-    "mtime": 1787453299.2035198,
-    "ast_hash": "1981664c34da3c7a6467befb96741c45",
+    "mtime": 1787685915.1742759,
+    "ast_hash": "4cfe0d94b8eea9fa8d00a1cf3df324eb",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ModClientConfig.java": {
@@ -1785,8 +1785,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/StorageBlacklist.java": {
-    "mtime": 1787453299.2296698,
-    "ast_hash": "0df32726b43be71d20e741cc05dcffdc",
+    "mtime": 1787685896.562234,
+    "ast_hash": "9ebf4880d64a6f16006d060edb71d6c6",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/container/ContainerDrawers.java": {
@@ -2090,8 +2090,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/util/CompactingHelper.java": {
-    "mtime": 1787663602.121812,
-    "ast_hash": "0787413931f433cf66a70d969b755d95",
+    "mtime": 1787685802.1582942,
+    "ast_hash": "e31c1a119c633a06dab173a6f99e7d93",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/util/ComponentUtil.java": {
@@ -2125,8 +2125,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787682482.5368538,
-    "ast_hash": "2ddf03acacb90189118b22bd45f4152d",
+    "mtime": 1787689257.0782294,
+    "ast_hash": "d572c39635f316c99f7bc72c3c30481b",
     "semantic_hash": ""
   },
   "README.md": {
@@ -2180,8 +2180,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/capabilities/PlatformCapabilities.java": {
-    "mtime": 1787678070.277242,
-    "ast_hash": "5cd3068d189e38857e2c995031fc9e34",
+    "mtime": 1787683614.5952227,
+    "ast_hash": "b530957b1bad35ed95ee2f885b68d5ec",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/capabilities/PlatformDrawerItemHandler.java": {
@@ -7547,6 +7547,11 @@
   "src/main/resources/assets/vault_drawers/textures/logo.png": {
     "mtime": 1787303695.9343941,
     "ast_hash": "86827c1057c9250d31cc114d559e7f78",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.3.md": {
+    "mtime": 1787689246.7781644,
+    "ast_hash": "22b7b49c41547d0fbc238801c5cbafa7",
     "semantic_hash": ""
   }
 }
