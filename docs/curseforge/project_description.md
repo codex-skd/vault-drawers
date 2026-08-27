@@ -85,7 +85,7 @@
 
 <h2>🙏 Credits</h2>
 
-<p><strong>Original Mod:</strong> <em>Storage Drawers</em> by <strong>Texelsaur</strong> (MIT License)<br>
+<p><strong>Original Mod:</strong> <em>Storage Drawers</em> by <strong>Texelsaur</strong> (MIT License) — <a href="https://www.curseforge.com/minecraft/mc-mods/storage-drawers" target="_blank">CurseForge page</a><br>
 <strong>Port & Maintenance:</strong> <strong>Stalking Dragons</strong></p>
 
 <p>This is an independent port for NeoForge 26.2. All original assets, code logic, and design belong to Texelsaur. This port adapts the 1.21.1 codebase to Minecraft 26.2 / NeoForge 26.2.0.57.</p>
