@@ -1,90 +1,54 @@
-stages:
-  - validate
-  - build
-  - test
-  - deploy
+image: alpine:latest
 
 variables:
-  GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3G"
+  GIT_DEPTH: 0
 
-before_script:
-  - chmod +x gradlew
+stages:
+  - publish
 
-validate:
-  stage: validate
+publish-public:
+  stage: publish
+  only:
+    - /^minecraft\/.*\/.*\/production$/
+  except:
+    - main
   script:
-    - ./gradlew --version
-    - ./gradlew checkstyleMain || true
-  tags:
-    - java
+    - apk add --no-cache git
+    - git config user.email "ci@mods-minecraft.dev"
+    - git config user.name "Mods Minecraft CI"
 
-build:
-  stage: build
-  script:
-    - ./gradlew clean build -x test
-  artifacts:
-    paths:
-      - build/libs/*.jar
-    expire_in: 1 week
-  tags:
-    - java
+    # Derive main branch: minecraft/X/N/production → minecraft/X/N/main
+    - MAIN_BRANCH=$(echo "$CI_COMMIT_BRANCH" | sed 's|/production$|/main|')
+    - echo "Publishing to $MAIN_BRANCH"
 
-test:
-  stage: test
-  script:
-    - ./gradlew test
-  tags:
-    - java
-
-deploy_curseforge:
-  stage: deploy
-  image: curlimages/curl:latest
-  variables:
-    # Set in GitLab CI/CD variables: CURSEFORGE_API_TOKEN, CURSEFORGE_PROJECT_ID
-    JAR_PATH: "build/libs/vault_drawers-26.2-neoforge-26.2.0.57-${MOD_VERSION}.jar"
-  script:
+    # Fetch main branch. Fail if it doesn't exist — the agent must create it manually.
     - |
-      if [ -z "$CURSEFORGE_API_TOKEN" ] || [ -z "$CURSEFORGE_PROJECT_ID" ]; then
-        echo "Missing CURSEFORGE_API_TOKEN or CURSEFORGE_PROJECT_ID variables"
+      if ! git fetch origin "$MAIN_BRANCH" 2>/dev/null; then
+        echo "ERROR: $MAIN_BRANCH does not exist. Create it from production first."
         exit 1
       fi
-    - |
-      # Extract version from gradle.properties
-      MOD_VERSION=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2)
-      JAR_FILE=$(ls build/libs/vault_drawers-26.2-neoforge-26.2.0.57-${MOD_VERSION}.jar 2>/dev/null | head -1)
-      if [ ! -f "$JAR_FILE" ]; then
-        echo "JAR not found: $JAR_FILE"
-        exit 1
-      fi
-      echo "Uploading $JAR_FILE to CurseForge project $CURSEFORGE_PROJECT_ID"
-    - |
-      # Upload to CurseForge API
-      curl -X POST "https://minecraft.curseforge.com/api/projects/${CURSEFORGE_PROJECT_ID}/upload-file" \
-        -H "Authorization: Bearer ${CURSEFORGE_API_TOKEN}" \
-        -H "Accept: application/json" \
-        -F "file=@${JAR_FILE}" \
-        -F "metadata={\"gameVersions\":[\"26.2\",\"NeoForge\"],\"releaseType\":\"beta\",\"changelog\":\"$(cat CHANGELOG.md | sed -n '/^## \[0.0.0-beta/,/^## \[/p' | head -n -1 | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/\\n/g')\"}" \
-        -w "\nHTTP %{http_code}\n"
-  rules:
-    - if: $CI_COMMIT_TAG =~ /^v0\.0\.0-beta\./
-      when: manual
-    - if: $CI_COMMIT_BRANCH == "minecraft/26.2/neoforge-26.2.0.57/production"
-      when: manual
-  tags:
-    - java
+    - git checkout "$MAIN_BRANCH"
 
-# Graphify update (run manually or on schedule)
-graphify:
-  stage: build
-  script:
+    # Clean and copy only public files from production
+    - git rm -rf --ignore-unmatch --quiet . 2>/dev/null || true
+
+    # Required files (must exist in all mods)
+    - git checkout "$CI_COMMIT_SHA" -- src/ build.gradle settings.gradle gradle.properties gradlew gradlew.bat .gitignore README.md CHANGELOG.md
+
+    # Optional files (may not exist in some mods)
+    - git checkout "$CI_COMMIT_SHA" -- libs/ 2>/dev/null || true
+
+    # Sanitize secrets in gradle.properties
+    - sed -i 's/^mod_version=.*/mod_version=0.0.0/' gradle.properties
+    - sed -i 's/^mod_group_id=.*/mod_group_id=com\.skd\.placeholder/' gradle.properties
+    - sed -i 's/^mod_curseforge_project_id=.*/mod_curseforge_project_id=/' gradle.properties
+
+    # Commit and force push to the main branch
+    - git add -A
     - |
-      GRAPHIFY="C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe"
-      "$GRAPHIFY" update . --force
-    - git config user.email "ci@stalkingdragons.com"
-    - git config user.name "CI Bot"
-    - git add graphify-out/
-    - git commit -m "chore: update knowledge graph" || true
-    - git push || true
-  when: manual
-  tags:
-    - java
+      if ! git diff --cached --quiet; then
+        git commit -m "chore: sync public code from ${CI_COMMIT_SHORT_SHA}"
+        git push --force "https://oauth2:${GITLAB_PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" HEAD:"$MAIN_BRANCH"
+      else
+        echo "No changes to publish"
+      fi
