@@ -45,10 +45,7 @@
 <h3>🔧 Integration & Compat</h3>
 <ul>
 <li><strong>JEI</strong> — Recipe viewing for upgrades, trim, controllers</li>
-<li><strong>JADE / The One Probe</strong> — Hover tooltips showing contents, upgrades, capacity</li>
-<li><strong>FTB Chunks</strong> — Chunk claim integration (access control)</li>
-<li><strong>FTB Teams</strong> — Team-based drawer access</li>
-<li><strong>Architectury API</strong> — Cross-loader compatibility layer</li>
+<li><strong>Jade</strong> — Hover tooltips showing contents, upgrades, capacity, owner</li>
 </ul>
 
 <h3>⚙️ Configuration</h3>
