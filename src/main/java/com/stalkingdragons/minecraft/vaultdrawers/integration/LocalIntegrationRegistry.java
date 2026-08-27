@@ -2,8 +2,6 @@ package com.stalkingdragons.minecraft.vaultdrawers.integration;
 
 import com.stalkingdragons.minecraft.vaultdrawers.VaultDrawers;
 import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
-// import com.stalkingdragons.minecraft.vaultdrawers.integration.ftb.FTBChunksModule;
-// import com.stalkingdragons.minecraft.vaultdrawers.integration.ftb.FTBTeamsModule;
 import net.neoforged.fml.ModList;
 
 public class LocalIntegrationRegistry
@@ -12,10 +10,9 @@ public class LocalIntegrationRegistry
 
     public static void initialize () {
         IntegrationRegistry reg = instance();
-        // if (ModList.get().isLoaded("ftbteams") && ModCommonConfig.INSTANCE.INTEGRATION.ftbTeams.enable.get())
-        //     reg.add(new FTBTeamsModule());
-        // if (ModList.get().isLoaded("ftbchunks") && ModCommonConfig.INSTANCE.INTEGRATION.ftbChunks.enable.get())
-        //     reg.add(new FTBChunksModule());
+        if (ModList.get().isLoaded("jade") && ModCommonConfig.INSTANCE.INTEGRATION.jade.enable.get()) {
+            reg.add(new JadeModule());
+        }
     }
 
     private final IntegrationRegistry registry;
@@ -36,5 +33,23 @@ public class LocalIntegrationRegistry
             instance = new LocalIntegrationRegistry();
 
         return instance.registry;
+    }
+
+    private static class JadeModule extends IntegrationModule {
+        @Override
+        public String getModID () {
+            return "jade";
+        }
+
+        @Override
+        public void init () throws Throwable {
+            // Jade registration happens via @WailaPlugin annotation on Jade class
+            // No additional init needed
+        }
+
+        @Override
+        public void postInit () {
+            // No post-init needed
+        }
     }
 }

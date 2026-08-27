@@ -18,8 +18,8 @@ public class Jade implements IWailaPlugin
 {
     @Override
     public void registerClient (IWailaClientRegistration registration) {
-        if (!ModCommonConfig.INSTANCE.INTEGRATION.waila.enable.get()
-            || !ModClientConfig.INSTANCE.INTEGRATION.enableWaila.get())
+        if (!ModCommonConfig.INSTANCE.INTEGRATION.jade.enable.get()
+            || !ModClientConfig.INSTANCE.INTEGRATION.enableJade.get())
             return;
 
         registration.addConfig(VaultDrawers.rl("display.content"), true);

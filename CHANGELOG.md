@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.5] - 2026-08-27
+
+### Eliminado
+- **Integraciones TOP y FTB (Chunks/Teams/Library)**: no existen builds para Minecraft 26.2 / NeoForge 26.2.0.57. Eliminadas declaraciones en `neoforge.mods.toml`, config (`ModCommonConfig.INTEGRATION`), y código stub en `LocalIntegrationRegistry`.
+- **Referencias a WAILA** en config renombradas a **Jade** (nombre real del mod).
+
+### Cambiado
+- `ModCommonConfig.Integration` simplificado: solo sección `Jade` (antes `Waila` + `FTBChunks` + `FTBTeams`).
+- `build.gradle` comentarios actualizados: FTB/TOP marcados como no disponibles en 26.2, Architectury solo transitivo vía Jade.
+
 ## [0.0.0-beta.4] - 2026-08-25
 
 ### Corregido
@@ -58,10 +68,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Upgrades (Capacity, Void, Speed; 1-4 slots)
   - Controller + Controller Slave network (512 drawer limit)
   - JEI integration (recipes for all items)
-  - JADE / The One Probe integration (tooltips)
-  - FTB Chunks integration (claim-based access)
-  - FTB Teams integration (team-based access)
-  - Architectury API compatibility layer
+  - **Jade integration (block tooltips)** — *The One Probe / FTB integrations removed: not available for 26.2*
+  - **Architectury** — *transitive via Jade only*
   - Full configuration system
 
 ### Changed

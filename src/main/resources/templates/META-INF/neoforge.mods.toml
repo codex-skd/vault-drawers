@@ -19,7 +19,7 @@ Features:
 - Trim system (wood/metal)
 - Upgrades: Capacity, Void, Speed
 - Controller network (512 drawer limit)
-- JEI, JADE, TOP, FTB Chunks, FTB Teams integration
+- JEI, Jade integration (tooltips)
 - Full configuration support
 '''
 
@@ -53,40 +53,10 @@ versionRange="[26.2.8,)"
 ordering="AFTER"
 side="BOTH"
 
-# The following optional integrations (The One Probe, Architectury, FTB Library/Chunks/Teams)
-# are declared for load ordering, but the actual compat Java code is not yet compiled against
-# them (see build.gradle TODO) — left unpinned ([0,)) until Phase 5 (Integration & Compat) of
-# ROADMAP.md wires up real compile dependencies and verified version numbers.
-[[dependencies.${mod_id}]]
-modId="theoneprobe"
-type="optional"
-versionRange="[0,)"
-ordering="AFTER"
-side="BOTH"
-
+# Architectury is a transitive dependency of Jade (cross-loader abstraction).
+# Declared for load ordering only; no direct compile dependency.
 [[dependencies.${mod_id}]]
 modId="architectury"
-type="optional"
-versionRange="[0,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="ftblibrary"
-type="optional"
-versionRange="[0,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="ftbchunks"
-type="optional"
-versionRange="[0,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="ftbteams"
 type="optional"
 versionRange="[0,)"
 ordering="AFTER"

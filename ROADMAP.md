@@ -109,11 +109,12 @@ front), custom block entity renderers, model decorators. Java classes for this e
 `src/main/java/.../client/`, `.../common/gui/` but were not verified for correctness
 during the Phase 2 compile-only pass — needs runtime testing once Phase 3 assets exist.
 
-## Phase 5: Integration & Compat 🔄 PENDING
+## Phase 5: Integration & Compat 🔄 PENDING (Scope Reduced)
 
-JEI, JADE, The One Probe, FTB Chunks, FTB Teams — Java integration classes exist but are
-untested. Recipes for JEI display depend on Phase 3's `data/vault_drawers/recipe/` being
-in place first.
+JEI, **Jade** — Java integration classes exist in `client_backup/integration/` (Jade = `Waila.java`).
+**The One Probe, FTB Chunks, FTB Teams REMOVED** — no builds exist for MC 26.2 / NeoForge 26.2.0.57.
+FTB stack (Library/Chunks/Teams) tops at 26.1.2.x. TOP last release 26.1.x.
+Architectury is transitive via Jade only (declared in mods.toml for load ordering).
 
 ## Phase 6: Testing 🔄 PENDING
 
@@ -136,11 +137,8 @@ in place first.
 1. **Phase 6 full testing checklist** — drawer placement, item insert/extract, upgrades,
    trim, controller network, config sync, JEI recipe display. Needs real interactive
    play (manual or desktop-automation), not just log inspection.
-2. **Phase 5 integrations** (JEI/JADE/The One Probe/FTB Chunks/FTB Teams) — currently
-   NOT implemented at all beyond 2 stub interfaces; real compat modules exist unported in
-   `client_backup/integration/`, and their compile dependencies (Jade, TOP, FTB, Architectury)
-   aren't even resolved in `build.gradle` yet (only JEI is). Sizeable follow-up, optional/
-   non-blocking for core functionality.
+2. **Phase 5: Jade integration** — port `client_backup/integration/Waila.java` → `src/main/.../integration/Jade.java`, register in `LocalIntegrationRegistry`, verify tooltips work. JEI already works.
+   *TOP/FTB removed from scope — not available for 26.2.*
 3. **Phase 4 client rendering deep-dive** — dynamic drawer face rendering, custom block
    entity renderers, model decorators; loads without error but not yet visually verified
    in detail (e.g. does the drawer front actually preview the stored item?).
@@ -159,6 +157,7 @@ in place first.
 
 ---
 
-*Last updated: 2026-08-25 — Phases 1-3 complete, main class wired, runClient verified
-playable (recipes + item icons fixed). Phases 4 (deep verification), 5 (integrations), 6
+*Last updated: 2026-08-27 — Phases 1-3 complete, main class wired, runClient verified
+playable (recipes + item icons fixed). **TOP/FTB integrations removed (unavailable 26.2)**.
+Phase 5 scope reduced to Jade only. Phases 4 (deep verification), 5 (Jade), 6
 (full gameplay testing checklist) remain.*

@@ -62,8 +62,7 @@ public class PersonalKeyRecipe extends CustomRecipe
     }
 
     private boolean ftbEnabled () {
-        return ModSecurity.registry.getProvider("ftb") != null
-            && ModCommonConfig.INSTANCE.INTEGRATION.ftbTeams.enableCycleRecipe.get();
+        return false; // FTB Teams not available for MC 26.2
     }
 
     @Override
