@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.7] - 2026-08-28
+
+### Corregido
+- **FerriteCore crash**: `IntegerSetProperty.getInternalIndex()` ahora retorna índice secuencial (0,1,2...) en lugar del valor real (1,2,4), compatible con `FastMap` de FerriteCore.
+- **Crash en cascada**: El crash de FerriteCore durante registro de bloques impedía que bloques como `keybutton_drawer` y `meta_indicator` se registraran, causando errores "unbound value" en Items y BlockEntities. Al fixear el crash raíz, el registro completa correctamente.
+
 ## [0.0.0-beta.6] - 2026-08-28
 
 ### Corregido
