@@ -58,7 +58,7 @@ public class IntegerSetProperty extends Property<Integer>
 
     @Override
     public int getInternalIndex(Integer value) {
-        return value;
+        return orderedValues.indexOf(value);
     }
 
     public String getName(Integer value) {
