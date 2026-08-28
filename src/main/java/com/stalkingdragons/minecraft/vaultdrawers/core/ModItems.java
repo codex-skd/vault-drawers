@@ -123,37 +123,40 @@ public final class ModItems
         EXCLUDE_ITEMS_CREATIVE_TAB.add(REMOTE_UPGRADE_BOUND);
         EXCLUDE_ITEMS_CREATIVE_TAB.add(REMOTE_GROUP_UPGRADE_BOUND);
 
+        // Register BlockItems using lazy suppliers to avoid accessing blocks during registration phase
         for (RegistryEntry<Block> ro : ModBlocks.BLOCKS.getEntries()) {
             if (ModBlocks.EXCLUDE_ITEMS.contains(ro.getId().getPath()))
                 continue;
 
-            registerBlock(ITEMS, ro);
+            registerBlockLazy(ITEMS, ro);
         }
 
         ITEMS.init(context);
     }
 
-    static void registerBlock (ChameleonRegistry<Item> register, RegistryEntry<? extends Block> blockHolder) {
+    static void registerBlockLazy (ChameleonRegistry<Item> register, RegistryEntry<? extends Block> blockHolder) {
         if (blockHolder == null)
             return;
 
-        register.register(blockHolder.getId().getPath(), () -> {
-            String path = blockHolder.getId().getPath();
-            Block block = blockHolder.get();
-            if (block instanceof BlockMeta)
-                return null;
-            if (block instanceof BlockFramedStandardDrawers) {
-                return new ItemFramedDrawers(block, setId(new Item.Properties(), path));
-            } else if (block instanceof BlockDrawers) {
-                return new ItemDrawers(block, setId(new Item.Properties(), path));
-            } else if (block instanceof BlockFramedTrim) {
-                return new ItemFramedTrim(block, setId(new Item.Properties(), path));
-            } else if (block instanceof BlockTrim) {
-                return new ItemTrim(block, setId(new Item.Properties(), path));
-            } else {
-                return new BlockItem(block, setId(new Item.Properties(), path));
-            }
-        });
+        String path = blockHolder.getId().getPath();
+        register.register(path, () -> createBlockItem(blockHolder, path));
+    }
+
+    private static Item createBlockItem(RegistryEntry<? extends Block> blockHolder, String path) {
+        Block block = blockHolder.get();
+        if (block instanceof BlockMeta)
+            return null;
+        if (block instanceof BlockFramedStandardDrawers) {
+            return new ItemFramedDrawers(block, setId(new Item.Properties(), path));
+        } else if (block instanceof BlockDrawers) {
+            return new ItemDrawers(block, setId(new Item.Properties(), path));
+        } else if (block instanceof BlockFramedTrim) {
+            return new ItemFramedTrim(block, setId(new Item.Properties(), path));
+        } else if (block instanceof BlockTrim) {
+            return new ItemTrim(block, setId(new Item.Properties(), path));
+        } else {
+            return new BlockItem(block, setId(new Item.Properties(), path));
+        }
     }
 
     private static <B extends Item> Stream<B> getItemsOfType (Class<B> itemClass) {

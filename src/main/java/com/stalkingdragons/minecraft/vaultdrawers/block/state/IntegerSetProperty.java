@@ -13,14 +13,16 @@ import java.util.stream.Collectors;
 public class IntegerSetProperty extends Property<Integer>
 {
     private final ImmutableSet<Integer> values;
+    private final List<Integer> orderedValues;
 
     protected IntegerSetProperty(String name, Set<Integer> validValues) {
         super(name, Integer.class);
         this.values = ImmutableSet.copyOf(validValues);
+        this.orderedValues = validValues.stream().sorted().collect(Collectors.toList());
     }
 
     public List<Integer> getPossibleValues() {
-        return List.copyOf(this.values);
+        return orderedValues;
     }
 
     public boolean equals(Object other) {

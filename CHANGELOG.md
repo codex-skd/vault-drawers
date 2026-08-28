@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.6] - 2026-08-28
+
+### Corregido
+- **Crash al iniciar con FerriteCore**: `IllegalStateException` en `BlockMeta.<init>` causado por `IntegerSetProperty` con orden no determinista. Fix: `getPossibleValues()` ahora retorna lista ordenada.
+- **Crash por acceso a bloques no registrados**: `NullPointerException: Trying to access unbound value` para `keybutton_drawer` y `meta_indicator`. Fix: Items y BlockEntities ahora usan lookup perezoso (lazy) dentro del supplier de DeferredRegister, resolviendo bloques después de que estén registrados.
+
+### Cambiado
+- `ModItems.init()`: registro de BlockItems diferido vía `registerBlockLazy()`.
+- `ModBlockEntities`: registro de block entity types con lookup de bloques dentro del supplier.
+
 ## [0.0.0-beta.5] - 2026-08-27
 
 ### Eliminado
