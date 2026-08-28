@@ -36,6 +36,6 @@ public class ItemUpgradeStorage extends ItemUpgrade
             return super.getDescription();
 
         int mult = ModCommonConfig.INSTANCE.UPGRADES.getLevelMult(level.getLevel());
-        return Component.translatable("item.storagedrawers.storage_upgrade.desc", mult);
+        return Component.translatable("item.vault_drawers.storage_upgrade.desc", mult);
     }
 }

@@ -57,9 +57,9 @@ public class CompactingHelper
         CompTierRegistry.Record record = CompTierRegistry.INSTANCE.findHigherTier(stack);
         if (record != null) {
             if (!world.isClientSide() && debugTrace)
-                ModServices.log.info("Found " + record.upper.toString() + " in registry with conv=" + record.convRate);
+                ModServices.log.info("Found " + record.getUpper().toString() + " in registry with conv=" + record.convRate);
 
-            return new Result(record.upper, record.convRate);
+            return new Result(record.getUpper(), record.convRate);
         }
 
         List<ItemStack> candidates = new ArrayList<>();
@@ -115,9 +115,9 @@ public class CompactingHelper
         CompTierRegistry.Record record = CompTierRegistry.INSTANCE.findLowerTier(stack);
         if (record != null) {
             if (!world.isClientSide() && debugTrace)
-                ModServices.log.info("Found " + record.lower.toString() + " in registry with conv=" + record.convRate);
+                ModServices.log.info("Found " + record.getLower().toString() + " in registry with conv=" + record.convRate);
 
-            return new Result(record.lower, record.convRate);
+            return new Result(record.getLower(), record.convRate);
         }
 
         List<ItemStack> candidates = new ArrayList<>();

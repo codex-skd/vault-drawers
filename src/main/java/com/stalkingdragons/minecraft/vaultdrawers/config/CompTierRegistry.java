@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class CompTierRegistry
@@ -18,15 +19,45 @@ public class CompTierRegistry
 
     public static class Record {
         @NotNull
-        public final ItemStack upper;
+        private final Item upperItem;
         @NotNull
-        public final ItemStack lower;
+        private final Item lowerItem;
         public final int convRate;
+        private ItemStack upperStack;
+        private ItemStack lowerStack;
 
-        public Record (@NotNull ItemStack upper, @NotNull ItemStack lower, int convRate) {
-            this.upper = upper;
-            this.lower = lower;
+        public Record (@NotNull Item upper, @NotNull Item lower, int convRate) {
+            this.upperItem = upper;
+            this.lowerItem = lower;
             this.convRate = convRate;
+        }
+
+        @NotNull
+        public ItemStack getUpper () {
+            if (upperStack == null) {
+                upperStack = new ItemStack(upperItem);
+                upperStack.setCount(1);
+            }
+            return upperStack;
+        }
+
+        @NotNull
+        public ItemStack getLower () {
+            if (lowerStack == null) {
+                lowerStack = new ItemStack(lowerItem);
+                lowerStack.setCount(1);
+            }
+            return lowerStack;
+        }
+
+        @NotNull
+        public Item getUpperItem () {
+            return upperItem;
+        }
+
+        @NotNull
+        public Item getLowerItem () {
+            return lowerItem;
         }
     }
 
@@ -40,15 +71,15 @@ public class CompTierRegistry
         initialized = true;
 
         if (ModCommonConfig.INSTANCE.DRAWERS.compacting.enableExtraCompactingRules.get()) {
-            register(new ItemStack(Blocks.CLAY), new ItemStack(Items.CLAY_BALL), 4);
-            register(new ItemStack(Blocks.SNOW_BLOCK), new ItemStack(Items.SNOWBALL), 4);
-            register(new ItemStack(Blocks.GLOWSTONE), new ItemStack(Items.GLOWSTONE_DUST), 4);
-            register(new ItemStack(Blocks.BRICKS), new ItemStack(Items.BRICK), 4);
-            register(new ItemStack(Blocks.NETHER_BRICKS), new ItemStack(Items.NETHER_BRICK), 4);
-            register(new ItemStack(Blocks.NETHER_WART_BLOCK), new ItemStack(Items.NETHER_WART), 9);
-            register(new ItemStack(Blocks.QUARTZ_BLOCK), new ItemStack(Items.QUARTZ), 4);
-            register(new ItemStack(Blocks.MELON), new ItemStack(Items.MELON_SLICE), 9);
-            register(new ItemStack(Blocks.BAMBOO_BLOCK), new ItemStack(Items.BAMBOO), 9);
+            register(Blocks.CLAY.asItem(), Items.CLAY_BALL, 4);
+            register(Blocks.SNOW_BLOCK.asItem(), Items.SNOWBALL, 4);
+            register(Blocks.GLOWSTONE.asItem(), Items.GLOWSTONE_DUST, 4);
+            register(Blocks.BRICKS.asItem(), Items.BRICK, 4);
+            register(Blocks.NETHER_BRICKS.asItem(), Items.NETHER_BRICK, 4);
+            register(Blocks.NETHER_WART_BLOCK.asItem(), Items.NETHER_WART, 9);
+            register(Blocks.QUARTZ_BLOCK.asItem(), Items.QUARTZ, 4);
+            register(Blocks.MELON.asItem(), Items.MELON_SLICE, 9);
+            register(Blocks.BAMBOO_BLOCK.asItem(), Items.BAMBOO, 9);
         }
 
         ModCommonConfig.INSTANCE.onLoad(() -> ModCommonConfig.INSTANCE.DRAWERS.compacting.compRules.get().forEach(this::register));
@@ -60,21 +91,16 @@ public class CompTierRegistry
         pendingRules = null;
     }
 
-    public boolean register (@NotNull ItemStack upper, @NotNull ItemStack lower, int convRate) {
-        if (upper.isEmpty() || lower.isEmpty())
-            return false;
-
+    public boolean register (@NotNull Item upper, @NotNull Item lower, int convRate) {
         unregisterUpperTarget(upper);
         unregisterLowerTarget(lower);
 
-        Record r = new Record(upper.copy(), lower.copy(), convRate);
-        r.upper.setCount(1);
-        r.lower.setCount(1);
+        Record r = new Record(upper, lower, convRate);
 
         records.add(r);
 
         if (ModCommonConfig.INSTANCE.GENERAL.logStartupActivity.get())
-            VaultDrawers.log.info("New compacting rule " + convRate + " " + lower.getItem() + " = 1 " + upper.getItem());
+            VaultDrawers.log.info("New compacting rule " + convRate + " " + lower + " = 1 " + upper);
 
         return true;
     }
@@ -120,17 +146,18 @@ public class CompTierRegistry
 
         try {
             int conv = Integer.parseInt(parts[2]);
-            return register(new ItemStack(upperItem), new ItemStack(lowerItem), conv);
+            return register(upperItem, lowerItem, conv);
         }
         catch (NumberFormatException e) {
             return false;
         }
     }
 
-    public boolean unregisterUpperTarget (@NotNull ItemStack stack) {
-        for (Record r : records) {
-            if (ItemStack.matches(stack, r.upper)) {
-                records.remove(r);
+    public boolean unregisterUpperTarget (@NotNull Item item) {
+        Iterator<Record> it = records.iterator();
+        while (it.hasNext()) {
+            if (it.next().getUpperItem() == item) {
+                it.remove();
                 return true;
             }
         }
@@ -138,10 +165,11 @@ public class CompTierRegistry
         return false;
     }
 
-    public boolean unregisterLowerTarget (@NotNull ItemStack stack) {
-        for (Record r : records) {
-            if (ItemStack.matches(stack, r.lower)) {
-                records.remove(r);
+    public boolean unregisterLowerTarget (@NotNull Item item) {
+        Iterator<Record> it = records.iterator();
+        while (it.hasNext()) {
+            if (it.next().getLowerItem() == item) {
+                it.remove();
                 return true;
             }
         }
@@ -153,8 +181,9 @@ public class CompTierRegistry
         if (stack.isEmpty())
             return null;
 
+        Item item = stack.getItem();
         for (Record r : records) {
-            if (ItemStack.isSameItemSameComponents(stack, r.lower))
+            if (item == r.getLowerItem())
                 return r;
         }
 
@@ -165,8 +194,9 @@ public class CompTierRegistry
         if (stack.isEmpty())
             return null;
 
+        Item item = stack.getItem();
         for (Record r : records) {
-            if (ItemStack.isSameItemSameComponents(stack, r.upper))
+            if (item == r.getUpperItem())
                 return r;
         }
 

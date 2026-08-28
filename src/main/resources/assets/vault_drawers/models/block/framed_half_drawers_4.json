@@ -1,0 +1,10 @@
+{
+    "parent": "vault_drawers:block/half_drawers_orientable_nocull",
+    "textures": {
+        "top": "vault_drawers:block/drawers_raw_front_2",
+        "front": "vault_drawers:block/drawers_raw_front_4",
+        "back": "vault_drawers:block/drawers_raw_side",
+        "side": "vault_drawers:block/drawers_raw_side",
+        "trim": "vault_drawers:block/drawers_raw_side"
+    }
+}

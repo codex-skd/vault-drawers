@@ -70,17 +70,13 @@ public class ModClientConfig extends ConfigSpec
     }
 
     public class Integration {
-        public final ChameleonConfig.ConfigEntry<Boolean> enableWaila;
-        public final ChameleonConfig.ConfigEntry<Boolean> enableTheOneProbe;
+        public final ChameleonConfig.ConfigEntry<Boolean> enableJade;
 
         public Integration() {
             commonConfig.pushGroup("Integration");
 
-            enableWaila = commonConfig.define("enableWaila", true)
-                .comment("Enable extended data display in WAILA if present")
-                .build();
-            enableTheOneProbe = commonConfig.define("enableTheOneProbe", true)
-                .comment("Enable extended data display in The One Probe if present")
+            enableJade = commonConfig.define("enableJade", true)
+                .comment("Enable extended data display in Jade if present")
                 .build();
 
             commonConfig.popGroup();

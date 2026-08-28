@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "vault_drawers:block/framed/framed_controller_io_shading" }
+    }
+}

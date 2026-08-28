@@ -1,6 +1,7 @@
 package com.stalkingdragons.minecraft.vaultdrawers.config;
 
 import com.stalkingdragons.minecraft.vaultdrawers.VaultDrawers;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,9 +25,9 @@ public class MaterialBlacklist extends ConfigItemList
     }
 
     @Override
-    protected void logRegisterItem (@NotNull ItemStack item) {
+    protected void logRegisterItem (@NotNull Item item) {
         if (ModCommonConfig.INSTANCE.GENERAL.logStartupActivity.get())
-            VaultDrawers.log.info("New denied framing material item " + item.getItem());
+            VaultDrawers.log.info("New denied framing material item " + item);
     }
 
 }

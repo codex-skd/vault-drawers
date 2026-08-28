@@ -52,7 +52,7 @@ public class ItemUpgrade extends Item
         ComponentUtil.appendSplitDescription(tooltip, this);
 
         if (!isEnabled())
-            tooltip.accept(Component.translatable("itemConfig.storagedrawers.disabled_upgrade")
+            tooltip.accept(Component.translatable("itemConfig.vault_drawers.disabled_upgrade")
                 .withStyle(ChatFormatting.YELLOW));
     }
 

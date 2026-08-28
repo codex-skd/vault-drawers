@@ -41,7 +41,7 @@ public class ItemUpgradeMagnet extends ItemUpgrade
         if (!isEnabled())
             return super.getDescription();
 
-        return Component.translatable("item.storagedrawers.magnet_upgrade.desc");
+        return Component.translatable("item.vault_drawers.magnet_upgrade.desc");
     }
 
     @Override

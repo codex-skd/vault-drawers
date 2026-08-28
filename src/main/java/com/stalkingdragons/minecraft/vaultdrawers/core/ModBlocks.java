@@ -14,7 +14,9 @@ import com.stalkingdragons.minecraft.vaultdrawers.chameleon.registry.ChameleonRe
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.registry.RegistryEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -140,9 +142,9 @@ public final class ModBlocks
         CONTROLLER_IO = registerControllerIOBlock("controller_io");
 
     public static final RegistryEntry<BlockFramedController> FRAMED_CONTROLLER = BLOCKS.register("framed_controller",
-        () -> new BlockFramedController(getStoneBlockProperties().noOcclusion()));
+        () -> new BlockFramedController(setId(getStoneBlockProperties().noOcclusion(), "framed_controller")));
     public static final RegistryEntry<BlockFramedControllerIO> FRAMED_CONTROLLER_IO = BLOCKS.register("framed_controller_io",
-        () -> new BlockFramedControllerIO(getStoneBlockProperties().noOcclusion()));
+        () -> new BlockFramedControllerIO(setId(getStoneBlockProperties().noOcclusion(), "framed_controller_io")));
 
     public static final RegistryEntry<BlockFramingTable> FRAMING_TABLE = registerFramingTableBlock("framing_table");
 
@@ -194,11 +196,11 @@ public final class ModBlocks
 
     public static final RegistryEntry<BlockKeyButton>
         KEYBUTTON_DRAWER = BLOCKS.register("keybutton_drawer",
-        () -> new BlockKeyButton(KeyType.DRAWER, Properties.of().sound(SoundType.STONE))),
+        () -> new BlockKeyButton(KeyType.DRAWER, setId(Properties.of().sound(SoundType.STONE), "keybutton_drawer"))),
         KEYBUTTON_QUANTIFY = BLOCKS.register("keybutton_quantify",
-            () -> new BlockKeyButton(KeyType.QUANTIFY, Properties.of().sound(SoundType.STONE))),
+            () -> new BlockKeyButton(KeyType.QUANTIFY, setId(Properties.of().sound(SoundType.STONE), "keybutton_quantify"))),
         KEYBUTTON_CONCEALMENT = BLOCKS.register("keybutton_concealment",
-            () -> new BlockKeyButton(KeyType.CONCEALMENT, Properties.of().sound(SoundType.STONE)));
+            () -> new BlockKeyButton(KeyType.CONCEALMENT, setId(Properties.of().sound(SoundType.STONE), "keybutton_concealment")));
 
     private ModBlocks() {}
 
@@ -229,28 +231,28 @@ public final class ModBlocks
 
     static RegistryEntry<BlockStandardDrawers> registerWoodenDrawerBlock(ChameleonRegistry<Block> register, String name, int drawerCount, boolean halfDepth) {
         IDrawerConfig config = getStandardConfig(drawerCount, halfDepth);
-        return register.register(name, () -> new BlockStandardDrawers(drawerCount, halfDepth, config, getWoodenDrawerBlockProperties()));
+        return register.register(name, () -> new BlockStandardDrawers(drawerCount, halfDepth, config, setId(getWoodenDrawerBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockStandardDrawers> registerWoodenDrawerBlock(ChameleonRegistry<Block> register, Identifier material, int drawerCount, boolean halfDepth) {
         String name = material.getPath() + (halfDepth ? "_half_drawers_" : "_full_drawers_") + drawerCount;
         IDrawerConfig config = getStandardConfig(drawerCount, halfDepth);
-        return register.register(name, () -> new BlockStandardDrawers(drawerCount, halfDepth, config, getWoodenDrawerBlockProperties()).setMatKey(material));
+        return register.register(name, () -> new BlockStandardDrawers(drawerCount, halfDepth, config, setId(getWoodenDrawerBlockProperties(), name)).setMatKey(material));
     }
 
     static RegistryEntry<BlockFramedStandardDrawers> registerFramedDrawerBlock(String name, int drawerCount, boolean halfDepth) {
         IDrawerConfig config = getStandardConfig(drawerCount, halfDepth);
-        return BLOCKS.register(name, () -> (BlockFramedStandardDrawers)new BlockFramedStandardDrawers(drawerCount, halfDepth, config, getWoodenDrawerBlockProperties().noOcclusion()).setMatKey("framed"));
+        return BLOCKS.register(name, () -> (BlockFramedStandardDrawers)new BlockFramedStandardDrawers(drawerCount, halfDepth, config, setId(getWoodenDrawerBlockProperties().noOcclusion(), name)).setMatKey("framed"));
     }
 
     static RegistryEntry<BlockCompDrawers> registerCompactingDrawerBlock(String name, int drawerCount, boolean halfDepth) {
         IDrawerConfig config = getCompConfig(halfDepth);
-        return BLOCKS.register(name, () -> new BlockCompDrawers(drawerCount, halfDepth, config, getStoneDrawerBlockProperties()));
+        return BLOCKS.register(name, () -> new BlockCompDrawers(drawerCount, halfDepth, config, setId(getStoneDrawerBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockFramedCompDrawers> registerFramedCompactingDrawerBlock(String name, int drawerCount, boolean halfDepth) {
         IDrawerConfig config = getCompConfig(halfDepth);
-        return BLOCKS.register(name, () -> new BlockFramedCompDrawers(drawerCount, halfDepth, config, getStoneDrawerBlockProperties().noOcclusion()));
+        return BLOCKS.register(name, () -> new BlockFramedCompDrawers(drawerCount, halfDepth, config, setId(getStoneDrawerBlockProperties().noOcclusion(), name)));
     }
 
     static RegistryEntry<BlockTrim> registerTrimBlock(Identifier name) {
@@ -258,68 +260,68 @@ public final class ModBlocks
     }
 
     static RegistryEntry<BlockTrim> registerTrimBlock(ChameleonRegistry<Block> register, String name) {
-        return register.register(name, () -> new BlockTrim(getWoodenBlockProperties()));
+        return register.register(name, () -> new BlockTrim(setId(getWoodenBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockTrim> registerTrimBlock(ChameleonRegistry<Block> register, Identifier material) {
         String name = material.getPath() + "_trim";
-        return register.register(name, () -> new BlockTrim(getWoodenBlockProperties()).setMatKey(material));
+        return register.register(name, () -> new BlockTrim(setId(getWoodenBlockProperties(), name)).setMatKey(material));
     }
 
     static RegistryEntry<BlockFramedTrim> registerFramedTrimBlock(String name) {
-        return BLOCKS.register(name, () -> (BlockFramedTrim)new BlockFramedTrim(getWoodenDrawerBlockProperties().noOcclusion()).setMatKey("framed"));
+        return BLOCKS.register(name, () -> (BlockFramedTrim)new BlockFramedTrim(setId(getWoodenDrawerBlockProperties().noOcclusion(), name)).setMatKey("framed"));
     }
 
     static RegistryEntry<BlockController> registerControllerBlock(String name) {
-        return BLOCKS.register(name, () -> new BlockController(getStoneBlockProperties()));
+        return BLOCKS.register(name, () -> new BlockController(setId(getStoneBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockControllerIO> registerControllerIOBlock (String name) {
-        return BLOCKS.register(name, () -> new BlockControllerIO(getStoneBlockProperties()));
+        return BLOCKS.register(name, () -> new BlockControllerIO(setId(getStoneBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockFramingTable> registerFramingTableBlock(String name) {
-        return BLOCKS.register(name, () -> new BlockFramingTable(getWoodenBlockProperties()));
+        return BLOCKS.register(name, () -> new BlockFramingTable(setId(getWoodenBlockProperties(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaBlock (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMeta(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMeta(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingBlock (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacing(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacing(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedBlock (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSized(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSized(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedSlotted23Block (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Slots23(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Slots23(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedSlotted124Block (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Slots124(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Slots124(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedLabelBlock (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Label(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSizedSlotted.Label(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedOpen2Block (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSizedOpen.Open2(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSizedOpen.Open2(setId(Properties.of().air(), name)));
     }
 
     static RegistryEntry<BlockMeta> registerMetaFacingSizedOpen3Block (String name) {
         EXCLUDE_ITEMS.add(name);
-        return BLOCKS.register(name, () -> new BlockMetaFacingSizedOpen.Open3(Properties.of().air()));
+        return BLOCKS.register(name, () -> new BlockMetaFacingSizedOpen.Open3(setId(Properties.of().air(), name)));
     }
 
     static Properties getWoodenBlockProperties() {
@@ -336,6 +338,10 @@ public final class ModBlocks
 
     static Properties getStoneDrawerBlockProperties() {
         return getStoneBlockProperties().isSuffocating(ModBlocks::predFalse).isRedstoneConductor(ModBlocks::predFalse);
+    }
+
+    static Properties setId(Properties props, String name) {
+        return props.setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ModConstants.MOD_ID, name)));
     }
 
     public static void init (ChameleonInit.InitContext context) {

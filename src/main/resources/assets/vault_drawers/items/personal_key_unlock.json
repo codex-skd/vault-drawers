@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "vault_drawers:item/personal_key_unlock"
+  }
+}

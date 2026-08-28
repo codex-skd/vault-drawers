@@ -191,6 +191,12 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
         return drawerAttributes;
     }
 
+    public static IDrawerAttributes getDrawerAttributes(BlockEntityDrawers be) {
+        if (be == null)
+            return null;
+        return be.getDrawerAttributes();
+    }
+
     @Override
     public <T> T getCapability(com.stalkingdragons.minecraft.vaultdrawers.chameleon.capabilities.ChameleonCapability<T> capability) {
         if (capability == com.stalkingdragons.minecraft.vaultdrawers.capabilities.Capabilities.DRAWER_ATTRIBUTES
@@ -321,6 +327,12 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
 
     public IDrawerGroup getGroup() {
         return this;
+    }
+
+    public static IDrawerGroup getGroup(BlockEntityDrawers be) {
+        if (be == null)
+            return null;
+        return be.getGroup();
     }
 
     @Override

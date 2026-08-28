@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "vault_drawers:block/controller" },
+        "facing=south": { "model": "vault_drawers:block/controller", "y": 180 },
+        "facing=west": { "model": "vault_drawers:block/controller", "y": 270 },
+        "facing=east": { "model": "vault_drawers:block/controller", "y": 90 }
+    }
+}

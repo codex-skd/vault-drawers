@@ -1,1 +1,0 @@
-Port of Storage Drawers to Minecraft 26.2 / NeoForge 26.2.0.57. Interactive compartment storage blocks that display their contents, with capacity, void and speed upgrades, plus a controller network to manage entire storage walls from a single block.

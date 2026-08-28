@@ -17,6 +17,7 @@ sourceSets.main.resources {
 }
 
 repositories {
+    maven { url "https://maven.blamejared.com" }
     maven { url "https://maven.isxander.dev/releases" }
     maven { url "https://maven.isxander.dev/snapshots" }
     exclusiveContent {
@@ -73,13 +74,13 @@ dependencies {
     implementation files("build/moddev/artifacts/minecraft-patched-${neo_version}.jar")
     // JEI
     runtimeOnly "mezz.jei:jei-${jei_mc}-neoforge:${jei_version}"
-    // JADE / The One Probe / Architectury / FTB - TODO: resolve via CurseForge maven or Modrinth
-    // implementation "curse.maven:jade-${jade_projid}:${jade_fileid}"
-    // implementation "curse.maven:the-one-probe-245211:6106998"
-    // implementation "curse.maven:architectury-api-419699:5786327"
-    // implementation "curse.maven:ftb-library-forge-404465:6807431"
-    // implementation "curse.maven:ftb-chunks-forge-314906:6504893"
-    // implementation "curse.maven:ftb-teams-forge-404468:6119437"
+    // Jade is an optional/soft integration, compiled against for compat/integration,
+    // bundled locally since Jade's public maven doesn't yet mirror a 26.2 build.
+    compileOnly files("libs/Jade-mc26.2-NeoForge-26.2.9.jar")
+    localRuntime files("libs/Jade-mc26.2-NeoForge-26.2.9.jar")
+    // The One Probe / FTB (Library/Chunks/Teams) - NOT available for MC 26.2.
+    // FTB maven tops out at 26.1.2.x. TOP last release 26.1.x. Removed from mods.toml.
+    // Architectury is transitive via Jade (cross-loader abstraction), declared in mods.toml for load ordering.
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

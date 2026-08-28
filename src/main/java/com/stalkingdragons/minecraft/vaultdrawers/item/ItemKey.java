@@ -60,7 +60,7 @@ public class ItemKey extends Item
         ComponentUtil.appendSplitDescription(tooltip, this);
 
         if (!isEnabled())
-            tooltip.accept(Component.translatable("itemConfig.storagedrawers.disabled_tool")
+            tooltip.accept(Component.translatable("itemConfig.vault_drawers.disabled_tool")
                 .withStyle(ChatFormatting.YELLOW));
     }
 

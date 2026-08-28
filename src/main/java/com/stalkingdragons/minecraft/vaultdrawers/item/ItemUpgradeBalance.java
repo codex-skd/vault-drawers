@@ -20,7 +20,7 @@ public class ItemUpgradeBalance extends ItemUpgrade
     @NotNull
     public Component getDescription() {
         return ModCommonConfig.INSTANCE.UPGRADES.balanceUpgrade.enableUpgrade.get()
-            ? Component.translatable("item.storagedrawers.balance_fill_upgrade.desc")
-            : Component.translatable("itemConfig.storagedrawers.disabled_upgrade").withStyle(ChatFormatting.RED);
+            ? Component.translatable("item.vault_drawers.balance_fill_upgrade.desc")
+            : Component.translatable("itemConfig.vault_drawers.disabled_upgrade").withStyle(ChatFormatting.RED);
     }
 }
