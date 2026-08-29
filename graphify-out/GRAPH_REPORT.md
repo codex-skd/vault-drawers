@@ -1,16 +1,16 @@
-# Graph Report - 26.2  (2026-08-25)
+# Graph Report - 26.2  (2026-08-29)
 
 ## Corpus Check
-- 1403 files · ~160,362 words
+- 1184 files · ~101,712 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 6295 nodes · 13478 edges · 325 communities (285 shown, 40 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 220 edges (avg confidence: 0.8)
+- 2922 nodes · 4623 edges · 864 communities (85 shown, 779 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 431 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `01b4aa68`
+- Built from commit: `7f713cf9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,7 +35,6 @@
 - UpgradeData
 - IDrawerAttributesModifiable
 - ConfigEntry
-- PlatformBlockEntityDrawersStandard.java
 - ModBlocks
 - DynamicPart
 - BlockEntityDrawers
@@ -58,14 +57,10 @@
 - MaterialData
 - ItemKeyring.java
 - IDrawerConfig
-- ItemKeyring
-- BlockEntityFramingTable
 - BlockController
-- BasicDrawerAttributes
 - BlockEntityFramingTable.java
 - BasicDrawerAttributes
 - DetachedDrawerContents
-- BlockEntityDrawersRenderer.java
 - BlockEntityControllerIO
 - FractionalStorage
 - KeyringContents
@@ -172,7 +167,6 @@
 - ModItems.java
 - ResourceFactory
 - NeoforgeCapability
-- .hitWithinArea
 - ConversionRegistry
 - CountUpdateMessage
 - ChameleonCapability
@@ -269,6 +263,7 @@
 - NeoforgeRegistryEntry
 - IVaultDrawersApi
 - BlockEntityDataShim
+- MapCodec
 - DrawerInventoryHelper.java
 - ItemFramedDrawers.java
 - ItemFramedTrim.java
@@ -279,16 +274,22 @@
 - ContainerDrawers2
 - ContainerDrawers4
 - ContainerDrawersComp2
+- BlockState
 - ItemUpgradeStorage
+- Direction
+- Identifier
 - UpgradeData.java
 - IInteractionProvider.java
 - ChameleonPlatform
+- Nullable
+- Override
 - ContainerDrawersComp3.java
 - ItemPersonalKey
 - ItemUpgradeStorage
 - PlatformCapabilities.java
 - ClientModBusSubscriber.java
 - ItemShroudKey
+- Override
 - Vault Drawers — CurseForge Logo Image Prompt
 - .renderImage
 - IFractionalDrawer
@@ -326,1159 +327,872 @@
 - PlayerConfigSetting
 - .getStoreModel
 - IDrawerConfig
+- DrawerPopulatedEvent.java
 - ItemSuspendKey
+- ItemStack
+- Level
 - IntegrationModule
+- LivingEntity
+- NotNull
 - ItemDrawerPuller
+- Player
 - FTBChunksModule
+- BlockState
+- Builder
+- ItemStack
+- Level
+- LevelReader
+- LivingEntity
+- NotNull
+- Override
+- Player
+- BlockPos
+- BlockState
+- Deprecated
+- ItemStack
+- Level
+- LevelReader
+- LivingEntity
+- Override
+- Player
+- BlockPos
+- BlockState
+- Builder
+- ItemStack
+- Level
+- LevelReader
+- LivingEntity
+- NotNull
+- Override
+- Player
+- Codec
+- Block
+- BlockState
+- Builder
+- Direction
+- EnumProperty
+- Override
+- Block
+- BlockState
+- BooleanProperty
+- Builder
+- Override
+- Block
+- BlockState
+- Builder
+- EnumProperty
+- Override
+- Block
+- BlockState
+- Builder
+- Override
+- BlockEntityType
+- BlockPos
+- BlockState
+- CompoundTag
+- NotNull
+- Override
+- Provider
+- BlockEntitySupplier
+- BlockEntityType
+- BlockPos
+- BlockState
+- ItemStack
+- Override
+- Player
+- BlockEntitySupplier
+- BlockEntityType
+- BlockPos
+- BlockState
+- Override
+- Player
+- AABB
+- AbstractContainerMenu
+- BlockEntityType
+- BlockPos
+- BlockState
+- Component
+- CompoundTag
+- Entity
+- Inventory
+- ItemStack
+- Level
+- Override
+- Player
+- Provider
+- ServerPlayer
+- BlockEntitySupplier
+- BlockEntityType
+- BlockPos
+- BlockState
+- Override
+- BlockEntitySupplier
+- BlockEntityType
+- BlockPos
+- BlockState
+- NotNull
+- Override
+- AbstractContainerMenu
+- BlockEntitySupplier
+- BlockEntityType
+- BlockPos
+- BlockState
+- Component
+- Inventory
+- ItemStack
+- Nullable
+- Override
+- Player
+- ServerPlayer
+- BlockEntityType
+- BlockPos
+- BlockState
+- Override
+- CompoundTag
+- Provider
+- BlockEntity
+- BlockPos
+- CompoundTag
+- Override
+- Provider
+- BlockPos
+- CompoundTag
+- Level
+- Override
+- Provider
+- CompoundTag
+- ItemStack
+- NotNull
+- Override
+- Provider
+- CompoundTag
+- ItemStack
+- Level
+- NotNull
+- Override
+- Provider
+- Codec
+- CompoundTag
+- ItemStack
+- NotNull
+- Override
+- Provider
+- RegistryFriendlyByteBuf
+- StreamCodec
+- CompoundTag
+- ItemStack
+- NotNull
+- Override
+- Provider
+- CompoundTag
+- ItemStack
+- NotNull
+- Override
+- Provider
+- ItemStack
+- Override
+- ItemStack
+- NotNull
+- Override
+- ItemStack
+- NonNullList
+- NotNull
+- Override
+- RegisterCapabilitiesEvent
+- BlockPos
+- Identifier
+- Level
+- FriendlyByteBuf
+- Nullable
+- BlockPos
+- FriendlyByteBuf
+- Level
+- Nullable
+- Override
+- ServerPlayer
+- BlockEntityType
+- BlockPos
+- Identifier
+- Level
+- Override
+- RegisterCapabilitiesEvent
+- Override
+- Registry
+- IEventBus
+- Identifier
+- Override
+- Identifier
+- Override
+- Builder
+- Override
+- AbstractContainerMenu
+- Component
+- Inventory
+- MenuType
+- Nullable
+- Override
+- Player
+- Override
+- ServerLevel
+- ServerPlayer
+- StreamCodec
+- Override
+- Override
+- Registry
+- Player
+- Identifier
+- Identifier
+- Override
+- Inventory
+- MenuType
+- Player
+- ServerLevel
+- ServerPlayer
+- StreamCodec
+- Registry
+- BlockGetter
+- BlockHitResult
+- BlockPos
+- Level
+- NotNull
+- Nullable
+- Player
+- GameProfile
+- Player
+- ItemStack
+- BlockPos
+- Codec
+- FriendlyByteBuf
+- Override
+- StreamCodec
+- Codec
+- ItemStack
+- Override
+- Codec
+- Override
+- Codec
+- ItemStack
+- Override
+- RegistryFriendlyByteBuf
+- StreamCodec
+- Codec
+- ItemStack
+- Nullable
+- Override
+- Player
+- RegistryFriendlyByteBuf
+- Slot
+- StreamCodec
+- Item
+- ItemStack
+- NotNull
+- Item
+- ItemStack
+- Identifier
+- Item
+- ItemStack
+- Item
+- ItemStack
+- Override
+- Player
+- Item
+- ItemStack
+- Override
+- BlockPos
+- Container
+- Inventory
+- ItemStack
+- MenuType
+- NotNull
+- Override
+- Player
+- Slot
+- Block
+- BlockGetter
+- BlockPos
+- BlockState
+- Identifier
+- MenuType
+- Override
+- ItemStack
+- Player
+- SubscribeEvent
+- CraftingInput
+- ItemStack
+- Level
+- NotNull
+- Nullable
+- Override
+- Provider
+- RecipeSerializer
+- CraftingInput
+- ItemStack
+- Level
+- NotNull
+- Override
+- RecipeSerializer
+- CraftingInput
+- ItemStack
+- Level
+- NotNull
+- Override
+- RecipeSerializer
+- CraftingInput
+- ItemStack
+- Level
+- NotNull
+- Nullable
+- Override
+- Provider
+- RecipeSerializer
+- Inventory
+- Override
+- Inventory
+- Override
+- Inventory
+- Override
+- Inventory
+- Override
+- Container
+- Inventory
+- ItemStack
+- MenuType
+- Override
+- Player
+- Slot
+- Container
+- ItemStack
+- NotNull
+- Override
+- Player
+- BlockPos
+- ItemStack
+- Level
+- ItemStack
+- NotNull
+- Override
+- Player
+- CompoundTag
+- ItemStack
+- NotNull
+- Provider
+- Container
+- ItemStack
+- Override
+- Container
+- Direction
+- ItemStack
+- NotNull
+- Override
+- Player
+- Container
+- ItemStack
+- Override
+- Player
+- NotNull
+- Override
+- NotNull
+- Override
+- NotNull
+- Override
+- NotNull
+- Override
+- Component
+- ItemStack
+- NotNull
+- Override
+- Provider
+- TooltipComponent
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- Override
+- Override
+- Block
+- BlockPos
+- Component
+- ItemStack
+- LevelReader
+- NotNull
+- Override
+- Player
+- Provider
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- Block
+- BlockPlaceContext
+- BlockState
+- Override
+- Block
+- BlockPlaceContext
+- BlockState
+- Override
+- BlockPos
+- BlockState
+- Component
+- InteractionResult
+- ItemStack
+- Level
+- NotNull
+- Override
+- Player
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- UseOnContext
+- Component
+- InteractionHand
+- InteractionResult
+- ItemStack
+- Level
+- NotNull
+- Override
+- Player
+- Slot
+- TooltipComponent
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- UseOnContext
+- Override
+- InteractionHand
+- InteractionResult
+- Level
+- Override
+- Player
+- Override
+- Override
+- Override
+- Block
+- BlockPos
+- Component
+- ItemStack
+- LevelReader
+- Override
+- Player
+- BlockPos
+- Component
+- ItemStack
+- LevelReader
+- NotNull
+- Override
+- Player
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- Component
+- NotNull
+- Override
+- Override
+- Override
+- Override
+- Override
+- Override
+- Component
+- ItemStack
+- NotNull
+- Override
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- Override
+- Override
+- Override
+- BlockPos
+- Component
+- Inventory
+- ItemStack
+- Level
+- LevelAccessor
+- Override
+- TooltipContext
+- TooltipDisplay
+- TooltipFlag
+- Component
+- NotNull
+- Override
+- Override
+- Identifier
+- Logger
+- BlockPos
+- CustomPacketPayload
+- FriendlyByteBuf
+- Override
+- Player
+- StreamCodec
+- CustomPacketPayload
+- FriendlyByteBuf
+- Override
+- Player
+- StreamCodec
+- BlockPos
+- InteractionHand
+- Override
+- Player
+- GameProfile
+- Override
+- Player
+- BlockPos
+- GameProfile
+- InteractionHand
+- Player
+- BlockEntitySupplier
+- Override
+- BlockEntitySupplier
+- ItemStack
+- Player
+- ItemStack
+- Level
+- NonNullList
+- NotNull
+- Override
+- Component
+- Item
+- Item
+- ItemStack
+- ItemStack
+- Override
+- BlockGetter
+- BlockHitResult
+- BlockPos
+- Level
+- NotNull
+- Nullable
+- Player
+- Identifier
+- IEventBus
+- Logger
+- SubscribeEvent
 
 ## God Nodes (most connected - your core abstractions)
-1. `BlockEntityDrawers` - 150 edges
-2. `BlockEntityController` - 88 edges
-3. `RegistryEntry` - 88 edges
-4. `IDrawer` - 84 edges
-5. `BlockDrawers` - 73 edges
-6. `MaterialData` - 72 edges
-7. `ConfigEntry` - 71 edges
-8. `IDrawerGroup` - 68 edges
-9. `DynamicPart` - 58 edges
-10. `UpgradeData` - 57 edges
+1. `BlockEntityDrawers` - 89 edges
+2. `IDrawer` - 60 edges
+3. `ModBlocks` - 56 edges
+4. `RegistryEntry` - 50 edges
+5. `IDrawerGroup` - 45 edges
+6. `BlockDrawers` - 45 edges
+7. `INetworked` - 40 edges
+8. `UpgradeData` - 40 edges
+9. `IDrawerAttributesModifiable` - 38 edges
+10. `FractionalStorage` - 36 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ModBlockEntities` --references--> `ChameleonRegistry`  [EXTRACTED]
-  client_backup/ModBlockEntities.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/chameleon/registry/ChameleonRegistry.java
-- `ModBlockEntities` --references--> `RegistryEntry`  [EXTRACTED]
-  client_backup/ModBlockEntities.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/chameleon/registry/RegistryEntry.java
-- `VariantData` --references--> `RegistryEntry`  [EXTRACTED]
-  client_backup/ModBlockVariants.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/chameleon/registry/RegistryEntry.java
-- `ModBlocks` --references--> `ChameleonRegistry`  [EXTRACTED]
-  client_backup/ModBlocks.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/chameleon/registry/ChameleonRegistry.java
-- `ModContainers` --references--> `RegistryEntry`  [EXTRACTED]
-  client_backup/ModContainers.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/chameleon/registry/RegistryEntry.java
+- `IDrawerGroup` --inherits--> `IDrawerCapabilityProvider`  [EXTRACTED]
+  src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/storage/IDrawerGroup.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/capabilities/IDrawerCapabilityProvider.java
+- `DrawerItemHandler` --implements--> `IItemHandler`  [EXTRACTED]
+  src/main/java/com/stalkingdragons/minecraft/vaultdrawers/capabilities/DrawerItemHandler.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/capabilities/IItemHandler.java
+- `PlatformCapabilities` --references--> `IItemHandler`  [EXTRACTED]
+  src/main/java/com/stalkingdragons/minecraft/vaultdrawers/capabilities/PlatformCapabilities.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/capabilities/IItemHandler.java
+- `DrawerItemRepository` --implements--> `IItemRepository`  [EXTRACTED]
+  src/main/java/com/stalkingdragons/minecraft/vaultdrawers/capabilities/DrawerItemRepository.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/capabilities/IItemRepository.java
+- `DrawerConfig` --implements--> `IDrawerConfig`  [EXTRACTED]
+  src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ModCommonConfig.java → src/main/java/com/stalkingdragons/minecraft/vaultdrawers/api/config/IDrawerConfig.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (325 total, 40 thin omitted)
+## Communities (864 total, 779 thin omitted)
 
 ### Community 0 - ".build"
-Cohesion: 0.04
-Nodes (31): Compacting, ConfigSection, ConversionUpgrade, Detached, DrawerConfig, Drawers, DropMode, DROP (+23 more)
-
-### Community 1 - "BlockFramingTable"
-Cohesion: 0.05
-Nodes (58): BlockFramingTable, Block, BlockEntity, BlockGetter, BlockHitResult, BlockPlaceContext, BlockPos, BlockState (+50 more)
-
-### Community 2 - "DrawerData"
-Cohesion: 0.06
-Nodes (30): IDrawer, IDrawerGroup, INetworked, ItemStack, Player, StorageUtil, ItemStackMatcher, ItemStack (+22 more)
+Cohesion: 0.11
+Nodes (7): ConversionUpgrade, IlluminationUpgrade, RedstoneUpgrade, RemoteUpgrade, StorageTierUpgrade, Upgrade, Upgrades
 
 ### Community 3 - "BlockDrawers"
-Cohesion: 0.09
-Nodes (25): BlockDrawers, AABB, Block, BlockGetter, BlockPlaceContext, BlockPos, BlockState, Builder (+17 more)
+Cohesion: 0.07
+Nodes (4): PathComputationType, IDrawerConfig, BlockDrawers, SuppressWarnings
 
 ### Community 4 - "Override"
-Cohesion: 0.04
-Nodes (31): Compacting, ConfigSection, ConversionUpgrade, Detached, DrawerConfig, Drawers, DropMode, DROP (+23 more)
+Cohesion: 0.08
+Nodes (10): Compacting, Detached, DrawerConfig, Drawers, Filled, Framed, Override, MagnetTierUpgrade (+2 more)
 
 ### Community 5 - "BlockStandardDrawers.java"
-Cohesion: 0.10
-Nodes (28): BlockCompDrawers, Block, BlockPos, BlockState, Builder, Deprecated, Direction, EnumProperty (+20 more)
-
-### Community 6 - "FractionalStorage"
-Cohesion: 0.06
-Nodes (13): FractionalDrawer, FractionalDrawerGroup, FractionalStorage, CompoundTag, IDrawer, IDrawerAttributes, IFractionalDrawer, ItemStack (+5 more)
+Cohesion: 0.15
+Nodes (3): FaceSlotBlock, InteractContext, PlayerConfig
 
 ### Community 7 - "DrawerData"
-Cohesion: 0.07
-Nodes (23): DrawerData, CompoundTag, IDrawer, IDrawerAttributes, ItemStack, ItemStackMatcher, NotNull, Override (+15 more)
-
-### Community 8 - "ContainerDrawers"
-Cohesion: 0.12
-Nodes (19): BufferSource, Compacting2, Compacting3, DrawerScreen, Component, GuiGraphics, Identifier, Inventory (+11 more)
+Cohesion: 0.05
+Nodes (12): IInteractionProvider, ISecurityProvider, IProtectable, BlockEntityDrawersStandard, GroupData, GroupDrawerData, StandardDrawerGroup, ModSecurity (+4 more)
 
 ### Community 9 - "BlockKeyButton.java"
-Cohesion: 0.07
-Nodes (41): BlockKeyButton, Block, BlockGetter, BlockHitResult, BlockPos, BlockState, BooleanProperty, Builder (+33 more)
-
-### Community 10 - "Slot"
-Cohesion: 0.31
-Nodes (5): Container, ItemStack, Override, Player, SlotUpgrade
-
-### Community 11 - "RegistryEntry"
-Cohesion: 0.08
-Nodes (18): Block, BlockCompDrawers, BlockController, BlockControllerIO, BlockDrawers, BlockFramedCompDrawers, BlockFramedController, BlockFramedControllerIO (+10 more)
+Cohesion: 0.21
+Nodes (3): FaceAttachedHorizontalDirectionalBlock, SoundEvent, BlockKeyButton
 
 ### Community 12 - "BaseBlockEntity"
-Cohesion: 0.06
-Nodes (28): BaseBlockEntity, BlockEntityType, BlockPos, BlockState, ClientboundBlockEntityDataPacket, CompoundTag, Connection, NotNull (+20 more)
+Cohesion: 0.16
+Nodes (3): ClientboundBlockEntityDataPacket, Connection, BaseBlockEntity
 
 ### Community 13 - "InventoryLookup"
-Cohesion: 0.09
-Nodes (21): CompactingHelper, InventoryLookup, CraftingContainer, Ingredient, ItemStack, Level, NonNullList, NotNull (+13 more)
-
-### Community 14 - "BlockDrawers"
-Cohesion: 0.05
-Nodes (49): BlockDrawers, AABB, Block, BlockGetter, BlockPlaceContext, BlockPos, BlockState, Builder (+41 more)
-
-### Community 15 - "InventoryUpgrade"
-Cohesion: 0.07
-Nodes (11): InventoryUpgrade, ItemStack, NotNull, Override, Player, Container, InventoryUpgrade, ItemStack (+3 more)
-
-### Community 16 - "LockAttribute"
-Cohesion: 0.06
-Nodes (7): getBitfield(), getEnumSet(), LockAttribute, LOCK_EMPTY, LOCK_POPULATED, IDrawerAttributesGroupControl, IDrawerAttributesGroupControl
-
-### Community 17 - "UpgradeData"
-Cohesion: 0.10
-Nodes (3): EnumUpgradeRedstone, ItemStack, UpgradeData
-
-### Community 18 - "IDrawerAttributesModifiable"
-Cohesion: 0.06
-Nodes (9): IDrawerAttributesModifiable, ItemQuantifyKey, Override, ItemDrawerKey, Override, ItemQuantifyKey, Override, ItemShroudKey (+1 more)
+Cohesion: 0.13
+Nodes (6): CraftingContainer, Ingredient, CompactingHelper, InventoryLookup, Result, TransientCraftingContainer
 
 ### Community 19 - "ConfigEntry"
-Cohesion: 0.07
-Nodes (13): ConfigSection, FramedDrawers, General, Integration, Override, ModClientConfig, Render, Controller (+5 more)
-
-### Community 20 - "PlatformBlockEntityDrawersStandard.java"
-Cohesion: 0.10
-Nodes (19): BlockEntityType, BlockPos, BlockState, ModelData, NotNull, Override, PlatformBlockEntityDrawersComp, Slot2 (+11 more)
-
-### Community 21 - "ModBlocks"
-Cohesion: 0.08
-Nodes (20): Block, BlockCompDrawers, BlockController, BlockControllerIO, BlockDrawers, BlockFramedCompDrawers, BlockFramedController, BlockFramedControllerIO (+12 more)
-
-### Community 22 - "DynamicPart"
-Cohesion: 0.05
-Nodes (42): DynamicPart, CLAIM, CLAIM_ICON, FRAMED_COMP2_FRONT, FRAMED_COMP2_SHADING, FRAMED_COMP2_SIDE, FRAMED_COMP2_TRIM, FRAMED_COMP3_FRONT (+34 more)
+Cohesion: 0.12
+Nodes (6): ChameleonConfig, Type, CLIENT, COMMON, SERVER, ModCommonConfig
 
 ### Community 23 - "BlockEntityDrawers"
-Cohesion: 0.07
-Nodes (15): BlockEntityDrawers, DrawerUpgradeData, Builder, Component, CompoundTag, Deprecated, IControlGroup, IDrawer (+7 more)
+Cohesion: 0.27
+Nodes (3): NeoforgeRegistries, ChameleonRegistry, ChameleonRegistries
 
 ### Community 24 - "Override"
-Cohesion: 0.13
-Nodes (6): DisabledDrawer, DisabledFractionalDrawer, ItemStack, NotNull, Override, WrappedDrawer
-
-### Community 25 - "IDrawer"
-Cohesion: 0.10
-Nodes (8): IDrawer, ItemStack, NotNull, CountFormatter, Font, Event, DrawerPopulatedEvent, IWailaTooltipHandler
-
-### Community 26 - "ResourceFactory"
-Cohesion: 0.06
-Nodes (30): Logger, ModServices, BlockEntityController, BlockEntityControllerIO, BlockEntityDrawersComp, BlockEntityDrawersStandard, BlockEntityFramingTable, BlockEntitySupplier (+22 more)
+Cohesion: 0.24
+Nodes (3): ConfigSection, Integration, Jade
 
 ### Community 27 - "Vault Drawers - Port Roadmap for Minecraft 26.2 / NeoForge 26.2.0.57"
 Cohesion: 0.14
 Nodes (13): Build Commands, (historical) Phase 3 gap analysis — biggest remaining gap, Next Steps (priority order), Phase 1: Project Setup & Core Infrastructure ✅ COMPLETED, Phase 2.5: Main class wiring ✅ COMPLETED (2026-08-25), Phase 2: Java Source Port ✅ COMPLETED (2026-08-25), Phase 3: Game Assets & Data ✅ COMPLETED (2026-08-25), Phase 4: Client Rendering 🔄 PENDING (+5 more)
 
 ### Community 28 - "ConfigSpec"
-Cohesion: 0.13
-Nodes (9): ConfigValue, ModConfigSpec, ForgeConfigEntry, ForgeConfigEntryEnum, ForgeConfigEntryList, ForgeConfigEntryRange, Builder, Override (+1 more)
+Cohesion: 0.08
+Nodes (8): ConfigValue, ModConfigSpec, ConfigSpec, ForgeConfigEntry, ForgeConfigEntryEnum, ForgeConfigEntryList, ForgeConfigEntryRange, NeoforgeConfig
 
 ### Community 29 - "INetworked"
-Cohesion: 0.12
-Nodes (8): IControlGroup, INetworked, ControllerHostData, BlockPos, CompoundTag, Level, Override, Provider
-
-### Community 30 - "BlockEntityController"
-Cohesion: 0.10
-Nodes (12): BlockEntityController, BlockEntity, BlockEntityType, BlockPos, BlockState, CompoundTag, GameProfile, IDrawerAttributes (+4 more)
-
-### Community 31 - "PositionContent"
-Cohesion: 0.14
-Nodes (12): IDrawerConfig, BlockType, BlockStandardDrawers, BlockPos, BlockState, Deprecated, Identifier, ItemStack (+4 more)
-
-### Community 32 - "UpgradeData"
-Cohesion: 0.10
-Nodes (3): EnumUpgradeRedstone, ItemStack, UpgradeData
+Cohesion: 0.22
+Nodes (9): DropMode, DROP, KEEP, VOID, fromValueIgnoreCase(), Mode, ALL, LIST (+1 more)
 
 ### Community 33 - "Override"
-Cohesion: 0.11
-Nodes (7): DisabledDrawer, DisabledFractionalDrawer, ItemStack, NotNull, Override, WrappedDrawer, WrappedFractionalDrawer
-
-### Community 34 - "KeyringContents"
-Cohesion: 0.11
-Nodes (11): Codec, ItemStack, Nullable, Override, Player, RegistryFriendlyByteBuf, Slot, StreamCodec (+3 more)
-
-### Community 35 - "GroupData"
-Cohesion: 0.12
-Nodes (10): BlockEntityDrawersComp, GroupData, BlockEntityType, BlockPos, BlockState, Level, NotNull, Override (+2 more)
+Cohesion: 0.09
+Nodes (5): DisabledDrawer, DisabledFractionalDrawer, Drawers, WrappedFractionalDrawer, IFractionalDrawer
 
 ### Community 36 - "IDrawerAttributes"
-Cohesion: 0.08
-Nodes (7): IItemHandler, ItemStack, EmptyDrawerAttributes, IDrawerAttributes, Capabilities, EmptyDrawerAttributes, Capabilities
+Cohesion: 0.16
+Nodes (3): ItemEntity, ChameleonInit, ModConstants
 
 ### Community 37 - "ChameleonInit"
-Cohesion: 0.07
-Nodes (22): Override, ModNetworking, AddUpgradeRecipe, KeyringRecipe, PersonalKeyRecipe, RecipeSerializer, RemoteGroupUpgradeRecipe, UpgradeDetachedDrawerRecipe (+14 more)
-
-### Community 38 - "BlockEntityController"
-Cohesion: 0.10
-Nodes (14): IControlGroup, BlockEntityController, DrawerAttributes, BlockEntitySupplier, BlockEntityType, BlockPos, BlockState, IDrawer (+6 more)
-
-### Community 39 - "MaterialData"
-Cohesion: 0.14
-Nodes (9): Codec, CompoundTag, ItemStack, NotNull, Override, Provider, RegistryFriendlyByteBuf, StreamCodec (+1 more)
-
-### Community 40 - "MaterialData"
-Cohesion: 0.14
-Nodes (9): Codec, CompoundTag, ItemStack, NotNull, Override, Provider, RegistryFriendlyByteBuf, StreamCodec (+1 more)
+Cohesion: 0.16
+Nodes (5): ModContainer, InitContext, NeoforgeRegistryContext, RecipeSerializer, ModRecipes
 
 ### Community 41 - "ItemKeyring.java"
-Cohesion: 0.15
-Nodes (18): ItemKeyring, ClickAction, Component, InteractionHand, InteractionResult, ItemEntity, ItemStack, Level (+10 more)
+Cohesion: 0.18
+Nodes (3): ClickAction, SlotAccess, ItemKeyring
 
 ### Community 42 - "IDrawerConfig"
-Cohesion: 0.11
-Nodes (7): ConfigEntry, Override, Controller, General, Key, QuantifyKey, Tools
-
-### Community 43 - "ItemKeyring"
-Cohesion: 0.15
-Nodes (17): ItemKeyring, ClickAction, Component, InteractionHand, InteractionResult, ItemEntity, ItemStack, Level (+9 more)
-
-### Community 44 - "BlockEntityFramingTable"
-Cohesion: 0.16
-Nodes (11): ContentProvider, AABB, AbstractContainerMenu, BlockEntityType, BlockPos, BlockState, Inventory, Nullable (+3 more)
-
-### Community 45 - "BlockController"
-Cohesion: 0.06
-Nodes (39): BlockController, Block, BlockHitResult, BlockPlaceContext, BlockPos, BlockState, Builder, InteractionResult (+31 more)
-
-### Community 47 - "BlockEntityFramingTable.java"
-Cohesion: 0.11
-Nodes (14): Nameable, BlockEntityFramingTable, ContentProvider, AbstractContainerMenu, BlockEntitySupplier, BlockEntityType, BlockPos, BlockState (+6 more)
-
-### Community 49 - "DetachedDrawerContents"
 Cohesion: 0.12
-Nodes (11): DetachedDrawerContents, Codec, ItemStack, Override, DetachedDrawerTooltip, KeyringTooltip, DetachedDrawerTooltip, Font (+3 more)
-
-### Community 50 - "BlockEntityDrawersRenderer.java"
-Cohesion: 0.20
-Nodes (15): BlockEntityDrawersRenderer, BlockPos, BlockState, Context, Direction, Identifier, ItemStack, MultiBufferSource (+7 more)
-
-### Community 51 - "BlockEntityControllerIO"
-Cohesion: 0.07
-Nodes (31): BlockControllerIO, BlockPos, BlockState, ItemStack, Level, Override, BlockFramedControllerIO, BlockGetter (+23 more)
-
-### Community 52 - "FractionalStorage"
-Cohesion: 0.15
-Nodes (5): FractionalStorage, IDrawerAttributes, ItemStack, ItemStackMatcher, NotNull
-
-### Community 53 - "KeyringContents"
-Cohesion: 0.13
-Nodes (10): Codec, ItemStack, Nullable, Override, Player, RegistryFriendlyByteBuf, Slot, StreamCodec (+2 more)
-
-### Community 54 - "ISecurityProvider"
-Cohesion: 0.12
-Nodes (7): IInteractionProvider, ISecurityProvider, ModSecurity, SecurityRegistry, IProtectable, ModSecurity, SecurityRegistry
-
-### Community 55 - "BlockEntityControllerIO"
-Cohesion: 0.13
-Nodes (10): BlockEntityControllerIO, BlockEntitySupplier, BlockEntityType, BlockPos, BlockState, IDrawer, IDrawerAttributesGroupControl, INetworked (+2 more)
+Nodes (6): ConfigEntry, Controller, General, Key, QuantifyKey, Tools
 
 ### Community 56 - "BlockController.java"
 Cohesion: 0.16
-Nodes (18): BlockController, Block, BlockEntity, BlockHitResult, BlockPlaceContext, BlockPos, BlockState, Builder (+10 more)
-
-### Community 57 - "ModRecipes.java"
-Cohesion: 0.11
-Nodes (15): CraftingBookCategory, CraftingInput, ItemStack, Override, Provider, RecipeSerializer, KeyringRecipe, CraftingBookCategory (+7 more)
-
-### Community 58 - "BlockEntityDrawers.java"
-Cohesion: 0.14
-Nodes (14): ContentProvider, DrawerAttributes, AABB, AbstractContainerMenu, BlockEntityType, BlockPos, BlockState, Entity (+6 more)
-
-### Community 59 - "Upgrade"
-Cohesion: 0.17
-Nodes (11): AbstractContainerMenu, ContainerDrawers, BlockPos, Container, Inventory, ItemStack, MenuType, NotNull (+3 more)
+Nodes (6): Block, EntityBlock, IFramedSourceBlock, BlockController, BlockControllerIO, StateDefinition
 
 ### Community 60 - "ContainerDrawers"
-Cohesion: 0.08
-Nodes (19): ContainerDrawers, BlockPos, Container, Inventory, ItemStack, MenuType, NotNull, Override (+11 more)
-
-### Community 61 - "StringRepresentable"
-Cohesion: 0.23
-Nodes (11): BlockFramedControllerIO, BlockPos, BlockState, Builder, ItemStack, Level, LevelReader, LivingEntity (+3 more)
-
-### Community 62 - ".addProbeInfo"
-Cohesion: 0.18
-Nodes (12): DrawerProbeProvider, BlockState, Identifier, Level, Override, Player, TheOneProbe, IProbeHitData (+4 more)
-
-### Community 63 - "DetachedDrawerData"
-Cohesion: 0.17
-Nodes (6): DetachedDrawerData, CompoundTag, ItemStack, NotNull, Override, Provider
+Cohesion: 0.11
+Nodes (7): ContainerLevelAccess, ModContainers, ContainerDrawers1, ContainerDrawers2, ContainerDrawers4, ContainerDrawersComp3, ContainerFramingTable
 
 ### Community 64 - "DetachedDrawerData"
-Cohesion: 0.17
-Nodes (6): DetachedDrawerData, CompoundTag, ItemStack, NotNull, Override, Provider
-
-### Community 65 - "ChatFormatting"
-Cohesion: 0.15
-Nodes (9): ChatFormatting, ItemDrawerPuller, Override, ComponentUtil, Component, Item, MutableComponent, ItemDrawerPuller (+1 more)
-
-### Community 66 - "BlockStandardDrawers"
-Cohesion: 0.11
-Nodes (16): BlockType, BlockStandardDrawers, BlockPos, BlockState, Deprecated, Identifier, ItemStack, Level (+8 more)
-
-### Community 67 - "ItemKey"
-Cohesion: 0.15
-Nodes (14): ItemKey, BlockPos, BlockState, Component, InteractionResult, ItemAttributeModifiers, ItemStack, Level (+6 more)
-
-### Community 68 - "ChameleonRegistry"
-Cohesion: 0.21
-Nodes (6): Block, Item, ItemKey, ItemKeyring, ModItems, Identifier
-
-### Community 69 - "InteractContext"
-Cohesion: 0.38
-Nodes (4): FramedModelContext, BakedModel, Override, RenderType
-
-### Community 70 - "PersonalKeyRecipe"
-Cohesion: 0.21
-Nodes (8): CraftingBookCategory, CraftingInput, ItemStack, Level, Override, Provider, RecipeSerializer, PersonalKeyRecipe
+Cohesion: 0.09
+Nodes (4): DetachedDrawerData, Context, UpgradeDetachedDrawerRecipe, ItemDetachedDrawer
 
 ### Community 71 - "IDrawer"
-Cohesion: 0.15
-Nodes (3): IDrawer, ItemStack, NotNull
+Cohesion: 0.08
+Nodes (5): Event, DrawerPopulatedEvent, WrappedDrawer, IDrawer, SlotDrawer
 
 ### Community 72 - "BlockEntityDrawers"
-Cohesion: 0.09
-Nodes (8): BlockEntityDrawers, DrawerUpgradeData, Component, IControlGroup, IDrawer, IDrawerAttributes, IDrawerAttributesModifiable, Override
-
-### Community 73 - "WorldUtils.java"
-Cohesion: 0.29
-Nodes (8): BlockGetter, BlockHitResult, BlockPos, Level, NotNull, Nullable, Player, WorldUtils
+Cohesion: 0.10
+Nodes (3): BlockEntityDrawers, DrawerOverlay, Component
 
 ### Community 74 - "ItemKey.java"
-Cohesion: 0.16
-Nodes (15): ItemKey, BlockPos, BlockState, Component, InteractionResult, ItemAttributeModifiers, ItemStack, Level (+7 more)
-
-### Community 75 - "PlatformDecoratedModel.java"
-Cohesion: 0.22
-Nodes (14): ChunkRenderTypeSet, ItemRender, BakedModel, BakedQuad, BlockState, Direction, ItemStack, ModelData (+6 more)
-
-### Community 76 - "IPortable"
-Cohesion: 0.22
-Nodes (9): ItemDetachedDrawer, Component, ItemStack, NotNull, Override, Provider, TooltipComponent, TooltipContext (+1 more)
-
-### Community 77 - "SlotDrawer"
-Cohesion: 0.16
-Nodes (9): EmptyInventory, Container, Direction, ItemStack, NotNull, Override, Player, SlotDrawer (+1 more)
+Cohesion: 0.15
+Nodes (4): ItemAttributeModifiers, EmptyDrawerAttributes, ItemDrawerPuller, ItemKey
 
 ### Community 78 - ".getDrawer"
-Cohesion: 0.13
-Nodes (18): MenuProvider, MenuSupplier, ContentMenuProvider, ServerPlayer, AbstractContainerMenu, Component, Inventory, MenuType (+10 more)
-
-### Community 79 - "ItemStackHelper"
-Cohesion: 0.17
-Nodes (8): DrawerCountData, Codec, Override, ItemStackHelper, CompoundTag, ItemStack, NotNull, Provider
+Cohesion: 0.11
+Nodes (6): AbstractContainerMenu, MenuProvider, ContentProvider, ContentProvider, ContentMenuProvider, PlatformContainerFactory
 
 ### Community 80 - "ItemUpgradeRemote.java"
-Cohesion: 0.15
-Nodes (11): ItemUpgradeRemote, BlockPos, Component, Inventory, ItemStack, Level, LevelAccessor, Override (+3 more)
-
-### Community 81 - "BlockFramedStandardDrawers.java"
-Cohesion: 0.17
-Nodes (13): BlockType, Drawers, Trim, BlockFramedStandardDrawers, BlockPos, BlockState, Deprecated, ItemStack (+5 more)
-
-### Community 82 - "IDrawerGroup"
-Cohesion: 0.13
-Nodes (7): IDrawerGroup, NotNull, PlatformDrawerItemHandler, IItemHandler, IRenderLabel, BlockEntity, PlatformDrawerItemHandler
+Cohesion: 0.11
+Nodes (4): Post, ControllerBinding, PlayerEventListener, ItemUpgradeRemote
 
 ### Community 83 - "BlockCompDrawers"
-Cohesion: 0.06
-Nodes (35): BlockModel, BlockCompDrawers, Block, BlockPos, BlockState, Builder, Deprecated, Direction (+27 more)
-
-### Community 84 - "BlockFramedTrim.java"
-Cohesion: 0.21
-Nodes (11): BlockFramedTrim, BlockGetter, BlockPos, BlockState, Builder, ItemStack, Level, LevelReader (+3 more)
-
-### Community 85 - "EnumUpgradeRedstone"
-Cohesion: 0.11
-Nodes (13): byMetadata(), EnumUpgradeRedstone, COMBINED, MAX, MIN, getSerializedName(), NotNull, Override (+5 more)
-
-### Community 86 - "ItemUpgradeRemote"
-Cohesion: 0.16
-Nodes (10): ItemUpgradeRemote, BlockPos, Component, Inventory, ItemStack, Level, LevelAccessor, Override (+2 more)
-
-### Community 87 - "Override"
-Cohesion: 0.16
-Nodes (4): GroupData, DrawerData, Override, StandardDrawerData
-
-### Community 88 - "Override"
-Cohesion: 0.16
-Nodes (5): BlockEntityFramingTable, Builder, Component, CompoundTag, Provider
+Cohesion: 0.13
+Nodes (3): BlockEntity, ModServices, ResourceFactory
 
 ### Community 89 - "SlotDrawer"
-Cohesion: 0.17
-Nodes (9): EmptyInventory, Container, Direction, ItemStack, NotNull, Override, Player, SlotDrawer (+1 more)
-
-### Community 90 - "ItemDrawers.java"
-Cohesion: 0.18
-Nodes (13): ItemDrawers, Block, BlockPos, Component, ItemStack, LevelReader, NotNull, Override (+5 more)
-
-### Community 91 - "ItemStackHelper"
-Cohesion: 0.17
-Nodes (7): DrawerCountData, Codec, Override, ItemStackHelper, Item, ItemStack, NotNull
-
-### Community 92 - "FramedModelProperties.java"
-Cohesion: 0.27
-Nodes (10): FramedModelProperties, BlockState, Direction, ItemStack, ModelData, ModelProperty, Override, RandomSource (+2 more)
-
-### Community 93 - "EnumUpgradeCreative"
-Cohesion: 0.12
-Nodes (12): byMetadata(), EnumUpgradeCreative, STORAGE, VENDING, getSerializedName(), NotNull, Override, toString() (+4 more)
-
-### Community 94 - "ItemDrawers"
-Cohesion: 0.19
-Nodes (12): ItemDrawers, Block, BlockPos, Component, ItemStack, LevelReader, NotNull, Override (+4 more)
-
-### Community 95 - "DrawerModelContext"
-Cohesion: 0.14
-Nodes (12): DrawerModelContext, BlockState, Direction, RandomSource, RenderType, DrawerModelDecorator, BakedModel, BlockState (+4 more)
-
-### Community 96 - "MaterialModelDecorator"
-Cohesion: 0.13
-Nodes (10): Facing, FacingSized, FacingSizedOpen, FacingSizedSlotted, BlockState, Identifier, ItemStack, MaterialModelDecorator (+2 more)
-
-### Community 97 - "SpriteReplacementModel.java"
-Cohesion: 0.10
-Nodes (21): BakedModel, BakedQuad, BlockState, Direction, Override, RandomSource, TextureAtlasSprite, ParentModel (+13 more)
+Cohesion: 0.32
+Nodes (3): SimpleContainer, EmptyInventory, WorldlyContainer
 
 ### Community 98 - "Item"
-Cohesion: 0.17
-Nodes (12): Item, ItemUpgrade, BlockPos, Component, ItemStack, LevelReader, NotNull, Override (+4 more)
+Cohesion: 0.13
+Nodes (3): ItemUpgrade, ItemUpgradeConversion, ItemUpgradeOneStack
 
 ### Community 99 - "BlockFramedTrim.java"
-Cohesion: 0.21
-Nodes (11): BlockFramedTrim, BlockPos, BlockState, Builder, ItemStack, Level, LevelReader, LivingEntity (+3 more)
-
-### Community 100 - "ItemUpgradeMagnet"
-Cohesion: 0.20
-Nodes (9): ItemUpgradeMagnet, Component, ItemStack, MagnetTierUpgrade, NotNull, Override, TooltipContext, TooltipDisplay (+1 more)
-
-### Community 101 - "ParentModel"
-Cohesion: 0.23
-Nodes (5): IDrawerCapabilityProvider, ChameleonCapability, BlockPos, Identifier, Level
-
-### Community 102 - "BlockFramedController.java"
-Cohesion: 0.22
-Nodes (6): ControllerHostData, BlockPos, CompoundTag, Level, Override, Provider
-
-### Community 103 - "BlockFramedControllerIO.java"
-Cohesion: 0.32
-Nodes (7): AbstractContainerScreen, FramingTableScreen, Component, GuiGraphics, Identifier, Inventory, Override
+Cohesion: 0.13
+Nodes (5): DataComponentType, BlockFramedTrim, BlockEntityTrim, FrameData, ModDataComponents
 
 ### Community 104 - "IntegrationModule"
 Cohesion: 0.13
-Nodes (4): FTBTeamsModule, Override, IntegrationModule, IntegrationRegistry
-
-### Community 105 - "ItemUpgradeMagnet"
-Cohesion: 0.21
-Nodes (8): ItemUpgradeMagnet, Component, ItemStack, MagnetTierUpgrade, NotNull, Override, TooltipContext, TooltipFlag
-
-### Community 106 - "AddUpgradeRecipe.java"
-Cohesion: 0.21
-Nodes (12): AddUpgradeRecipe, Context, CraftingBookCategory, CraftingInput, ItemStack, Level, NotNull, Nullable (+4 more)
+Nodes (6): FMLLoadCompleteEvent, IntegrationModule, IntegrationRegistry, JadeModule, Override, LocalIntegrationRegistry
 
 ### Community 107 - "IDrawerGroup"
-Cohesion: 0.05
-Nodes (40): BlockEntity, BlockGetter, BlockPos, BlockState, ContainerDrawers1, ContainerDrawers2, ContainerDrawers4, ContainerDrawersComp3 (+32 more)
-
-### Community 108 - "FractionalDrawer"
-Cohesion: 0.16
-Nodes (4): FractionalDrawer, IDrawer, IFractionalDrawer, Override
-
-### Community 109 - "BlockInventory"
-Cohesion: 0.23
-Nodes (3): BlockInventory, ItemStack, Override
+Cohesion: 0.31
+Nodes (3): Block, Item, ModItems
 
 ### Community 110 - "EnumCompDrawer.java"
 Cohesion: 0.15
-Nodes (13): IDrawerGeometry, byMetadata(), byOpenSlots(), EnumCompDrawer, OPEN1, OPEN2, OPEN3, getDrawerCount() (+5 more)
-
-### Community 111 - "BlockFramedStandardDrawers.java"
-Cohesion: 0.22
-Nodes (10): BlockFramedStandardDrawers, BlockGetter, BlockPos, BlockState, Deprecated, ItemStack, Level, LevelReader (+2 more)
-
-### Community 112 - "EnumUpgradeMagnet"
-Cohesion: 0.19
-Nodes (9): byMetadata(), EnumUpgradeMagnet, LEVEL1, LEVEL2, LEVEL3, getSerializedName(), NotNull, Override (+1 more)
-
-### Community 113 - "ItemUpgrade"
-Cohesion: 0.18
-Nodes (10): ItemUpgrade, BlockPos, Component, ItemStack, LevelReader, NotNull, Override, Player (+2 more)
-
-### Community 114 - "BlockFramedController.java"
-Cohesion: 0.27
-Nodes (7): EntityBlock, BlockControllerIO, BlockPos, BlockState, ItemStack, Level, Override
-
-### Community 115 - "BlockFramedControllerIO.java"
-Cohesion: 0.25
-Nodes (3): IDrawerCapabilityProvider, IDrawerGroup, NotNull
-
-### Community 116 - "ItemDetachedDrawer.java"
-Cohesion: 0.22
-Nodes (10): ItemDetachedDrawer, Component, ItemStack, NotNull, Override, Provider, TooltipComponent, TooltipContext (+2 more)
-
-### Community 117 - "Waila.java"
-Cohesion: 0.18
-Nodes (13): BlockAccessor, Identifier, NotNull, Override, Waila, WailaDrawer, IBlockComponentProvider, IElement (+5 more)
-
-### Community 118 - "BlockFramedCompDrawers.java"
-Cohesion: 0.33
-Nodes (6): BlockPos, BlockState, ModelData, NotNull, Override, PlatformBlockEntityControllerIO
-
-### Community 119 - "DrawerItemRepository"
-Cohesion: 0.32
-Nodes (6): DrawerItemRepository, ItemRecord, ItemStack, NonNullList, NotNull, Override
-
-### Community 120 - "ClientKeyringTooltip"
-Cohesion: 0.25
-Nodes (8): ClientKeyringTooltip, Font, GuiGraphics, Identifier, Override, Texture, BLOCKED_SLOT, SLOT
-
-### Community 121 - "EnumUpgradeStorage"
-Cohesion: 0.14
-Nodes (14): byLevel(), byMetadata(), EnumUpgradeStorage, COPPER, DIAMOND, EMERALD, GOLD, IRON (+6 more)
-
-### Community 122 - "UpgradeDetachedDrawerRecipe.java"
-Cohesion: 0.22
-Nodes (11): Context, CraftingBookCategory, CraftingInput, ItemStack, Level, NotNull, Nullable, Override (+3 more)
+Nodes (9): IDrawerGeometry, byMetadata(), byOpenSlots(), EnumCompDrawer, OPEN1, OPEN2, OPEN3, getSerializedName() (+1 more)
 
 ### Community 123 - "EnumUpgradeStorage"
 Cohesion: 0.14
-Nodes (14): byLevel(), byMetadata(), EnumUpgradeStorage, COPPER, DIAMOND, EMERALD, GOLD, IRON (+6 more)
-
-### Community 124 - "IProtectable"
-Cohesion: 0.16
-Nodes (6): GameProfile, Player, IProtectable, ISecurityProvider, GameProfile, Player
-
-### Community 125 - "EnumCompDrawer"
-Cohesion: 0.26
-Nodes (8): BlockMetaFacingSizedOpen, Block, BlockState, Builder, EnumProperty, Override, Open2, Open3
-
-### Community 126 - "BlockEntityDrawersStandard.java"
-Cohesion: 0.19
-Nodes (8): BlockEntityDrawersStandard, BlockEntityType, BlockPos, BlockState, NotNull, Slot1, Slot2, Slot4
+Nodes (10): byLevel(), byMetadata(), EnumUpgradeStorage, COPPER, DIAMOND, EMERALD, GOLD, IRON (+2 more)
 
 ### Community 128 - "BlockFramedCompDrawers.java"
-Cohesion: 0.26
-Nodes (10): BlockFramedCompDrawers, BlockPos, BlockState, Deprecated, ItemStack, Level, LevelReader, LivingEntity (+2 more)
+Cohesion: 0.15
+Nodes (3): BlockItem, IFramedBlock, BlockFramedCompDrawers
 
 ### Community 129 - "ModClientConfig.java"
-Cohesion: 0.18
-Nodes (6): ConfigSection, FramedDrawers, General, Integration, Override, Render
-
-### Community 130 - "IItemRepository"
-Cohesion: 0.24
-Nodes (6): DefaultPredicate, IItemRepository, ItemRecord, ItemStack, NonNullList, NotNull
+Cohesion: 0.16
+Nodes (7): ConfigSection, FramedDrawers, General, Integration, Override, ModClientConfig, Render
 
 ### Community 131 - "IFramedBlock"
-Cohesion: 0.09
-Nodes (19): BlockItem, IFramedBlock, Block, BlockPos, BlockState, Level, StateDefinition, CreativeModeTab (+11 more)
-
-### Community 132 - "IFramedSourceBlock"
-Cohesion: 0.08
-Nodes (13): Block, IFramedSourceBlock, ItemStack, BlockTrim, Identifier, ItemStack, Override, BlockMeta (+5 more)
-
-### Community 133 - "IFractionalDrawer"
-Cohesion: 0.16
-Nodes (4): Drawers, WrappedFractionalDrawer, IFractionalDrawer, Drawers
-
-### Community 134 - "EnumBasicDrawer.java"
-Cohesion: 0.17
-Nodes (13): byMetadata(), EnumBasicDrawer, FULL1, FULL2, FULL4, HALF2, HALF4, getDrawerCount() (+5 more)
-
-### Community 135 - "BlockMetaFacingSizedSlotted.java"
-Cohesion: 0.22
-Nodes (9): BlockMetaFacingSizedSlotted, Block, BlockState, Builder, IntegerProperty, Override, Label, Slots124 (+1 more)
-
-### Community 136 - "DrawerItemHandler"
-Cohesion: 0.38
-Nodes (4): DrawerItemHandler, ItemStack, NotNull, Override
-
-### Community 137 - "PlayerConfig"
-Cohesion: 0.21
-Nodes (5): Player, PlayerConfig, PlayerConfigSetting, Player, PlayerConfig
-
-### Community 138 - "FTBTeamsSecurityProvider"
-Cohesion: 0.22
-Nodes (8): FTBTeamsSecurityProvider, GameProfile, Override, Player, DefaultSecurityProvider, GameProfile, Override, Player
-
-### Community 139 - "ModBlockEntities"
-Cohesion: 0.21
-Nodes (10): BlockEntityController, BlockEntityControllerIO, BlockEntityDrawers, BlockEntityDrawersComp, BlockEntityDrawersStandard, BlockEntityFramingTable, BlockEntitySupplier, BlockEntityTrim (+2 more)
-
-### Community 140 - "SecurityManager.java"
-Cohesion: 0.21
-Nodes (8): BlockPos, GameProfile, InteractionHand, Player, SecurityManager, ClientUtil, GameProfile, Player
-
-### Community 141 - "ControllerData"
-Cohesion: 0.21
-Nodes (6): ControllerData, BlockEntity, BlockPos, CompoundTag, Override, Provider
+Cohesion: 0.47
+Nodes (4): CreativeModeTab, RegisterEvent, ResourceKey, ModCreativeTabs
 
 ### Community 142 - "EnumBasicDrawer.java"
-Cohesion: 0.17
-Nodes (13): byMetadata(), EnumBasicDrawer, FULL1, FULL2, FULL4, HALF2, HALF4, getDrawerCount() (+5 more)
+Cohesion: 0.16
+Nodes (9): byMetadata(), EnumBasicDrawer, FULL1, FULL2, FULL4, HALF2, HALF4, getSerializedName() (+1 more)
 
 ### Community 143 - "BlockMetaFacingSizedSlotted.java"
-Cohesion: 0.22
-Nodes (9): BlockMetaFacingSizedSlotted, Block, BlockState, Builder, IntegerProperty, Override, Label, Slots124 (+1 more)
+Cohesion: 0.10
+Nodes (9): IntegerProperty, BlockMetaFacingSized, BlockMetaFacingSizedOpen, Open2, Open3, BlockMetaFacingSizedSlotted, Label, Slots124 (+1 more)
 
 ### Community 144 - "ModBlockEntities"
-Cohesion: 0.19
-Nodes (10): BlockEntityController, BlockEntityControllerIO, BlockEntityDrawers, BlockEntityDrawersComp, BlockEntityDrawersStandard, BlockEntityFramingTable, BlockEntitySupplier, BlockEntityTrim (+2 more)
-
-### Community 145 - "BlockMetaFacing"
-Cohesion: 0.25
-Nodes (10): BlockMetaFacing, Block, BlockState, Builder, Direction, EnumProperty, Mirror, NotNull (+2 more)
-
-### Community 146 - "ConfigItemList"
-Cohesion: 0.05
-Nodes (20): ConfigItemList, Item, ItemStack, ItemStack, Override, MaterialBlacklist, ItemStack, Override (+12 more)
-
-### Community 147 - "ClientDetachedDrawerTooltip"
-Cohesion: 0.28
-Nodes (7): ClientDetachedDrawerTooltip, Font, GuiGraphics, Identifier, ItemStack, Override, ClientTooltipComponent
-
-### Community 148 - "ModelDecorator"
-Cohesion: 0.33
-Nodes (6): BlockPos, BlockState, ModelData, NotNull, Override, PlatformBlockEntityTrim
+Cohesion: 0.47
+Nodes (3): BlockEntitySupplier, BlockEntityType, ModBlockEntities
 
 ### Community 149 - "DrawerModelStore.java"
-Cohesion: 0.24
-Nodes (11): AddUpgradeRecipe, Context, CraftingInput, ItemStack, Level, NotNull, Nullable, Override (+3 more)
-
-### Community 151 - "FractionalDrawerGroup"
-Cohesion: 0.12
-Nodes (4): FractionalDrawerGroup, CompoundTag, Level, Provider
+Cohesion: 0.33
+Nodes (3): CustomRecipe, AddUpgradeRecipe, Context
 
 ### Community 152 - "Vault Drawers"
 Cohesion: 0.13
 Nodes (14): ⚙️ Configuration, 🎮 Controller System, 🙏 Credits, ✨ Features, 🎮 Getting Started, 🚀 Installation, 🔧 Integrations, 📄 License (+6 more)
 
-### Community 153 - "ControllerData"
-Cohesion: 0.23
-Nodes (6): ControllerData, BlockEntity, BlockPos, CompoundTag, Override, Provider
-
-### Community 154 - "ModItems.java"
-Cohesion: 0.31
-Nodes (5): Identifier, Override, NeoforgeCapabilities, ChameleonCapabilities, Identifier
-
 ### Community 156 - "NeoforgeCapability"
-Cohesion: 0.26
-Nodes (9): BlockCapability, ICapabilityProvider, BlockEntityType, BlockPos, Identifier, Level, Override, RegisterCapabilitiesEvent (+1 more)
-
-### Community 157 - ".hitWithinArea"
-Cohesion: 0.38
-Nodes (4): CompoundTag, NotNull, Override, Provider
-
-### Community 158 - "ConversionRegistry"
-Cohesion: 0.27
-Nodes (5): ConversionRegistry, Identifier, Item, ItemStack, TagKey
-
-### Community 159 - "CountUpdateMessage"
-Cohesion: 0.22
-Nodes (8): CountUpdateMessage, BlockPos, CustomPacketPayload, FriendlyByteBuf, Override, Player, StreamCodec, CountUpdateMessageHandler
-
-### Community 160 - "ChameleonCapability"
-Cohesion: 0.38
-Nodes (4): DrawerItemHandler, ItemStack, NotNull, Override
-
-### Community 161 - ".getSlotsValidAttributes"
-Cohesion: 0.18
-Nodes (4): GroupAttributeController, IDrawerAttributesGroupControl, IDrawerAttributesModifiable, Override
+Cohesion: 0.08
+Nodes (11): BlockCapability, ICapabilityProvider, IDrawerCapabilityProvider, PlatformCapabilities, ChameleonCapability, ChameleonServices, NeoforgeCapability, NeoforgeCapabilities (+3 more)
 
 ### Community 162 - "CurseForge — Variables del proyecto Vault Drawers"
 Cohesion: 0.14
 Nodes (13): Changelog, CurseForge — Variables del proyecto Vault Drawers, Descripcion del proyecto, Estructura del changelog (HTML), Flujo completo, Parámetros del upload, Proyecto, Rama (+5 more)
 
 ### Community 163 - "ItemStack"
-Cohesion: 0.31
-Nodes (6): DefaultPredicate, IItemRepository, ItemRecord, ItemStack, NonNullList, NotNull
+Cohesion: 0.11
+Nodes (6): IItemHandler, DefaultPredicate, IItemRepository, ItemRecord, Capabilities, PlatformDrawerItemHandler
 
 ### Community 164 - "KeyType"
-Cohesion: 0.18
-Nodes (7): getBitfield(), getEnumSet(), LockAttribute, LOCK_EMPTY, LOCK_POPULATED, Codec, KeyType
+Cohesion: 0.16
+Nodes (5): getBitfield(), getEnumSet(), LockAttribute, LOCK_EMPTY, LOCK_POPULATED
 
 ### Community 165 - "BlockMetaFacing"
-Cohesion: 0.25
-Nodes (9): BlockMetaFacing, Block, BlockState, Builder, Direction, EnumProperty, Mirror, Override (+1 more)
-
-### Community 166 - "BlockEntityDrawers.java"
-Cohesion: 0.11
-Nodes (15): IFramedBlockEntity, ContentProvider, DrawerAttributes, AABB, AbstractContainerMenu, BlockEntityType, BlockPos, BlockState (+7 more)
-
-### Community 167 - ".stackCapacityCheck"
-Cohesion: 0.25
-Nodes (10): Context, CraftingInput, ItemStack, Level, NotNull, Nullable, Override, Provider (+2 more)
-
-### Community 168 - "DetachedDrawerContents"
-Cohesion: 0.23
-Nodes (4): DetachedDrawerContents, Codec, ItemStack, Override
+Cohesion: 0.32
+Nodes (3): Mirror, Rotation, BlockMetaFacing
 
 ### Community 169 - "ConfigItemList"
-Cohesion: 0.27
-Nodes (7): CraftingInput, ItemStack, Level, NotNull, Override, RecipeSerializer, PersonalKeyRecipe
-
-### Community 170 - "ConversionRegistry"
-Cohesion: 0.27
-Nodes (5): ConversionRegistry, Identifier, Item, ItemStack, TagKey
+Cohesion: 0.19
+Nodes (8): CraftingInput, ItemStack, Level, NotNull, Override, RecipeSerializer, PersonalKeyRecipe, ItemPersonalKey
 
 ### Community 171 - "CountUpdateMessage.java"
-Cohesion: 0.21
-Nodes (8): CountUpdateMessage, BlockPos, CustomPacketPayload, FriendlyByteBuf, Override, Player, StreamCodec, CountUpdateMessageHandler
-
-### Community 172 - "BlockEntityFramingRenderer.java"
-Cohesion: 0.27
-Nodes (8): BlockEntityRenderer, BlockEntityFramingRenderer, AABB, Context, ItemStack, MultiBufferSource, Override, PoseStack
-
-### Community 173 - "BlockItem"
-Cohesion: 0.48
-Nodes (4): ComponentUtil, Component, Item, MutableComponent
-
-### Community 174 - "FrameMaterial"
-Cohesion: 0.21
-Nodes (7): FrameMaterial, FRONT, SIDE, TRIM, IFramedMaterials, ItemStack, NotNull
-
-### Community 175 - "BlockMetaFacingSizedOpen.java"
-Cohesion: 0.26
-Nodes (8): BlockMetaFacingSizedOpen, Block, BlockState, Builder, EnumProperty, Override, Open2, Open3
-
-### Community 176 - "FrameData"
-Cohesion: 0.23
-Nodes (7): FrameData, Codec, ItemStack, MaterialData, Override, RegistryFriendlyByteBuf, StreamCodec
-
-### Community 177 - "CompTierRegistry"
-Cohesion: 0.31
-Nodes (3): CompTierRegistry, ItemStack, Record
-
-### Community 178 - "ContainerFramingTable"
-Cohesion: 0.26
-Nodes (9): ContainerFramingTable, Container, ContainerLevelAccess, Inventory, ItemStack, MenuType, Override, Player (+1 more)
-
-### Community 179 - "FramedModelContext"
-Cohesion: 0.53
-Nodes (4): BlockState, Direction, RandomSource, RenderType
-
-### Community 180 - "CombinedModelDecorator"
-Cohesion: 0.53
-Nodes (3): IItemHandler, RegisterCapabilitiesEvent, PlatformCapabilities
+Cohesion: 0.20
+Nodes (3): ModNetworking, CountUpdateMessage, CountUpdateMessageHandler
 
 ### Community 181 - "NeoforgeRegistry.java"
-Cohesion: 0.13
-Nodes (10): DeferredRegister, Override, Registry, NeoforgeRegistry, Override, Registry, NeoforgeRegistries, RegistryEntryList (+2 more)
+Cohesion: 0.29
+Nodes (3): DeferredRegister, NeoforgeRegistry, RegistryEntryList
 
 ### Community 182 - "Flujo de trabajo — Vault Drawers (NeoForge 26.2)"
 Cohesion: 0.15
 Nodes (12): Buenas prácticas, Commits (Conventional Commits), Convenciones de nomenclatura, Específico del mod, Estructura del proyecto, Fases del Port (Roadmap), Flujo de trabajo — Vault Drawers (NeoForge 26.2), Flujo por tarea (+4 more)
 
-### Community 183 - ".entityInside"
-Cohesion: 0.27
-Nodes (7): CraftingInput, ItemStack, Level, NotNull, Override, RecipeSerializer, KeyringRecipe
-
-### Community 184 - "BlockEntityDrawersComp"
-Cohesion: 0.22
-Nodes (7): BlockEntityDrawersComp, BlockEntitySupplier, BlockEntityType, BlockPos, BlockState, FractionalDrawerGroup, Override
-
-### Community 185 - "FrameData"
-Cohesion: 0.23
-Nodes (7): FrameData, Codec, ItemStack, MaterialData, Override, RegistryFriendlyByteBuf, StreamCodec
-
-### Community 186 - "CompTierRegistry"
-Cohesion: 0.22
-Nodes (5): CompTierRegistry, Item, ItemStack, NotNull, Record
-
-### Community 187 - "ContainerFramingTable"
-Cohesion: 0.26
-Nodes (9): ContainerFramingTable, Container, ContainerLevelAccess, Inventory, ItemStack, MenuType, Override, Player (+1 more)
-
 ### Community 188 - "EnumUpgradeMagnet.java"
-Cohesion: 0.19
-Nodes (9): byMetadata(), EnumUpgradeMagnet, LEVEL1, LEVEL2, LEVEL3, getSerializedName(), NotNull, Override (+1 more)
-
-### Community 189 - "IFramedBlockEntity"
-Cohesion: 0.21
-Nodes (7): ItemRepository, IDrawer, ItemStack, NotNull, Player, ProtectedItemRepository, IDrawerGroup
-
-### Community 190 - "ControllerBinding"
-Cohesion: 0.27
-Nodes (6): ControllerBinding, BlockPos, Codec, FriendlyByteBuf, Override, StreamCodec
+Cohesion: 0.20
+Nodes (5): byMetadata(), EnumUpgradeMagnet, LEVEL1, LEVEL2, LEVEL3
 
 ### Community 191 - "VaultDrawers.java"
-Cohesion: 0.15
-Nodes (12): EntityJoinLevelEvent, FMLCommonSetupEvent, FMLLoadCompleteEvent, Mod, ModConfigEvent, ModContainer, PlayerLoggedOutEvent, Identifier (+4 more)
-
-### Community 192 - "ItemPriorityKey"
-Cohesion: 0.27
-Nodes (6): ItemPriorityKey, InteractionHand, InteractionResult, Level, Override, Player
-
-### Community 193 - "ItemTrim.java"
-Cohesion: 0.27
-Nodes (8): ItemTrim, Block, BlockPos, Component, ItemStack, LevelReader, Override, Player
-
-### Community 194 - "WorldUtils.java"
-Cohesion: 0.29
-Nodes (8): BlockGetter, BlockHitResult, BlockPos, Level, NotNull, Nullable, Player, WorldUtils
+Cohesion: 0.20
+Nodes (6): EntityJoinLevelEvent, FMLCommonSetupEvent, Mod, ModConfigEvent, PlayerLoggedOutEvent, VaultDrawers
 
 ### Community 195 - "ChameleonPacket"
-Cohesion: 0.17
-Nodes (12): Override, PayloadRegistrar, ServerLevel, ServerPlayer, StreamCodec, NeoforgeNetworking, CustomPacketPayload, ChameleonPacket (+4 more)
-
-### Community 196 - "EntityBlock"
-Cohesion: 0.34
-Nodes (3): BlockInventory, ItemStack, Override
-
-### Community 197 - "IControlGroup"
-Cohesion: 0.36
-Nodes (6): CraftResultSlot, Container, ItemStack, NotNull, Override, Player
+Cohesion: 0.19
+Nodes (5): CustomPacketPayload, PayloadRegistrar, NeoforgeNetworking, ChameleonPacket, ChameleonNetworking
 
 ### Community 199 - "IntegerSetProperty"
-Cohesion: 0.20
-Nodes (3): IntegerSetProperty, ImmutableSet, Override
-
-### Community 200 - "ControllerBinding"
-Cohesion: 0.27
-Nodes (6): ControllerBinding, BlockPos, Codec, FriendlyByteBuf, Override, StreamCodec
+Cohesion: 0.19
+Nodes (4): ImmutableSet, Property, IntegerSetProperty, Override
 
 ### Community 201 - "EnumUpgradeRedstone.java"
-Cohesion: 0.21
-Nodes (9): byMetadata(), EnumUpgradeRedstone, COMBINED, MAX, MIN, getSerializedName(), NotNull, Override (+1 more)
-
-### Community 202 - "ItemPriorityKey"
-Cohesion: 0.27
-Nodes (6): ItemPriorityKey, InteractionHand, InteractionResult, Level, Override, Player
-
-### Community 203 - "Block"
-Cohesion: 0.29
-Nodes (6): CombinedModelDecorator, BakedModel, BlockState, ItemStack, Override, RenderType
+Cohesion: 0.15
+Nodes (6): byMetadata(), EnumUpgradeRedstone, COMBINED, MAX, MIN, ItemUpgradeRedstone
 
 ### Community 204 - "BlockEntity"
-Cohesion: 0.13
-Nodes (3): BlockPos, Player, INetworked
-
-### Community 206 - "IFramedMaterials"
-Cohesion: 0.26
-Nodes (4): IFramedMaterials, ItemStack, NotNull, IFramedBlockEntity
-
-### Community 207 - "BlockControllerIO"
-Cohesion: 0.20
-Nodes (3): IControlGroup, BlockPos, Player
-
-### Community 208 - "EnumCompDrawer.java"
-Cohesion: 0.20
-Nodes (12): byMetadata(), byOpenSlots(), EnumCompDrawer, OPEN1, OPEN2, OPEN3, getDrawerCount(), getSerializedName() (+4 more)
-
-### Community 209 - "IntegerSetProperty"
-Cohesion: 0.24
-Nodes (3): IntegerSetProperty, ImmutableSet, Property
-
-### Community 210 - "DrawerModelProperties.java"
-Cohesion: 0.31
-Nodes (9): DrawerModelProperties, BlockState, Direction, ItemStack, ModelData, ModelProperty, Override, RandomSource (+1 more)
-
-### Community 211 - "IntegrationRegistry"
-Cohesion: 0.14
-Nodes (5): IntegrationRegistry, IntegrationRegistry, LocalIntegrationRegistry, IntegrationRegistry, LocalIntegrationRegistry
-
-### Community 212 - "ModelContext"
-Cohesion: 0.24
-Nodes (8): CustomRecipe, CraftingInput, ItemStack, Level, NotNull, Override, RecipeSerializer, RemoteGroupUpgradeRecipe
+Cohesion: 0.09
+Nodes (3): IControlGroup, INetworked, ControllerHostData
 
 ### Community 213 - "Type"
-Cohesion: 0.36
-Nodes (6): CraftResultSlot, Container, ItemStack, NotNull, Override, Player
-
-### Community 214 - "NeoforgeNetworking.java"
-Cohesion: 0.29
-Nodes (8): BlockGetter, BlockHitResult, BlockPos, Level, NotNull, Nullable, Player, WorldUtils
-
-### Community 215 - "ControllerHostData"
-Cohesion: 0.40
-Nodes (5): BlockState, Direction, RandomSource, RenderType, ModelContext
+Cohesion: 0.11
+Nodes (5): Container, Slot, ContainerDrawers, CraftResultSlot, RestrictedSlot
 
 ### Community 216 - "DrawerItemRepository"
-Cohesion: 0.33
-Nodes (6): DrawerItemRepository, ItemRecord, ItemStack, NonNullList, NotNull, Override
+Cohesion: 0.20
+Nodes (3): IDrawerGroup, DrawerItemRepository, StorageUtil
 
 ### Community 217 - "EnumUpgradeCreative.java"
-Cohesion: 0.24
-Nodes (8): byMetadata(), EnumUpgradeCreative, STORAGE, VENDING, getSerializedName(), NotNull, Override, toString()
-
-### Community 218 - "IRenderLabel"
-Cohesion: 0.27
-Nodes (4): IRenderRegistry, IRenderLabel, BlockEntity, IRenderRegistry
-
-### Community 219 - "Key"
-Cohesion: 0.19
-Nodes (4): General, Key, QuantifyKey, Tools
-
-### Community 220 - "FrameMatSet"
-Cohesion: 0.31
-Nodes (5): Container, ItemStack, Override, Player, SlotUpgrade
-
-### Community 221 - "PlayerBoolConfigMessage.java"
 Cohesion: 0.18
-Nodes (10): FriendlyByteBuf, Override, Player, StreamCodec, PlayerBoolConfigMessage, Type, CLIENT, COMMON (+2 more)
-
-### Community 222 - "PlatformBlockEntityController.java"
-Cohesion: 0.31
-Nodes (6): BlockPos, BlockState, ModelData, NotNull, Override, PlatformBlockEntityController
-
-### Community 223 - "PlayerEventListener.java"
-Cohesion: 0.23
-Nodes (8): IPortable, ItemStack, Provider, ItemStack, Player, Post, SubscribeEvent, PlayerEventListener
-
-### Community 224 - "BlockEntityControllerIO.java"
-Cohesion: 0.31
-Nodes (6): Override, PayloadRegistrar, ServerLevel, ServerPlayer, StreamCodec, NeoforgeNetworking
-
-### Community 225 - ".onUpgradeChanged"
-Cohesion: 0.35
-Nodes (5): BakedModel, BlockState, ItemStack, RenderType, ModelDecorator
-
-### Community 226 - "ItemCollectionRegistry"
-Cohesion: 0.33
-Nodes (3): ItemCollectionRegistry, Entry, Item
-
-### Community 227 - "BlockEntityTrim"
-Cohesion: 0.53
-Nodes (3): IItemHandler, RegisterCapabilitiesEvent, PlatformCapabilities
-
-### Community 228 - "SecurityManager.java"
-Cohesion: 0.33
-Nodes (5): BlockPos, GameProfile, InteractionHand, Player, SecurityManager
+Nodes (5): byMetadata(), EnumUpgradeCreative, STORAGE, VENDING, ItemUpgradeCreative
 
 ### Community 229 - "ItemCollectionRegistry"
-Cohesion: 0.33
-Nodes (3): ItemCollectionRegistry, Entry, Item
+Cohesion: 0.21
+Nodes (4): Entry, Item, Record, ItemCollectionRegistry
 
 ### Community 230 - "[13.11.4] - 2024-08-21"
-Cohesion: 0.11
-Nodes (18): [0.0.0-beta.1] - 2026-08-25, [0.0.0-beta.2] - 2026-08-25, [0.0.0-beta.3] - 2026-08-25, [0.0.0-beta.4] - 2026-08-25, [13.11.4] - 2024-08-21, Added, Añadido, Añadido (+10 more)
-
-### Community 231 - "IWailaTooltipHandler"
-Cohesion: 0.22
-Nodes (3): IWailaRegistry, IWailaTooltipHandler, IWailaRegistry
-
-### Community 232 - "BlockMetaFacingSized"
-Cohesion: 0.31
-Nodes (6): BlockMetaFacingSized, Block, BlockState, BooleanProperty, Builder, Override
-
-### Community 233 - "IntegrationEvents.java"
-Cohesion: 0.31
-Nodes (5): IntegrationEvents, EventBusSubscriber, SubscribeEvent, TheOneProbeLoader, InterModEnqueueEvent
-
-### Community 237 - "BlockMetaFacingSized"
-Cohesion: 0.31
-Nodes (6): BlockMetaFacingSized, Block, BlockState, BooleanProperty, Builder, Override
-
-### Community 238 - "NeoforgeCapabilities.java"
-Cohesion: 0.40
-Nodes (5): ItemStack, Player, Post, SubscribeEvent, PlayerEventListener
-
-### Community 239 - "MaterialBlacklist"
-Cohesion: 0.43
-Nodes (6): BlockState, Direction, ItemStack, ModelData, RandomSource, RenderType
-
-### Community 240 - "ModContainers"
-Cohesion: 0.33
-Nodes (5): BlockEntityTrim, BlockEntityType, BlockPos, BlockState, Override
-
-### Community 241 - "IStorageDrawersApi"
-Cohesion: 0.32
-Nodes (3): Api, IStorageDrawersApi, StorageDrawersApi
-
-### Community 242 - "CommonEventBusSubscriber.java"
-Cohesion: 0.39
-Nodes (5): CommonEventBusSubscriber, EventBusSubscriber, SubscribeEvent, ItemStackedOnOtherEvent, LeftClickBlock
-
-### Community 243 - "MaterialBlacklist"
-Cohesion: 0.47
-Nodes (3): DrawerOverlay, Component, IDrawerAttributes
-
-### Community 244 - "StorageBlacklist"
-Cohesion: 0.36
-Nodes (6): CustomPacketPayload, FriendlyByteBuf, Override, Player, StreamCodec, PlayerBoolConfigMessage
-
-### Community 245 - "FTBChunksInteractionProvider.java"
-Cohesion: 0.39
-Nodes (5): FTBChunksInteractionProvider, BlockPos, InteractionHand, Override, Player
-
-### Community 246 - "DrawerInventoryHelper.java"
-Cohesion: 0.54
-Nodes (4): DrawerInventoryHelper, BlockPos, ItemStack, Level
-
-### Community 247 - "ItemFramedDrawers.java"
-Cohesion: 0.36
-Nodes (5): ItemFramedDrawers, Block, BlockPlaceContext, BlockState, Override
-
-### Community 248 - "ItemFramedTrim.java"
-Cohesion: 0.36
-Nodes (5): ItemFramedTrim, Block, BlockPlaceContext, BlockState, Override
-
-### Community 249 - "ItemUpgradeBalance"
-Cohesion: 0.36
-Nodes (4): ItemUpgradeBalance, Component, NotNull, Override
-
-### Community 250 - "ModelContextSupplier.java"
-Cohesion: 0.32
-Nodes (4): Container, Override, Player, SlotStorage
-
-### Community 251 - "DefaultInteractionProvider.java"
-Cohesion: 0.39
-Nodes (5): DefaultInteractionProvider, BlockPos, InteractionHand, Override, Player
-
-### Community 252 - "NeoforgeRegistryEntry"
-Cohesion: 0.39
-Nodes (4): DeferredHolder, Identifier, Override, NeoforgeRegistryEntry
+Cohesion: 0.07
+Nodes (29): [0.0.0-beta.1] - 2026-08-25, [0.0.0-beta.2] - 2026-08-25, [0.0.0-beta.3] - 2026-08-25, [0.0.0-beta.4] - 2026-08-25, [0.0.0-beta.5] - 2026-08-27, [0.0.0-beta.6] - 2026-08-28, [0.0.0-beta.7] - 2026-08-28, [0.0.0-beta.8] - 2026-08-29 (+21 more)
 
 ### Community 253 - "IVaultDrawersApi"
-Cohesion: 0.32
-Nodes (3): IVaultDrawersApi, VaultDrawersApi, Api
-
-### Community 254 - "BlockEntityDataShim"
-Cohesion: 0.57
-Nodes (3): BlockEntityDataShim, CompoundTag, Provider
-
-### Community 256 - "DrawerInventoryHelper.java"
-Cohesion: 0.54
-Nodes (4): DrawerInventoryHelper, BlockPos, ItemStack, Level
-
-### Community 257 - "ItemFramedDrawers.java"
-Cohesion: 0.36
-Nodes (5): ItemFramedDrawers, Block, BlockPlaceContext, BlockState, Override
-
-### Community 258 - "ItemFramedTrim.java"
-Cohesion: 0.36
-Nodes (5): ItemFramedTrim, Block, BlockPlaceContext, BlockState, Override
-
-### Community 259 - "ItemUpgradeBalance"
-Cohesion: 0.36
-Nodes (4): ItemUpgradeBalance, Component, NotNull, Override
-
-### Community 260 - "DefaultInteractionProvider.java"
-Cohesion: 0.39
-Nodes (5): DefaultInteractionProvider, BlockPos, InteractionHand, Override, Player
-
-### Community 261 - "DefaultSecurityProvider.java"
-Cohesion: 0.43
-Nodes (4): DefaultSecurityProvider, GameProfile, Override, Player
-
-### Community 262 - "ContainerDrawers1"
-Cohesion: 0.38
-Nodes (3): ContainerDrawers1, Inventory, Override
+Cohesion: 0.11
+Nodes (16): BlockAccessor, Element, IBlockComponentProvider, IPluginConfig, ITooltip, IWailaClientRegistration, IWailaPlugin, IVaultDrawersApi (+8 more)
 
 ### Community 263 - "ContainerDrawers2"
-Cohesion: 0.12
-Nodes (18): BlockPos, FriendlyByteBuf, Level, Nullable, Override, PositionContent, Serializer, ContainerContent (+10 more)
+Cohesion: 0.14
+Nodes (8): MenuSupplier, ContainerContent, ContainerContentSerializer, PositionContent, Serializer, NeoforgeContainer, ChameleonContainer, ChameleonContainerFactory
 
 ### Community 264 - "ContainerDrawers4"
-Cohesion: 0.11
-Nodes (17): getSerializedName(), NotNull, Override, FrameMaterial, FRONT, SIDE, TRIM, getSerializedName() (+9 more)
-
-### Community 265 - "ContainerDrawersComp2"
-Cohesion: 0.17
-Nodes (9): Container, ItemStack, Override, RestrictedSlot, Slot, Container, ItemStack, Override (+1 more)
-
-### Community 267 - "ItemUpgradeStorage"
-Cohesion: 0.29
-Nodes (4): ItemUpgradeStorage, Component, NotNull, Override
-
-### Community 270 - "UpgradeData.java"
-Cohesion: 0.16
-Nodes (8): MagnetDim, DOWN, HORIZONTAL, UP, CompoundTag, NotNull, Override, Provider
-
-### Community 271 - "IInteractionProvider.java"
-Cohesion: 0.43
-Nodes (4): IInteractionProvider, BlockPos, InteractionHand, Player
-
-### Community 272 - "ChameleonPlatform"
-Cohesion: 0.25
-Nodes (4): ChameleonServices, Override, NeoforgePlatform, ChameleonPlatform
-
-### Community 275 - "ContainerDrawersComp3.java"
-Cohesion: 0.38
-Nodes (3): ContainerDrawers2, Inventory, Override
-
-### Community 277 - "ItemUpgradeStorage"
-Cohesion: 0.29
-Nodes (4): ItemUpgradeStorage, Component, NotNull, Override
-
-### Community 278 - "PlatformCapabilities.java"
-Cohesion: 0.38
-Nodes (3): ContainerDrawers4, Inventory, Override
-
-### Community 279 - "ClientModBusSubscriber.java"
-Cohesion: 0.53
-Nodes (4): ClientModBusSubscriber, EventBusSubscriber, SubscribeEvent, FMLClientSetupEvent
+Cohesion: 0.20
+Nodes (8): FrameMaterial, FRONT, SIDE, TRIM, EnumFramingTablePart, LEFT, RIGHT, StringRepresentable
 
 ### Community 282 - "Vault Drawers — CurseForge Logo Image Prompt"
 Cohesion: 0.33
 Nodes (5): Ready-to-use prompt, Reference, Target output, Usage, Vault Drawers — CurseForge Logo Image Prompt
 
-### Community 283 - ".renderImage"
-Cohesion: 0.47
-Nodes (3): Font, GuiGraphics, Override
-
-### Community 287 - "IDrawerCapability.java"
-Cohesion: 0.60
-Nodes (3): IDrawerCapability, BlockPos, Level
-
-### Community 288 - "IInteractionProvider.java"
-Cohesion: 0.60
-Nodes (3): BlockPos, InteractionHand, Player
-
-### Community 296 - "IDrawerCapability.java"
-Cohesion: 0.60
-Nodes (3): IDrawerCapability, BlockPos, Level
-
-### Community 297 - ".isHeavy"
-Cohesion: 0.50
-Nodes (3): IPortable, ItemStack, Provider
-
 ### Community 298 - "MagnetDim"
-Cohesion: 0.40
+Cohesion: 0.33
 Nodes (4): MagnetDim, DOWN, HORIZONTAL, UP
-
-### Community 299 - "Component"
-Cohesion: 0.38
-Nodes (3): ContainerDrawersComp2, Inventory, Override
 
 ### Community 310 - "gradlew"
 Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ### Community 314 - "BlockType"
-Cohesion: 0.50
+Cohesion: 0.29
 Nodes (3): BlockType, Drawers, Trim
 
-### Community 317 - ".getStoreModel"
-Cohesion: 0.38
-Nodes (3): ContainerDrawersComp3, Inventory, Override
-
-### Community 332 - "ItemDrawerPuller"
-Cohesion: 0.38
-Nodes (3): ContainerDrawers1, Inventory, Override
-
 ## Knowledge Gaps
-- **196 isolated node(s):** `DefaultPredicate`, `SIDE`, `TRIM`, `FRONT`, `Drawers` (+191 more)
+- **116 isolated node(s):** `DefaultPredicate`, `SIDE`, `TRIM`, `FRONT`, `Drawers` (+111 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **779 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BlockEntityDrawers` connect `BlockEntityDrawers` to `BlockFramedCompDrawers.java`, `ItemFramedDrawers.java`, `BlockDrawers`, `BlockStandardDrawers.java`, `ContainerDrawers1`, `DrawerData`, `BaseBlockEntity`, `ControllerData`, `BlockDrawers`, `InventoryUpgrade`, `ContainerDrawersComp3.java`, `PlatformBlockEntityDrawersStandard.java`, `PlatformCapabilities.java`, `CountUpdateMessage`, `UpgradeData`, `PositionContent`, `GroupData`, `BlockEntityDrawers.java`, `MaterialData`, `Component`, `CountUpdateMessage.java`, `BlockEntityFramingTable.java`, `BlockEntityDrawersRenderer.java`, `CombinedModelDecorator`, `BlockEntityDrawersComp`, `BlockEntityDrawers.java`, `Upgrade`, `ContainerDrawers`, `.getStoreModel`, `.addProbeInfo`, `IFramedBlockEntity`, `BlockStandardDrawers`, `ItemDrawerPuller`, `BlockFramedStandardDrawers.java`, `DrawerModelProperties.java`, `BlockCompDrawers`, `Override`, `BlockEntityTrim`, `ParentModel`, `BlockFramedStandardDrawers.java`, `MaterialBlacklist`, `Waila.java`, `ItemFramedDrawers.java`, `IProtectable`, `BlockEntityDrawersStandard.java`?**
-  _High betweenness centrality (0.129) - this node is a cross-community bridge._
-- **Why does `BlockDrawers` connect `BlockDrawers` to `BlockStandardDrawers.java`, `DrawerData`, `PositionContent`, `BlockEntityDrawers.java`, `BlockEntityDrawersRenderer.java`, `BlockEntityDrawers.java`, `Upgrade`, `ContainerDrawers`, `ItemTrim.java`, `BlockStandardDrawers`, `ChameleonRegistry`, `BlockTrim`, `BlockCompDrawers`, `ItemDrawers.java`, `ItemDrawers`, `DrawerModelContext`, `MaterialModelDecorator`, `IDrawerGroup`, `BlockFramedController.java`, `CommonEventBusSubscriber.java`, `Waila.java`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
-- **Why does `ItemKey` connect `ItemKey` to `IDrawerAttributesModifiable`, `ItemPersonalKey`, `ItemShroudKey`, `ResourceFactory`, `ItemSuspendKey`, `KeyringContents`, `ItemKeyring.java`, `ItemKeyring`, `BlockController`, `KeyringContents`, `.entityInside`, `BlockController.java`, `ModRecipes.java`, `ItemPriorityKey`, `ChatFormatting`, `ItemSuspendKey`, `ItemPriorityKey`, `IDrawerGroup`, `Item`?**
-  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+- **Why does `BlockEntityDrawers` connect `BlockEntityDrawers` to `BlockFramedCompDrawers.java`, `DrawerData`, `ContainerDrawers`, `BaseBlockEntity`, `InventoryUpgrade`, `ModBlockEntities`, `PlatformBlockEntityDrawersStandard.java`, `BlockEntityController.java`, `ControllerData`, `NeoforgeCapability`, `PositionContent`, `IDrawerAttributes`, `CountUpdateMessage.java`, `BlockEntityFramingTable.java`, `BlockController.java`, `BlockEntityDrawersComp`, `BlockType`, `ContainerDrawers`, `StringRepresentable`, `BlockEntity`, `.getDrawer`, `BlockFramedStandardDrawers.java`, `BlockCompDrawers`, `Type`, `DrawerItemRepository`, `BlockFramedTrim.java`, `BlockInventory`, `IVaultDrawersApi`?**
+  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `IDrawer` connect `IDrawer` to `ChameleonCapability`, `Override`, `DetachedDrawerData`, `DrawerData`, `IDrawerAttributes`, `ItemStack`, `BlockEntityController`, `SlotDrawer`, `ContainerDrawers`, `ItemStackHelper`, `PlatformBlockEntityDrawersStandard.java`, `BlockEntityControllerIO`, `DrawerItemRepository`, `IDrawer`, `BlockController.java`?**
+  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+- **Why does `ItemUpgrade` connect `Item` to `ItemUpgradeBalance`, `IDrawerAttributes`, `ItemCollectionRegistry`, `ItemUpgradeMagnet`, `EnumUpgradeRedstone.java`, `ItemUpgradeFillLevel`, `ItemUpgradeHopper`, `ItemUpgradeIllumination`, `ItemUpgradeRemote.java`, `ItemUpgradePortability`, `ItemUpgradeVoid`, `ItemUpgradeStorage`, `DrawerModelStore.java`, `EnumUpgradeCreative.java`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **What connects `DefaultPredicate`, `SIDE`, `TRIM` to the rest of the system?**
-  _196 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _116 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.build` be split into smaller, more focused modules?**
-  _Cohesion score 0.04381443298969072 - nodes in this community are weakly interconnected._
-- **Should `BlockFramingTable` be split into smaller, more focused modules?**
-  _Cohesion score 0.05218365061590145 - nodes in this community are weakly interconnected._
-- **Should `DrawerData` be split into smaller, more focused modules?**
-  _Cohesion score 0.055669050051072526 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11384615384615385 - nodes in this community are weakly interconnected._
+- **Should `BlockDrawers` be split into smaller, more focused modules?**
+  _Cohesion score 0.07056451612903226 - nodes in this community are weakly interconnected._
+- **Should `Override` be split into smaller, more focused modules?**
+  _Cohesion score 0.08478513356562137 - nodes in this community are weakly interconnected._

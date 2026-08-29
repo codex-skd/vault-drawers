@@ -1,1132 +1,7 @@
 {
   "build.gradle": {
-    "mtime": 1787674193.9251866,
-    "ast_hash": "ee69bdaa9a5009735d8f51567e0d7cca",
-    "semantic_hash": ""
-  },
-  "client_backup/Api.java": {
-    "mtime": 1787358858.638214,
-    "ast_hash": "549b725473a697a7072f770f6566ccb1",
-    "semantic_hash": ""
-  },
-  "client_backup/ClientModBusSubscriber.java": {
-    "mtime": 1787399420.1223745,
-    "ast_hash": "8f3a68772cd4013cd97a742a38b6a0c3",
-    "semantic_hash": ""
-  },
-  "client_backup/CommonEventBusSubscriber.java": {
-    "mtime": 1787359717.9096563,
-    "ast_hash": "1567403d753000ecbfef2f9310558c5e",
-    "semantic_hash": ""
-  },
-  "client_backup/DrawerModelProperties.java": {
-    "mtime": 1787358859.5840733,
-    "ast_hash": "7b9bfc1312f79be1a7e9a84d38d58d52",
-    "semantic_hash": ""
-  },
-  "client_backup/DrawerOverlay.java": {
-    "mtime": 1787358859.6784215,
-    "ast_hash": "8a0cd94026d6eef5df294c6f116060f1",
-    "semantic_hash": ""
-  },
-  "client_backup/DrawerScreen.java": {
-    "mtime": 1787358860.9196675,
-    "ast_hash": "d2e83daf56c5f2e14868e04db6090939",
-    "semantic_hash": ""
-  },
-  "client_backup/FramedModelProperties.java": {
-    "mtime": 1787358859.6295993,
-    "ast_hash": "2d14ebb5af624b6ae8f65dd1b7488fd9",
-    "semantic_hash": ""
-  },
-  "client_backup/FramingTableScreen.java": {
-    "mtime": 1787358860.9651935,
-    "ast_hash": "8b1bde2f5f12aea0ecec851dcedf139e",
-    "semantic_hash": ""
-  },
-  "client_backup/IntegrationEvents.java": {
-    "mtime": 1787363511.6524527,
-    "ast_hash": "f678082d9e8fe8e23fabe7782ffa6854",
-    "semantic_hash": ""
-  },
-  "client_backup/IntegrationModule.java": {
-    "mtime": 1787358860.0115216,
-    "ast_hash": "6452b471250e9c2e628798336b211c8c",
-    "semantic_hash": ""
-  },
-  "client_backup/IntegrationRegistry.java": {
-    "mtime": 1787360935.5466774,
-    "ast_hash": "a43504c49bcbdb0c56eda840a749aa22",
-    "semantic_hash": ""
-  },
-  "client_backup/LocalIntegrationRegistry.java": {
-    "mtime": 1787361383.8686714,
-    "ast_hash": "3d693dbc72792119f0135e98c1d4a891",
-    "semantic_hash": ""
-  },
-  "client_backup/ModBlockEntities.java": {
-    "mtime": 1787359749.9912162,
-    "ast_hash": "ddf59ed3220ca132dc0a34761298ea14",
-    "semantic_hash": ""
-  },
-  "client_backup/ModBlockVariants.java": {
-    "mtime": 1787359942.423085,
-    "ast_hash": "617d1d427c60bef76a5dff3b27aa612a",
-    "semantic_hash": ""
-  },
-  "client_backup/ModBlocks.java": {
-    "mtime": 1787359814.2443695,
-    "ast_hash": "386078022856dd1185c1b3ea558a6e47",
-    "semantic_hash": ""
-  },
-  "client_backup/ModContainers.java": {
-    "mtime": 1787360009.0313356,
-    "ast_hash": "0f9c3611f9f555970b4125fb2a58445e",
-    "semantic_hash": ""
-  },
-  "client_backup/ModCreativeTabs.java": {
-    "mtime": 1787360256.4082384,
-    "ast_hash": "2476b7f6f233cbe9881ccfcfc6327efb",
-    "semantic_hash": ""
-  },
-  "client_backup/ModDataComponents.java": {
-    "mtime": 1787360281.3598576,
-    "ast_hash": "6226aff1e62224200d41f9e2b0e257f4",
-    "semantic_hash": ""
-  },
-  "client_backup/ModItems.java": {
-    "mtime": 1787360349.425689,
-    "ast_hash": "1e48c6eead09212efe35df4d8e1b4b1d",
-    "semantic_hash": ""
-  },
-  "client_backup/ModNetworking.java": {
-    "mtime": 1787360593.778255,
-    "ast_hash": "6ddbc3083f3d98465ef62b9d6b5b53aa",
-    "semantic_hash": ""
-  },
-  "client_backup/ModRecipes.java": {
-    "mtime": 1787360685.727412,
-    "ast_hash": "a57423e97e922ef493537521b190dd90",
-    "semantic_hash": ""
-  },
-  "client_backup/ModSecurity.java": {
-    "mtime": 1787358859.26748,
-    "ast_hash": "eff2a187239273548e0f2529f0091cd6",
-    "semantic_hash": ""
-  },
-  "client_backup/ModServices.java": {
-    "mtime": 1787358863.0990665,
-    "ast_hash": "7172c819a3e0e0a35f42a761a2e3d715",
-    "semantic_hash": ""
-  },
-  "client_backup/ModelContextSupplier.java": {
-    "mtime": 1787358863.055458,
-    "ast_hash": "ed678651b248f3f56406bea55d474cce",
-    "semantic_hash": ""
-  },
-  "client_backup/NeoforgeNetworking.java": {
-    "mtime": 1787358856.700011,
-    "ast_hash": "377419b5bafa763196a5e956cb267b77",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformBlockEntityController.java": {
-    "mtime": 1787358863.299757,
-    "ast_hash": "4ac8ac09d3fdeab6a96260cd0c8aa591",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformBlockEntityControllerIO.java": {
-    "mtime": 1787358863.3747811,
-    "ast_hash": "55e2c984bf64f3420bb4bb945b15e728",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformBlockEntityDrawersComp.java": {
-    "mtime": 1787358863.42388,
-    "ast_hash": "b07c30069e0f80bf3120fc5c46fda36a",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformBlockEntityDrawersStandard.java": {
-    "mtime": 1787358863.471065,
-    "ast_hash": "0824ff123ed626e83ae1341d665f1a90",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformBlockEntityTrim.java": {
-    "mtime": 1787358863.498783,
-    "ast_hash": "cb6f9f7af6fec6cbbd2e0789b5762842",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformDecoratedModel.java": {
-    "mtime": 1787358863.5622976,
-    "ast_hash": "5ba87beaea4b9348eb2511e9ddea9761",
-    "semantic_hash": ""
-  },
-  "client_backup/PlatformResourceFactory.java": {
-    "mtime": 1787358863.8544216,
-    "ast_hash": "c64e99e1c6213bbe65d402470e71372f",
-    "semantic_hash": ""
-  },
-  "client_backup/PlayerEventListener.java": {
-    "mtime": 1787358859.2944386,
-    "ast_hash": "901d099de602a6a34e52a90619a8ddee",
-    "semantic_hash": ""
-  },
-  "client_backup/PositionContent.java": {
-    "mtime": 1787358855.6152081,
-    "ast_hash": "4ffe18415dc5403b56fd721b39b6fe33",
-    "semantic_hash": ""
-  },
-  "client_backup/ResourceFactory.java": {
-    "mtime": 1787358863.9040568,
-    "ast_hash": "c9023c3efe87cb6fd91146208136684a",
-    "semantic_hash": ""
-  },
-  "client_backup/TheOneProbeLoader.java": {
-    "mtime": 1787358860.2538497,
-    "ast_hash": "19ea24abaeab3ea6507c6665e46f01da",
-    "semantic_hash": ""
-  },
-  "client_backup/api/IStorageDrawersApi.java": {
-    "mtime": 1787358851.356433,
-    "ast_hash": "887e5dfb3d6cc3784793b8af91a0ad12",
-    "semantic_hash": ""
-  },
-  "client_backup/api/StorageDrawersApi.java": {
-    "mtime": 1787358852.6549118,
-    "ast_hash": "2416f4d57514e29933a0d083010626b9",
-    "semantic_hash": ""
-  },
-  "client_backup/api/capabilities/IDrawerCapability.java": {
-    "mtime": 1787358850.9216175,
-    "ast_hash": "ebddcf228dc02b3838c666d9c6bd802a",
-    "semantic_hash": ""
-  },
-  "client_backup/api/capabilities/IDrawerCapabilityProvider.java": {
-    "mtime": 1787358850.9561176,
-    "ast_hash": "7e5ee708939cc3d365ceb6105c9cc49b",
-    "semantic_hash": ""
-  },
-  "client_backup/api/capabilities/IItemHandler.java": {
-    "mtime": 1787358851.0018094,
-    "ast_hash": "efe5b0a29cee41566d50152e232f5caa",
-    "semantic_hash": ""
-  },
-  "client_backup/api/capabilities/IItemRepository.java": {
-    "mtime": 1787358851.0489779,
-    "ast_hash": "ff514258a79eec6a772efd0390e9df29",
-    "semantic_hash": ""
-  },
-  "client_backup/api/config/IDrawerConfig.java": {
-    "mtime": 1787358851.094886,
-    "ast_hash": "689913818619c2d8401fe6ad06d12b8e",
-    "semantic_hash": ""
-  },
-  "client_backup/api/event/DrawerPopulatedEvent.java": {
-    "mtime": 1787358851.1248124,
-    "ast_hash": "9649375f2193772b6f044ca7cd06c571",
-    "semantic_hash": ""
-  },
-  "client_backup/api/framing/FrameMaterial.java": {
-    "mtime": 1787358851.1582427,
-    "ast_hash": "45d33734b0e004ce1752dc14d39da31c",
-    "semantic_hash": ""
-  },
-  "client_backup/api/framing/IFramedBlock.java": {
-    "mtime": 1787358851.2030294,
-    "ast_hash": "9fa35eee60ee98c3ea78c09b9fdbafab",
-    "semantic_hash": ""
-  },
-  "client_backup/api/framing/IFramedBlockEntity.java": {
-    "mtime": 1787358851.2368417,
-    "ast_hash": "088bbf59ae21fb89861570dc34a9e627",
-    "semantic_hash": ""
-  },
-  "client_backup/api/framing/IFramedMaterials.java": {
-    "mtime": 1787358851.2804513,
-    "ast_hash": "b0cfe074634e12192443dd07f45179da",
-    "semantic_hash": ""
-  },
-  "client_backup/api/framing/IFramedSourceBlock.java": {
-    "mtime": 1787358851.3131616,
-    "ast_hash": "5d70f29819705c380861949f38cab205",
-    "semantic_hash": ""
-  },
-  "client_backup/api/registry/IRenderRegistry.java": {
-    "mtime": 1787358851.4048243,
-    "ast_hash": "8e94e3a2f368e870eda0acadc92eafdd",
-    "semantic_hash": ""
-  },
-  "client_backup/api/registry/IWailaRegistry.java": {
-    "mtime": 1787358851.4508033,
-    "ast_hash": "85a56bdba24f623649a200afdd26e136",
-    "semantic_hash": ""
-  },
-  "client_backup/api/registry/IWailaTooltipHandler.java": {
-    "mtime": 1787358851.4974854,
-    "ast_hash": "3ca72970e9f1e0df1d2303a64ef938ea",
-    "semantic_hash": ""
-  },
-  "client_backup/api/render/IRenderLabel.java": {
-    "mtime": 1787358851.5449657,
-    "ast_hash": "51650a2eecc1dd7b56e879aedb417c9e",
-    "semantic_hash": ""
-  },
-  "client_backup/api/security/IInteractionProvider.java": {
-    "mtime": 1787358851.61176,
-    "ast_hash": "4f88dd7e7f6d3fe53702e26a0c433293",
-    "semantic_hash": ""
-  },
-  "client_backup/api/security/ISecurityProvider.java": {
-    "mtime": 1787358851.6681995,
-    "ast_hash": "d2fe8c0e772320d61bb71f0036757056",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/BlockType.java": {
-    "mtime": 1787358851.9700563,
-    "ast_hash": "64667b9561bb4d477311b625e2360dcd",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/Drawers.java": {
-    "mtime": 1787358852.0299752,
-    "ast_hash": "4babacc29a23cdf8b388f3bff206d7fd",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/EmptyDrawerAttributes.java": {
-    "mtime": 1787358852.1007473,
-    "ast_hash": "9703a419bf3f2a75746827eff66910c3",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/EnumBasicDrawer.java": {
-    "mtime": 1787358852.1650236,
-    "ast_hash": "08173168c73617295b328f376db8030c",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IControlGroup.java": {
-    "mtime": 1787358852.2321227,
-    "ast_hash": "d12b1a64ee52d66efe6d4845db50f699",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawer.java": {
-    "mtime": 1787358852.276296,
-    "ast_hash": "3226bda19bb4476cdbfad81bd802dad3",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawerAttributes.java": {
-    "mtime": 1787358852.3223736,
-    "ast_hash": "22090dccfdbb2a03c44ed4e182b7ccd5",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawerAttributesGroupControl.java": {
-    "mtime": 1787358852.3681114,
-    "ast_hash": "0bee8684a38fff68a9eac7b096e14503",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawerAttributesModifiable.java": {
-    "mtime": 1787358852.397763,
-    "ast_hash": "daf7101b77a183a90e08263dd43f40ca",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawerGeometry.java": {
-    "mtime": 1787358852.4723132,
-    "ast_hash": "78417dada5f3939784b2ef56e3d63ff7",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IDrawerGroup.java": {
-    "mtime": 1787358852.5159671,
-    "ast_hash": "e75fcc6cfcfe7ea2650e876ee3756389",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/IFractionalDrawer.java": {
-    "mtime": 1787358852.5674334,
-    "ast_hash": "44685c8c290579d1e7143f6660bc9c70",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/INetworked.java": {
-    "mtime": 1787358852.6115654,
-    "ast_hash": "b753d103026a661eed70bba5851e7666",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/IPortable.java": {
-    "mtime": 1787358851.7135906,
-    "ast_hash": "350981cccbdbef421d2e56f0b521512e",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/IProtectable.java": {
-    "mtime": 1787358851.7437367,
-    "ast_hash": "4506b15d816cd5339fe1411a3a64095d",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/ISealable.java": {
-    "mtime": 1787358851.7898886,
-    "ast_hash": "33180c1d4927e4d327e3742594f7a6fc",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/IVoidable.java": {
-    "mtime": 1787358851.8369427,
-    "ast_hash": "b05a52f298c80cbfac70052793444745",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/LockAttribute.java": {
-    "mtime": 1787358851.8716445,
-    "ast_hash": "fa98d0a10fb75294aa004da1202e3f5e",
-    "semantic_hash": ""
-  },
-  "client_backup/api/storage/attribute/MagnetDim.java": {
-    "mtime": 1787358851.9128466,
-    "ast_hash": "2ec1cfc6adf8f83973b3a4057dd0df43",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockCompDrawers.java": {
-    "mtime": 1787358852.703589,
-    "ast_hash": "c7782b88d11540fae0628f1774d38689",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockController.java": {
-    "mtime": 1787358852.7519834,
-    "ast_hash": "040afae1ca82ca0872ef41a8a5c59c73",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockControllerIO.java": {
-    "mtime": 1787358852.8153589,
-    "ast_hash": "34dc1beee03a8f2272e203a98f1a5132",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockDrawers.java": {
-    "mtime": 1787364004.548269,
-    "ast_hash": "e431ed804fc6b606803e5115c5962662",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockFramingTable.java": {
-    "mtime": 1787358852.9710097,
-    "ast_hash": "5d4e310feeacdbb5bd84a03904d3ba65",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockKeyButton.java": {
-    "mtime": 1787358853.0364778,
-    "ast_hash": "cc07e92a374fe5bb377e297207dbe6da",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockStandardDrawers.java": {
-    "mtime": 1787358853.0772798,
-    "ast_hash": "28be7e1538a0a1422cf9825355557bd9",
-    "semantic_hash": ""
-  },
-  "client_backup/block/BlockTrim.java": {
-    "mtime": 1787358853.1521888,
-    "ast_hash": "5eb5ae0eb198e13918ab03550b38331a",
-    "semantic_hash": ""
-  },
-  "client_backup/block/EnumCompDrawer.java": {
-    "mtime": 1787358853.20082,
-    "ast_hash": "2b79866c7543aa138ea9bfd12b4454fc",
-    "semantic_hash": ""
-  },
-  "client_backup/block/EnumFramingTablePart.java": {
-    "mtime": 1787358853.2685332,
-    "ast_hash": "9c88f0348422e537074b701c219aefc7",
-    "semantic_hash": ""
-  },
-  "client_backup/block/FaceSlotBlock.java": {
-    "mtime": 1787358853.3102522,
-    "ast_hash": "d1edf5137c72faa45e5c9456baf427ee",
-    "semantic_hash": ""
-  },
-  "client_backup/block/KeyType.java": {
-    "mtime": 1787358853.7253993,
-    "ast_hash": "5cb2053e1c10b9555ae09e419aac3799",
-    "semantic_hash": ""
-  },
-  "client_backup/block/framed/BlockFramedCompDrawers.java": {
-    "mtime": 1787358853.3797646,
-    "ast_hash": "80b0332e75d8e8abc8edc7e773193274",
-    "semantic_hash": ""
-  },
-  "client_backup/block/framed/BlockFramedController.java": {
-    "mtime": 1787358853.4911954,
-    "ast_hash": "ffe9e38d23dfb9c83bf7754768aa76ab",
-    "semantic_hash": ""
-  },
-  "client_backup/block/framed/BlockFramedControllerIO.java": {
-    "mtime": 1787358853.5637422,
-    "ast_hash": "019efed5ab809ad65f6eca5ade84dda3",
-    "semantic_hash": ""
-  },
-  "client_backup/block/framed/BlockFramedStandardDrawers.java": {
-    "mtime": 1787358853.615791,
-    "ast_hash": "c05e2a7e3108242859200a0c13d31f8d",
-    "semantic_hash": ""
-  },
-  "client_backup/block/framed/BlockFramedTrim.java": {
-    "mtime": 1787358853.6654122,
-    "ast_hash": "8df1359a26c5cccf07a4035e7f48fad4",
-    "semantic_hash": ""
-  },
-  "client_backup/block/meta/BlockMeta.java": {
-    "mtime": 1787358853.7501898,
-    "ast_hash": "9f52b91b01a623857389c582ab8769e5",
-    "semantic_hash": ""
-  },
-  "client_backup/block/meta/BlockMetaFacing.java": {
-    "mtime": 1787358853.8020155,
-    "ast_hash": "e911247aa56848d38f8225e0128d6c6f",
-    "semantic_hash": ""
-  },
-  "client_backup/block/meta/BlockMetaFacingSized.java": {
-    "mtime": 1787358853.854259,
-    "ast_hash": "4e231f1ef899e777b66f6e425aaee118",
-    "semantic_hash": ""
-  },
-  "client_backup/block/meta/BlockMetaFacingSizedOpen.java": {
-    "mtime": 1787358853.9157186,
-    "ast_hash": "8f226baa587eeab4f5af304db0fbb3b1",
-    "semantic_hash": ""
-  },
-  "client_backup/block/meta/BlockMetaFacingSizedSlotted.java": {
-    "mtime": 1787358853.9630656,
-    "ast_hash": "71a1c2fb2419b97caf16f28adf12acb3",
-    "semantic_hash": ""
-  },
-  "client_backup/block/state/IntegerSetProperty.java": {
-    "mtime": 1787358854.0025632,
-    "ast_hash": "8252c5819ddcc016b9cf6db8b40d7cf6",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/BasicDrawerAttributes.java": {
-    "mtime": 1787358855.0211382,
-    "ast_hash": "4a17c98029c9284182907672bb7d0b4a",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/Capabilities.java": {
-    "mtime": 1787358855.0727546,
-    "ast_hash": "699e30c40be0965265e7b4096217dc5f",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/DrawerItemHandler.java": {
-    "mtime": 1787358855.1155207,
-    "ast_hash": "cd5b07c39d40572fcbc0d3743f566aa3",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/DrawerItemRepository.java": {
-    "mtime": 1787358855.1621423,
-    "ast_hash": "306c0932f5fd06a5217636e48fbfbc1b",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/PlatformCapabilities.java": {
-    "mtime": 1787358855.2323985,
-    "ast_hash": "acee3d73a4089dc55018d75ecfed72ab",
-    "semantic_hash": ""
-  },
-  "client_backup/capabilities/PlatformDrawerItemHandler.java": {
-    "mtime": 1787358855.2871132,
-    "ast_hash": "5fca33c955857bad874524473d43e45a",
-    "semantic_hash": ""
-  },
-  "client_backup/components/item/ControllerBinding.java": {
-    "mtime": 1787358857.874644,
-    "ast_hash": "c3d6017161acbdffb1f9622fa2cbc6a8",
-    "semantic_hash": ""
-  },
-  "client_backup/components/item/DetachedDrawerContents.java": {
-    "mtime": 1787358857.91939,
-    "ast_hash": "4dd24219285fbf0c82ba6794cfb90ce3",
-    "semantic_hash": ""
-  },
-  "client_backup/components/item/DrawerCountData.java": {
-    "mtime": 1787358857.9648986,
-    "ast_hash": "c7f5ff45f96eb2165ae6bfea07ed52a7",
-    "semantic_hash": ""
-  },
-  "client_backup/components/item/FrameData.java": {
-    "mtime": 1787358858.0122342,
-    "ast_hash": "d0c8660121e571bb79ad596cf8aedd77",
-    "semantic_hash": ""
-  },
-  "client_backup/components/item/KeyringContents.java": {
-    "mtime": 1787358858.0596588,
-    "ast_hash": "70c88458a48c68307cda5aec231ed0b1",
-    "semantic_hash": ""
-  },
-  "client_backup/config/CompTierRegistry.java": {
-    "mtime": 1787358858.1510437,
-    "ast_hash": "ced4003f3578915a38dcc76713015f0b",
-    "semantic_hash": ""
-  },
-  "client_backup/config/ConfigItemList.java": {
-    "mtime": 1787358858.2139955,
-    "ast_hash": "b772223fbae642f5b3a7ef51cd914b92",
-    "semantic_hash": ""
-  },
-  "client_backup/config/ConversionRegistry.java": {
-    "mtime": 1787358858.2780683,
-    "ast_hash": "547ba3896e0ea9793347739b2762eb51",
-    "semantic_hash": ""
-  },
-  "client_backup/config/MaterialBlacklist.java": {
-    "mtime": 1787358858.3364952,
-    "ast_hash": "16e2a4058e3316afa60a2d8b3d74ebd5",
-    "semantic_hash": ""
-  },
-  "client_backup/config/ModClientConfig.java": {
-    "mtime": 1787359599.1957934,
-    "ast_hash": "b3e9b912cfcaaa66725b5ae84cf31529",
-    "semantic_hash": ""
-  },
-  "client_backup/config/ModCommonConfig.java": {
-    "mtime": 1787359618.021181,
-    "ast_hash": "fd34dcc6adc98eb17a99af6f165308b9",
-    "semantic_hash": ""
-  },
-  "client_backup/config/PlayerConfig.java": {
-    "mtime": 1787358858.4775424,
-    "ast_hash": "5c1fd3ddf92f110245ad94cf2afb1d9e",
-    "semantic_hash": ""
-  },
-  "client_backup/config/PlayerConfigSetting.java": {
-    "mtime": 1787358858.5323358,
-    "ast_hash": "1c4c3b8bdb6ef513933334aae3e6b937",
-    "semantic_hash": ""
-  },
-  "client_backup/config/StorageBlacklist.java": {
-    "mtime": 1787358858.595474,
-    "ast_hash": "14ed5bf7ea4082c083ffc9f8162b5a16",
-    "semantic_hash": ""
-  },
-  "client_backup/gui/ClientDetachedDrawerTooltip.java": {
-    "mtime": 1787358857.0880961,
-    "ast_hash": "e88042b40ea712d4acf964edb53dcfff",
-    "semantic_hash": ""
-  },
-  "client_backup/gui/ClientKeyringTooltip.java": {
-    "mtime": 1787358857.1414707,
-    "ast_hash": "484c33fc9adb7b4aaef452106acc19f7",
-    "semantic_hash": ""
-  },
-  "client_backup/gui/StorageGuiGraphics.java": {
-    "mtime": 1787358857.189212,
-    "ast_hash": "08e44a48246b7914537a2d6e495237b4",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/TheOneProbe.java": {
-    "mtime": 1787358860.166443,
-    "ast_hash": "a130dfc4694bbb44f4f37848e512cbe1",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/Waila.java": {
-    "mtime": 1787358860.3029659,
-    "ast_hash": "79be4124757932cc18c4bdb995c820d3",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/ftb/FTBChunksInteractionProvider.java": {
-    "mtime": 1787358859.7207031,
-    "ast_hash": "d2fb132c323afd5c472437d541a9177a",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/ftb/FTBChunksModule.java": {
-    "mtime": 1787358859.76679,
-    "ast_hash": "cba4d35f643f5508aaef8d006d9faeb0",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/ftb/FTBTeamsModule.java": {
-    "mtime": 1787358859.824372,
-    "ast_hash": "81ecbc7e1e1581cd84bf027b64a94684",
-    "semantic_hash": ""
-  },
-  "client_backup/integration/ftb/FTBTeamsSecurityProvider.java": {
-    "mtime": 1787358859.8837838,
-    "ast_hash": "7f3a61f093a3fc9a0b7c64b2dd07f5dc",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawers.java": {
-    "mtime": 1787360120.7146535,
-    "ast_hash": "8bba35268f39733fc731294de6f1521c",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawers1.java": {
-    "mtime": 1787358860.451116,
-    "ast_hash": "13d160b6aff98e9565c4914d5104201e",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawers2.java": {
-    "mtime": 1787358860.5507698,
-    "ast_hash": "787a2be8dbd9878ecb29ac829dbfda71",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawers4.java": {
-    "mtime": 1787358860.6383555,
-    "ast_hash": "b666cce63c2198ed208d5a71a998cc3f",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawersComp2.java": {
-    "mtime": 1787358860.669113,
-    "ast_hash": "c45f314f86062f94ecd817d911fd2fdc",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerDrawersComp3.java": {
-    "mtime": 1787358860.707684,
-    "ast_hash": "d2ff1ea67b91c7b273b63590e06fade9",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ContainerFramingTable.java": {
-    "mtime": 1787358860.748296,
-    "ast_hash": "957d656c8d5dbf20379630375e48cf7e",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/CraftResultSlot.java": {
-    "mtime": 1787358860.821358,
-    "ast_hash": "f16fc7ed0c678336e8b6f5a33f205013",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/DrawerInventoryHelper.java": {
-    "mtime": 1787358860.8716383,
-    "ast_hash": "f120bea39cda520555c4f58e3bceac6f",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/InventoryUpgrade.java": {
-    "mtime": 1787358861.0326872,
-    "ast_hash": "a901809a5b409719e1c6036deac1773e",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/ItemStackHelper.java": {
-    "mtime": 1787358861.0934398,
-    "ast_hash": "3e65e5ea2460566a8e33fee6561bb760",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/RestrictedSlot.java": {
-    "mtime": 1787358861.139294,
-    "ast_hash": "5770a9161fd586e8a337fcd45c98069a",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/SlotDrawer.java": {
-    "mtime": 1787358861.1859598,
-    "ast_hash": "69ee3b278470d7a0f29f3dc95d24e010",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/SlotStorage.java": {
-    "mtime": 1787358861.2337112,
-    "ast_hash": "aba09baaf625e21e11ee94ce5422e4fb",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/SlotUpgrade.java": {
-    "mtime": 1787358861.2798786,
-    "ast_hash": "619eaa50b86191df4734b80704e8f4db",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/tooltip/DetachedDrawerTooltip.java": {
-    "mtime": 1787358861.3228345,
-    "ast_hash": "6337042a586db250b091f2520b4b5a3c",
-    "semantic_hash": ""
-  },
-  "client_backup/inventory/tooltip/KeyringTooltip.java": {
-    "mtime": 1787358861.3695054,
-    "ast_hash": "03014de9d0ed0e58706bc8ccbf38e7d1",
-    "semantic_hash": ""
-  },
-  "client_backup/item/EnumUpgradeCreative.java": {
-    "mtime": 1787358861.397751,
-    "ast_hash": "c595538ae61f9f5bbfb825304dba012a",
-    "semantic_hash": ""
-  },
-  "client_backup/item/EnumUpgradeMagnet.java": {
-    "mtime": 1787358861.4477117,
-    "ast_hash": "a7f184fa495d9129c29cf071a37855c4",
-    "semantic_hash": ""
-  },
-  "client_backup/item/EnumUpgradeRedstone.java": {
-    "mtime": 1787358861.4939673,
-    "ast_hash": "05c93361d052e3b3b848f159b407a1e0",
-    "semantic_hash": ""
-  },
-  "client_backup/item/EnumUpgradeStorage.java": {
-    "mtime": 1787358861.5504785,
-    "ast_hash": "2946416652342b1f912a1745c24d3b32",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemDetachedDrawer.java": {
-    "mtime": 1787358861.5846558,
-    "ast_hash": "071105bf01733a533721ea8bca8c99de",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemDrawerKey.java": {
-    "mtime": 1787358861.6264477,
-    "ast_hash": "bb02377a1480b1514595ec8437158188",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemDrawerPuller.java": {
-    "mtime": 1787358861.6697361,
-    "ast_hash": "db4d6d026ee15dfd92ced5553c23cc8e",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemDrawers.java": {
-    "mtime": 1787358861.7098615,
-    "ast_hash": "8793136329012ece39eb7c4e49245b67",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemFramedDrawers.java": {
-    "mtime": 1787358861.7567127,
-    "ast_hash": "c4f63c87add60699c421171e615c9cb6",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemFramedTrim.java": {
-    "mtime": 1787358861.8080623,
-    "ast_hash": "16ef1d1d9ed3f232af87302217460ccc",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemKey.java": {
-    "mtime": 1787358861.8751016,
-    "ast_hash": "ac6abba03465408f936d0772f14894b4",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemKeyring.java": {
-    "mtime": 1787360539.1831245,
-    "ast_hash": "ca7f0b64109e9e3800cd4e2515b3f1a1",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemPersonalKey.java": {
-    "mtime": 1787358861.9899876,
-    "ast_hash": "f8d28cb544e0f26e64329d1e5eee10d9",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemPriorityKey.java": {
-    "mtime": 1787362350.389363,
-    "ast_hash": "463ec358a6cc66317331b6576e0dccf3",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemQuantifyKey.java": {
-    "mtime": 1787358862.0638134,
-    "ast_hash": "8e748f2fda77ba0c48d8b3e636ad78fe",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemShroudKey.java": {
-    "mtime": 1787358862.1138537,
-    "ast_hash": "ffd825a81b86b8d9c3138e8453cef370",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemSuspendKey.java": {
-    "mtime": 1787358862.1655262,
-    "ast_hash": "8af0e14a9139a6b887f95ea0167af965",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemTrim.java": {
-    "mtime": 1787358862.203075,
-    "ast_hash": "a127a51663ab4afddf253f5fb9b00845",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgrade.java": {
-    "mtime": 1787358862.2696092,
-    "ast_hash": "09ed899e0588c2dbe00db62ff3faae41",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeBalance.java": {
-    "mtime": 1787358862.3198242,
-    "ast_hash": "0663a3e38c6ed5986b12d2c2ae267735",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeConversion.java": {
-    "mtime": 1787358862.3567975,
-    "ast_hash": "c097a9abcc9681a397bd226c7485846b",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeCreative.java": {
-    "mtime": 1787358862.4037147,
-    "ast_hash": "7b05f8c436eda44030a719277055b90c",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeFillLevel.java": {
-    "mtime": 1787358862.4496846,
-    "ast_hash": "b6447fbfafa8cae33f65bde22bb35a22",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeHopper.java": {
-    "mtime": 1787358862.4950325,
-    "ast_hash": "bfda266d2ac3b524599cd598d292cf1d",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeIllumination.java": {
-    "mtime": 1787358862.5525358,
-    "ast_hash": "bea3442b129486e39a906286bb306e44",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeMagnet.java": {
-    "mtime": 1787358862.6114433,
-    "ast_hash": "97269ad93594821581895daa9ef7b608",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeOneStack.java": {
-    "mtime": 1787358862.7009656,
-    "ast_hash": "2b58b069dd590782e8c5933236e01ea8",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradePortability.java": {
-    "mtime": 1787358862.7592125,
-    "ast_hash": "ee52d28c542834213341f019aabf1bf9",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeRedstone.java": {
-    "mtime": 1787358862.786448,
-    "ast_hash": "de39c745e8fcc216d9145908dfa0db58",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeRemote.java": {
-    "mtime": 1787358862.8342793,
-    "ast_hash": "cb8a2d1bee5504df4e85734e54f88537",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeStorage.java": {
-    "mtime": 1787358862.87904,
-    "ast_hash": "1f0caa530ca00873a8d5a5eafb5da658",
-    "semantic_hash": ""
-  },
-  "client_backup/item/ItemUpgradeVoid.java": {
-    "mtime": 1787358862.970652,
-    "ast_hash": "d1f13e59661e1bdc4ea650be20fb6a6a",
-    "semantic_hash": ""
-  },
-  "client_backup/model/DrawerModelGeometry.java": {
-    "mtime": 1787358857.5155065,
-    "ast_hash": "3a3f851a84433816e24dce45da941cad",
-    "semantic_hash": ""
-  },
-  "client_backup/model/DrawerModelStore.java": {
-    "mtime": 1787358857.578287,
-    "ast_hash": "5d862484559258a911463be616742160",
-    "semantic_hash": ""
-  },
-  "client_backup/model/ParentModel.java": {
-    "mtime": 1787358857.6399486,
-    "ast_hash": "8a72ff63b2cdd124cf300c944c40cef1",
-    "semantic_hash": ""
-  },
-  "client_backup/model/SpriteReplacementModel.java": {
-    "mtime": 1787358857.6890638,
-    "ast_hash": "28a9bcbfbb7490c8e837997fc91d1f0f",
-    "semantic_hash": ""
-  },
-  "client_backup/model/context/DrawerModelContext.java": {
-    "mtime": 1787358857.2147193,
-    "ast_hash": "f915c1f73d63b3f9657aa1c716cc937c",
-    "semantic_hash": ""
-  },
-  "client_backup/model/context/FramedModelContext.java": {
-    "mtime": 1787358857.251047,
-    "ast_hash": "12de88561441cd6c6fa22faf1711f25e",
-    "semantic_hash": ""
-  },
-  "client_backup/model/context/ModelContext.java": {
-    "mtime": 1787358857.2976718,
-    "ast_hash": "09e80eaf6df175319512672754f54006",
-    "semantic_hash": ""
-  },
-  "client_backup/model/decorator/CombinedModelDecorator.java": {
-    "mtime": 1787358857.3476417,
-    "ast_hash": "9a8a8cce04ca8709689f9e7acd09caca",
-    "semantic_hash": ""
-  },
-  "client_backup/model/decorator/DrawerModelDecorator.java": {
-    "mtime": 1787358857.3757954,
-    "ast_hash": "5408808e953b9460873b3c6cab06b203",
-    "semantic_hash": ""
-  },
-  "client_backup/model/decorator/MaterialModelDecorator.java": {
-    "mtime": 1787358857.4229827,
-    "ast_hash": "4acdbec41d5dae1209d63e9ce2de0a18",
-    "semantic_hash": ""
-  },
-  "client_backup/model/decorator/ModelDecorator.java": {
-    "mtime": 1787358857.4862728,
-    "ast_hash": "5abd4d80e5e541fa318a20eb0445f04e",
-    "semantic_hash": ""
-  },
-  "client_backup/network/CountUpdateMessage.java": {
-    "mtime": 1787358863.1464274,
-    "ast_hash": "f939bee21186637854e40d315522ccab",
-    "semantic_hash": ""
-  },
-  "client_backup/network/CountUpdateMessageHandler.java": {
-    "mtime": 1787358863.1909819,
-    "ast_hash": "6dfaf0e1a8f5f8f2955ec830dd74b279",
-    "semantic_hash": ""
-  },
-  "client_backup/network/PlayerBoolConfigMessage.java": {
-    "mtime": 1787358863.23955,
-    "ast_hash": "cd8cf3756a2c7b7be1a617c0338283bc",
-    "semantic_hash": ""
-  },
-  "client_backup/recipe/AddUpgradeRecipe.java": {
-    "mtime": 1787358859.327712,
-    "ast_hash": "3adc811adadaf4454d535d3ddd1a3070",
-    "semantic_hash": ""
-  },
-  "client_backup/recipe/KeyringRecipe.java": {
-    "mtime": 1787358859.377753,
-    "ast_hash": "ed9feee57b1a693c48cd205bbc35db3f",
-    "semantic_hash": ""
-  },
-  "client_backup/recipe/PersonalKeyRecipe.java": {
-    "mtime": 1787358859.423813,
-    "ast_hash": "b264286f7ed6269c6f70294ad86042b1",
-    "semantic_hash": ""
-  },
-  "client_backup/recipe/RemoteGroupUpgradeRecipe.java": {
-    "mtime": 1787358859.4723313,
-    "ast_hash": "4a1b5a4f23e545807aa6437046ad2d20",
-    "semantic_hash": ""
-  },
-  "client_backup/recipe/UpgradeDetachedDrawerRecipe.java": {
-    "mtime": 1787358859.49897,
-    "ast_hash": "d69ec6ba19135d4b25c39321591006c9",
-    "semantic_hash": ""
-  },
-  "client_backup/renderer/BlockEntityDrawersRenderer.java": {
-    "mtime": 1787358857.7528875,
-    "ast_hash": "293fdbda873104217d6a31d49135d419",
-    "semantic_hash": ""
-  },
-  "client_backup/renderer/BlockEntityFramingRenderer.java": {
-    "mtime": 1787358857.8122418,
-    "ast_hash": "7f46dc4213c3bf18e8f5defdae025626",
-    "semantic_hash": ""
-  },
-  "client_backup/security/DefaultInteractionProvider.java": {
-    "mtime": 1787358863.6261783,
-    "ast_hash": "de2979caa42241a1511053c200e80ebf",
-    "semantic_hash": ""
-  },
-  "client_backup/security/DefaultSecurityProvider.java": {
-    "mtime": 1787358863.7091744,
-    "ast_hash": "b699815f0873f1d88d72f8a57998f1d2",
-    "semantic_hash": ""
-  },
-  "client_backup/security/SecurityManager.java": {
-    "mtime": 1787358863.794345,
-    "ast_hash": "ec920b88eb201bd311ab50600854f1ce",
-    "semantic_hash": ""
-  },
-  "client_backup/security/SecurityRegistry.java": {
-    "mtime": 1787358863.8179815,
-    "ast_hash": "697bbdec7dfc329fd3966f4c649fa8a5",
-    "semantic_hash": ""
-  },
-  "client_backup/storage/StorageUtil.java": {
-    "mtime": 1787358863.939466,
-    "ast_hash": "137c6bfe9dfb41a743407a689f8bb864",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BaseBlockEntity.java": {
-    "mtime": 1787358854.0471318,
-    "ast_hash": "485ab21e4f1c18b69711fc34d34e3a16",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityController.java": {
-    "mtime": 1787358854.0933518,
-    "ast_hash": "5e9f17f6189e489389bcbb801710be85",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityControllerIO.java": {
-    "mtime": 1787358854.145091,
-    "ast_hash": "dd2aa0ea943e51e091feaa2b1b442536",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityDrawers.java": {
-    "mtime": 1787358854.2015052,
-    "ast_hash": "90f3388456dc9ce92508156f79585ab2",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityDrawersComp.java": {
-    "mtime": 1787358854.2653787,
-    "ast_hash": "25c8b98729ab46aac8dd262647924680",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityDrawersStandard.java": {
-    "mtime": 1787358854.3151276,
-    "ast_hash": "43985421d01557967f90f63320af5181",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityFramingTable.java": {
-    "mtime": 1787358854.3619525,
-    "ast_hash": "0340b24288f7b2808974b28f2c5aec7e",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/BlockEntityTrim.java": {
-    "mtime": 1787358854.4040716,
-    "ast_hash": "86f7ede4e5954571571103c054655d10",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/BlockEntityDataShim.java": {
-    "mtime": 1787358854.4537654,
-    "ast_hash": "0805361fe9e342c96c52b533fae085dd",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/ControllerData.java": {
-    "mtime": 1787358854.520313,
-    "ast_hash": "48edc563547c0b06e0f23788ca2c589d",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/ControllerHostData.java": {
-    "mtime": 1787358854.583086,
-    "ast_hash": "a9208af9c1ad6d5ff5d00493e4d7752b",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/DetachedDrawerData.java": {
-    "mtime": 1787358854.6370342,
-    "ast_hash": "fe10011bcbefe4f551c9699775f775dc",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/FractionalDrawerGroup.java": {
-    "mtime": 1787358854.676877,
-    "ast_hash": "4e32e9f168b62807dfba2330c7f281bb",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/MaterialData.java": {
-    "mtime": 1787358854.7347727,
-    "ast_hash": "9b2a871fa8ef6c1cd970c7ef2370a996",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/StandardDrawerGroup.java": {
-    "mtime": 1787358854.7759118,
-    "ast_hash": "b9cdd1ff825f961bb533d86b2fcf4690",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/tiledata/UpgradeData.java": {
-    "mtime": 1787358854.840586,
-    "ast_hash": "dd5f48229a0b3f6f4ac9091b8b902c37",
-    "semantic_hash": ""
-  },
-  "client_backup/tile/util/FrameHelper.java": {
-    "mtime": 1787358854.9114091,
-    "ast_hash": "f92c337f703f9e340ac5d7ac47946cd1",
-    "semantic_hash": ""
-  },
-  "client_backup/util/CompactingHelper.java": {
-    "mtime": 1787358864.0005012,
-    "ast_hash": "cc18264ecfb4dd1b3dd2cb38314992e5",
-    "semantic_hash": ""
-  },
-  "client_backup/util/ComponentUtil.java": {
-    "mtime": 1787358864.0577137,
-    "ast_hash": "e38d4fa370c583e46c9c0a02506d3312",
-    "semantic_hash": ""
-  },
-  "client_backup/util/CountFormatter.java": {
-    "mtime": 1787358864.083712,
-    "ast_hash": "fdc650eea45b2028bb8d928836cf0d01",
-    "semantic_hash": ""
-  },
-  "client_backup/util/ItemCollectionRegistry.java": {
-    "mtime": 1787358864.1365755,
-    "ast_hash": "8579d1016bec4137f5c2e69dcbabf665",
-    "semantic_hash": ""
-  },
-  "client_backup/util/ItemStackMatcher.java": {
-    "mtime": 1787358864.1791418,
-    "ast_hash": "03807445dbf4badef38e18edb195d659",
-    "semantic_hash": ""
-  },
-  "client_backup/util/ItemStackTagMatcher.java": {
-    "mtime": 1787358864.2254622,
-    "ast_hash": "d6a3289a4cf1e10f075e8e913433c882",
-    "semantic_hash": ""
-  },
-  "client_backup/util/WorldUtils.java": {
-    "mtime": 1787358864.2624187,
-    "ast_hash": "cf0520c07bc9d96856ebddf6ed24c6d8",
+    "mtime": 1787856830.2865973,
+    "ast_hash": "62f16530c48d3038c160a99e308b14fe",
     "semantic_hash": ""
   },
   "gradlew": {
@@ -1465,8 +340,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/block/state/IntegerSetProperty.java": {
-    "mtime": 1787526664.183805,
-    "ast_hash": "1fe29210be182528c6d2a2231487ddfb",
+    "mtime": 1787930615.034865,
+    "ast_hash": "06e695913cc79eb7e838c03918387185",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/block/tile/BaseBlockEntity.java": {
@@ -1765,13 +640,13 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ModClientConfig.java": {
-    "mtime": 1787453299.2045372,
-    "ast_hash": "62b3ffafc845d5fc8ed9d2899d56527e",
+    "mtime": 1787857052.005329,
+    "ast_hash": "ff688cd9b02500f951da7e1c24e98deb",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/ModCommonConfig.java": {
-    "mtime": 1787453299.2075367,
-    "ast_hash": "02d2b03cb367cebde480d417d1d4e525",
+    "mtime": 1787856782.2006748,
+    "ast_hash": "996fe02a86a666c2bc6afb29dfc4fbd4",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/config/PlayerConfig.java": {
@@ -1800,8 +675,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/ModBlockEntities.java": {
-    "mtime": 1787662083.0518517,
-    "ast_hash": "ec789b255682479cafd3eb2cc50660fc",
+    "mtime": 1787926401.2832348,
+    "ast_hash": "3d773dad997a600c73896529617604b4",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/ModBlocks.java": {
@@ -1820,8 +695,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/ModItems.java": {
-    "mtime": 1787680924.6331058,
-    "ast_hash": "add18286bf166ab5502bf1ef24c1b206",
+    "mtime": 1787925661.6956031,
+    "ast_hash": "200a10054d6268495d02cd214f46e6dd",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/ModSecurity.java": {
@@ -2120,13 +995,13 @@
     "semantic_hash": ""
   },
   ".gitlab-ci.yml": {
-    "mtime": 1787306896.439448,
-    "ast_hash": "ecf46600dc708f0b72010f357d7eede7",
+    "mtime": 1787867676.7586432,
+    "ast_hash": "402e112fb0a27fd876291ce11aac8792",
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787692222.4455059,
-    "ast_hash": "5fb8b70c460725201283731cfdcf9776",
+    "mtime": 1788026990.664639,
+    "ast_hash": "749cbe906ae9fe9d04e7f9218cde6f01",
     "semantic_hash": ""
   },
   "README.md": {
@@ -2135,8 +1010,8 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1787692305.0143476,
-    "ast_hash": "9be860c0575916d581c14266217215b9",
+    "mtime": 1787856978.1579602,
+    "ast_hash": "43eb202d272970e08c02ff0797658e51",
     "semantic_hash": ""
   },
   "docs/WORKFLOW_VAULT_DRAWERS_26-2.md": {
@@ -2145,8 +1020,8 @@
     "semantic_hash": ""
   },
   "docs/curseforge/project_description.md": {
-    "mtime": 1787306983.1608229,
-    "ast_hash": "6efc7ca144e28011fa03b81b6a60c6c8",
+    "mtime": 1787865315.3660088,
+    "ast_hash": "85b9584cacd8e4c62cc84c034fcd9fd4",
     "semantic_hash": ""
   },
   "docs/curseforge/project_vars.md": {
@@ -2205,8 +1080,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/ModRecipes.java": {
-    "mtime": 1787678883.1900873,
-    "ast_hash": "7420b379e861ca212a288f8dc1060107",
+    "mtime": 1788025960.3697,
+    "ast_hash": "81582cf8a4073d296255c0b4fe626a6c",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/PlayerEventListener.java": {
@@ -2225,8 +1100,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/recipe/PersonalKeyRecipe.java": {
-    "mtime": 1787677373.5096838,
-    "ast_hash": "1cf9ebcbeff006e0c9f70035274c1440",
+    "mtime": 1787857056.0551543,
+    "ast_hash": "44f02c0c903ccf72bc7b55e807dbce4f",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/core/recipe/RemoteGroupUpgradeRecipe.java": {
@@ -2250,8 +1125,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/integration/LocalIntegrationRegistry.java": {
-    "mtime": 1787676972.2626107,
-    "ast_hash": "3d693dbc72792119f0135e98c1d4a891",
+    "mtime": 1787857802.744714,
+    "ast_hash": "645059e1108f7ff4e7c9d6df6f21e584",
     "semantic_hash": ""
   },
   "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/network/PlayerBoolConfigMessage.java": {
@@ -2990,8 +1865,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/assets/vault_drawers/lang/en_us.json": {
-    "mtime": 1787673645.9427185,
-    "ast_hash": "c98bc9928ad153d67bfb71a7d41c58e5",
+    "mtime": 1787694509.0771463,
+    "ast_hash": "45ab66f151b127c6ebd6852ba001e52b",
     "semantic_hash": ""
   },
   "src/main/resources/assets/vault_drawers/lang/es_es.json": {
@@ -6005,8 +4880,8 @@
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/personal_key_cofh.json": {
-    "mtime": 1787691860.6253006,
-    "ast_hash": "5cf12b3d506f74e48e2b6647b8290a96",
+    "mtime": 1788025982.8084722,
+    "ast_hash": "acb3e3aa7bb5082fc584d61806ee4583",
     "semantic_hash": ""
   },
   "src/main/resources/data/vault_drawers/recipe/personal_key_cycle.json": {
@@ -8357,6 +7232,36 @@
   "docs/curseforge/versions/0.0.0-beta.4.md": {
     "mtime": 1787692213.6975932,
     "ast_hash": "c021d5208e1d238be0ff9ddf150ce6a2",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/integration/DrawerOverlay.java": {
+    "mtime": 1787857059.4218087,
+    "ast_hash": "c2f75a1f1efa18843d8bfaf1480ea895",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/stalkingdragons/minecraft/vaultdrawers/integration/Jade.java": {
+    "mtime": 1787857063.9954972,
+    "ast_hash": "d9083b42aeeeadcae497b12869be7db9",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.5.md": {
+    "mtime": 1787867423.5680983,
+    "ast_hash": "dfe967f2114002fcddc0563e01f666f3",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.6.md": {
+    "mtime": 1787928034.551543,
+    "ast_hash": "39fd1ec943c9d985a8e1a33746ac4ea5",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.7.md": {
+    "mtime": 1787931357.3755653,
+    "ast_hash": "9b1bb65d281cadf12223915ed928bcd6",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.8.md": {
+    "mtime": 1788027002.0001721,
+    "ast_hash": "a8ead1db7890fe2a973de4c74d4847a1",
     "semantic_hash": ""
   }
 }
