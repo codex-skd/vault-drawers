@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.8] - 2026-08-29
+
+### Corregido
+- **Desconexión al entrar al mundo por sincronización de recetas**: los 5 serializers de recetas custom en `ModRecipes` construían el `MapCodec` con `MapCodec.unit(X::new)` (instancia nueva en cada carga de datapack) y el `StreamCodec` con `StreamCodec.unit(new X())` (una instancia fija distinta). `StreamCodec.unit` valida por identidad al codificar, así que al enviar el paquete `neoforge:recipe_content` al cliente lanzaba `IllegalStateException: Can't encode ...@a, expected ...@b` → `EncoderException` → el cliente se desconectaba nada más unirse a la partida. Ahora cada receta usa una única instancia singleton compartida por ambos codecs (`MapCodec.unit(instancia)`).
+- **Receta `personal_key_cofh` descartada con aviso**: la receta referenciaba el tag `#cofh_core:crafting/locks`; cuando el tag está vacío o ausente, 26.2 descartaba la receta entera con "can't be placed due to empty ingredients". Envuelta ahora en una condición de carga `neoforge:not` + `neoforge:tag_empty` para que solo se cargue cuando el tag tiene contenido.
+
+### Eliminado
+- Directorios de paquete Java vacíos: el árbol muerto `com/jaquadro/**` heredado del nombre de paquete del mod original, y `client/gui`, `event`, `framing`, `recipe` bajo `com/stalkingdragons/minecraft/vaultdrawers/`.
+
 ## [0.0.0-beta.7] - 2026-08-28
 
 ### Corregido
