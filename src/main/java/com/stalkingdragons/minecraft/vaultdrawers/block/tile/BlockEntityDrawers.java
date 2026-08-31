@@ -27,6 +27,11 @@ import com.stalkingdragons.minecraft.vaultdrawers.chameleon.ChameleonServices;
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.capabilities.ChameleonCapability;
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.inventory.ContentMenuProvider;
 import com.stalkingdragons.minecraft.vaultdrawers.chameleon.inventory.content.PositionContent;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.ContainerDrawers1;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.ContainerDrawers2;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.ContainerDrawers4;
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.ContainerDrawersComp3;
+import com.stalkingdragons.minecraft.vaultdrawers.storage.StorageUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -209,11 +214,18 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
     }
 
     public int getDrawerCapacity() {
-        return getGroup().getDrawer(0).getMaxCapacity();
+        Block block = getBlockState().getBlock();
+        if (!(block instanceof BlockDrawers bd))
+            return 0;
+
+        return bd.getStorageUnits();
     }
 
     public int getEffectiveDrawerCapacity() {
-        return getDrawerCapacity() * upgrades().getStorageMultiplier();
+        if (upgradeData.hasOneStackUpgrade())
+            return 1;
+
+        return getDrawerCapacity() * ModCommonConfig.INSTANCE.DRAWERS.baseStackStorage.get();
     }
 
     public int getDrawerCount() {
@@ -234,8 +246,9 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
         return true;
     }
 
-    public boolean emptySlotCanBeCleared(int slot) {
-        return false;
+    protected boolean emptySlotCanBeCleared(int slot) {
+        IDrawer drawer = BlockEntityDrawers.this.getGroup().getDrawer(slot);
+        return !drawer.isEmpty() && drawer.getStoredItemCount() == 0;
     }
 
     public void onAttributeChanged() {
@@ -243,18 +256,240 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
         markBlockForUpdate();
     }
     public void entityInside(Level level, BlockPos pos, BlockState state, Entity entity) {
-        if (entity instanceof ItemEntity itemEntity && !itemEntity.getItem().isEmpty() && !getDrawerAttributes().isSuspended()) {
-            ItemStack stack = itemEntity.getItem().copy();
-            interactPutItemsIntoSlot(-1, null);
+        if (level.isClientSide())
+            return;
+
+        if (!(entity instanceof ItemEntity itementity))
+            return;
+
+        if (itementity.getItem().isEmpty() || !entity.getBoundingBox().move(-pos.getX(), -pos.getY(), -pos.getZ()).intersects(SUCK_AABB))
+            return;
+
+        addItemEntity(itementity);
+    }
+
+    public boolean isRedstone() {
+        return upgradeData.getRedstoneType() != null;
+    }
+
+    public int getRedstoneLevel() {
+        EnumUpgradeRedstone type = upgradeData.getRedstoneType();
+        if (type == null)
+            return 0;
+
+        return switch (type) {
+            case COMBINED -> getCombinedRedstoneLevel();
+            case MAX -> getMaxRedstoneLevel();
+            case MIN -> getMinRedstoneLevel();
+        };
+    }
+
+    protected int getCombinedRedstoneLevel() {
+        int active = 0;
+        float fillRatio = 0;
+
+        for (int i = 0; i < getDrawerCount(); i++) {
+            IDrawer drawer = getDrawer(i);
+            if (!drawer.isEnabled())
+                continue;
+
+            if (drawer.getMaxCapacity() > 0)
+                fillRatio += ((float)drawer.getStoredItemCount() / drawer.getMaxCapacity());
+
+            active++;
         }
+
+        if (active == 0)
+            return 0;
+
+        if (fillRatio == active)
+            return 15;
+
+        return (int)Math.ceil((fillRatio / active) * 14);
+    }
+
+    protected int getMinRedstoneLevel() {
+        float minRatio = 2;
+
+        for (int i = 0; i < getDrawerCount(); i++) {
+            IDrawer drawer = getDrawer(i);
+            if (!drawer.isEnabled())
+                continue;
+
+            if (drawer.getMaxCapacity() > 0)
+                minRatio = Math.min(minRatio, (float)drawer.getStoredItemCount() / drawer.getMaxCapacity());
+            else
+                minRatio = 0;
+        }
+
+        if (minRatio > 1)
+            return 0;
+        if (minRatio == 1)
+            return 15;
+
+        return (int)Math.ceil(minRatio * 14);
+    }
+
+    protected int getMaxRedstoneLevel() {
+        float maxRatio = 0;
+
+        for (int i = 0; i < getDrawerCount(); i++) {
+            IDrawer drawer = getDrawer(i);
+            if (!drawer.isEnabled())
+                continue;
+
+            if (drawer.getMaxCapacity() > 0)
+                maxRatio = Math.max(maxRatio, (float)drawer.getStoredItemCount() / drawer.getMaxCapacity());
+        }
+
+        if (maxRatio == 1)
+            return 15;
+
+        return (int)Math.ceil(maxRatio * 14);
     }
 
     public boolean pushItemsTick(Level level, BlockPos pos, BlockState state) {
+        IDrawerAttributes attr = getDrawerAttributes();
+        if (attr.isSuspended())
+            return false;
+        if (!attr.isHopper() && !attr.isMagnet())
+            return false;
+
+        boolean added = suckInItems(level);
+        if (added)
+            setChanged(level, pos, state);
+
+        return added;
+    }
+
+    private boolean suckInItems(Level level) {
+        BlockPos pos = getBlockPos();
+        BlockPos blockpos = BlockPos.containing(pos.getX(), pos.getY() + 1.0, pos.getZ());
+        BlockState blockstate = level.getBlockState(blockpos);
+
+        if (!upgradeData.hasMagnetUpgrade()) {
+            if (blockstate.isCollisionShapeFullBlock(level, blockpos) && !blockstate.is(BlockTags.DOES_NOT_BLOCK_HOPPERS))
+                return false;
+        }
+
+        for (ItemEntity item : getItemEntitiesInRange(level)) {
+            if (addItemEntity(item))
+                return true;
+        }
+
         return false;
     }
 
-    public void interactPutItemsIntoSlot(int slot, Player player) {
-        // Simplified
+    private List<ItemEntity> getItemEntitiesInRange(Level level) {
+        BlockPos pos = getBlockPos();
+        AABB aabb = (upgradeData.hasMagnetUpgrade() ? MAGNET_AABB : SUCK_AABB).move(pos);
+        return level.getEntitiesOfClass(ItemEntity.class, aabb, EntitySelector.ENTITY_STILL_ALIVE);
+    }
+
+    private boolean addItemEntity(ItemEntity itemEntity) {
+        ItemStack itemstack = itemEntity.getItem().copy();
+
+        IDrawerGroup group = getGroup(this);
+
+        for (int i = 0; i < group.getDrawerCount(); i++) {
+            if (group.getDrawer(i).isEmpty()) {
+                IDrawerAttributes attr = group.getCapability(Capabilities.DRAWER_ATTRIBUTES);
+                if (attr != null && attr.isItemLocked(LockAttribute.LOCK_EMPTY))
+                    continue;
+            }
+
+            putItemsIntoSlot(i, itemstack, itemstack.getCount(), null);
+            if (itemstack.isEmpty())
+                break;
+        }
+
+        if (itemstack.isEmpty()) {
+            itemEntity.setItem(ItemStack.EMPTY);
+            itemEntity.discard();
+            return true;
+        }
+
+        if (itemEntity.getItem().getCount() != itemstack.getCount()) {
+            itemEntity.setItem(itemstack);
+            return true;
+        }
+
+        return false;
+    }
+
+    public int interactPutItemsIntoSlot(int slot, Player player) {
+        if (getLevel() == null)
+            return 0;
+
+        int count;
+        if (getLevel().getGameTime() - lastClickTime < 10 && player.getUUID().equals(lastClickUUID))
+            count = interactPutCurrentInventoryIntoSlot(slot, player);
+        else
+            count = interactPutCurrentItemIntoSlot(slot, player);
+
+        lastClickTime = getLevel().getGameTime();
+        lastClickUUID = player.getUUID();
+
+        return count;
+    }
+
+    public int putItemsIntoSlot(int slot, @NotNull ItemStack stack, int count, Player player) {
+        IDrawer drawer = getGroup().getDrawer(slot);
+        if (!drawer.isEnabled())
+            return 0;
+
+        if (!drawer.canItemBeStoredManual(stack, null))
+            return 0;
+
+        if (drawer.isEmpty())
+            drawer = drawer.setStoredItem(stack);
+
+        int countAdded = Math.min(count, stack.getCount());
+        if (!drawerAttributes.isVoid())
+            countAdded = Math.min(countAdded, drawer.getRemainingCapacity());
+
+        drawer.setStoredItemCount(drawer.getStoredItemCount() + countAdded);
+        stack.shrink(countAdded);
+
+        if (upgradeData.hasbalancedFillUpgrade() && !upgradeData.hasVendingUpgrade() && !drawerAttributes.isSuspended())
+            StorageUtil.rebalanceDrawers(getGroup(), slot, player);
+
+        return countAdded;
+    }
+
+    public int interactPutCurrentItemIntoSlot(int slot, Player player) {
+        IDrawer drawer = getDrawer(slot);
+        if (!drawer.isEnabled())
+            return 0;
+
+        int count = 0;
+        ItemStack playerStack = player.getInventory().getItem(player.getInventory().getSelectedSlot());
+        if (!playerStack.isEmpty())
+            count = putItemsIntoSlot(slot, playerStack, playerStack.getCount(), player);
+
+        return count;
+    }
+
+    public int interactPutCurrentInventoryIntoSlot(int slot, Player player) {
+        IDrawer drawer = getGroup().getDrawer(slot);
+        if (!drawer.isEnabled())
+            return 0;
+
+        int count = 0;
+        if (!drawer.isEmpty()) {
+            for (int i = 0, n = Inventory.INVENTORY_SIZE; i < n; i++) {
+                ItemStack subStack = player.getInventory().getItem(i);
+                if (!subStack.isEmpty()) {
+                    int subCount = putItemsIntoSlot(slot, subStack, subStack.getCount(), player);
+                    if (subCount > 0 && subStack.getCount() == 0)
+                        player.getInventory().setItem(i, ItemStack.EMPTY);
+
+                    count += subCount;
+                }
+            }
+        }
+
+        return count;
     }
 
     public void clientUpdateCount (final int slot, final int count) {
@@ -266,12 +501,66 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
             drawer.setStoredItemCount(count);
     }
 
+    protected void syncClientCount (int slot, int count) {
+        if (!(getLevel() instanceof net.minecraft.server.level.ServerLevel serverLevel))
+            return;
+
+        com.stalkingdragons.minecraft.vaultdrawers.chameleon.ChameleonServices.NETWORK.sendToPlayersNear(
+            new com.stalkingdragons.minecraft.vaultdrawers.network.CountUpdateMessage(getBlockPos(), slot, count),
+            serverLevel, getBlockPos().getX(), getBlockPos().getY(), getBlockPos().getZ(), 500);
+    }
+
     public ItemStack takeItemsFromSlot(int slot, int amount, Player player) {
-        return ItemStack.EMPTY;
+        IDrawer drawer = getGroup().getDrawer(slot);
+        if (!drawer.isEnabled() || drawer.isEmpty())
+            return ItemStack.EMPTY;
+
+        ItemStack stack = drawer.getStoredItemPrototype().copy();
+        stack.setCount(Math.min(amount, drawer.getStoredItemCount()));
+
+        drawer.setStoredItemCount(drawer.getStoredItemCount() - stack.getCount());
+
+        if (upgradeData.hasbalancedFillUpgrade() && !upgradeData.hasVendingUpgrade() && !drawerAttributes.isSuspended())
+            StorageUtil.rebalanceDrawers(getGroup(), slot, player);
+
+        if (isRedstone() && getLevel() != null) {
+            getLevel().updateNeighborsAt(getBlockPos(), getBlockState().getBlock());
+            getLevel().updateNeighborsAt(getBlockPos().below(), getBlockState().getBlock());
+        }
+
+        return stack;
     }
 
     public boolean interactReplaceDrawer(int slot, ItemStack detachedDrawer, Player player) {
-        return false;
+        IDrawer drawer = getDrawer(slot);
+        if (!drawer.isMissing())
+            return false;
+
+        if (detachedDrawer.isEmpty())
+            return false;
+
+        DetachedDrawerContents contents = detachedDrawer.getOrDefault(ModDataComponents.DETACHED_DRAWER_CONTENTS.get(),
+            DetachedDrawerContents.EMPTY);
+
+        int count = contents.getItemCount();
+        ItemStack proto = contents.getItemPrototype();
+
+        if (count > drawer.getMaxCapacity(proto))
+            return false;
+
+        if (ModCommonConfig.INSTANCE.DRAWERS.detached.forceMaxCapacityCheck.get()) {
+            int cap = getEffectiveDrawerCapacity() * upgradeData.getStorageMultiplier();
+            if (contents.getStackLimit() < cap)
+                return false;
+        }
+
+        drawer.setDetached(false);
+        drawer.setStoredItem(proto, count);
+
+        if (drawerAttributes.isBalancedFill() && !drawerAttributes.isSuspended())
+            StorageUtil.rebalanceDrawers(getGroup(), slot, player);
+
+        return true;
     }
 
     public void validateBoundController() {
@@ -401,7 +690,13 @@ public abstract class BlockEntityDrawers extends BaseBlockEntity implements IDra
         
         @Override
         public AbstractContainerMenu createMenu(int containerId, Inventory playerInventory, Player player) {
-            return new com.stalkingdragons.minecraft.vaultdrawers.container.ContainerDrawers(null, containerId, playerInventory, drawerEntity);
+            return switch (drawerEntity.getGroup().getDrawerCount()) {
+                case 1 -> new ContainerDrawers1(containerId, playerInventory, drawerEntity);
+                case 2 -> new ContainerDrawers2(containerId, playerInventory, drawerEntity);
+                case 4 -> new ContainerDrawers4(containerId, playerInventory, drawerEntity);
+                case 3 -> new ContainerDrawersComp3(containerId, playerInventory, drawerEntity);
+                default -> null;
+            };
         }
         
         @Override
