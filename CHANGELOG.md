@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.9] - 2026-08-31
+
+### Corregido
+- **Crash al colocar cajones de compactación de 3 ranuras**: `BlockEntityDrawersComp.create(slotCount)` y `BlockEntityDrawersStandard.create(slotCount)` ignoraban el parámetro `slotCount` y devolvían siempre el `BlockEntityType` de 2 ranuras (`FRACTIONAL_DRAWERS_2` / `STANDARD_DRAWERS_1`). Al colocar un `compacting_drawers_3` (o un cajón estándar de 2/4 ranuras) el `BlockEntity` creado no coincidía con el bloque y `BlockEntity.validateBlockState` lanzaba `IllegalStateException`. Ahora cada factoría elige el `BlockEntityType` correcto según `slotCount`.
+- **Los cajones no aceptaban ni entregaban objetos**: la capa de interacción de `BlockDrawers` y `BlockEntityDrawers` estaba sin portar (`useSlot`/`useSlotInvertible`/`putSlot`/`takeSlot` devolvían `PASS`, `interactPutItemsIntoSlot` estaba vacío, `takeItemsFromSlot` devolvía vacío). Portada desde Storage Drawers original: meter objeto (clic derecho = 1, doble clic = volcar inventario coincidente), sacar (clic izquierdo = 1, acción alternativa = pila completa), abrir la interfaz de mejoras con Shift + mano vacía, `setPlacedBy` (lectura de datos portables), drops, y extracción/reinserción de cajones separables (`drawer_puller` / detached drawer).
+- **«Tamaño límite: 0» — capacidad de almacenamiento nula**: las clases internas de datos de los `BlockEntity` (`GroupData` / `DrawerData`) habían perdido sus overrides. `StandardDrawerGroup.DrawerData.getStackCapacity()` y `FractionalDrawerGroup.getStackCapacity()` devuelven `0` en la clase base y las subclases del `BlockEntity` deben aportar el cálculo real. Restaurados: `getStackCapacity` (`getStorageMultiplier() × getEffectiveDrawerCapacity()`), `onItemChanged` / `onAmountChanged` (persistencia y sync de contador al cliente), `getWorld` en los cajones de compactación (actualización del estado de bloque `SLOTS`), y `injectPortableData(group)` en ambos constructores (el contenido no se guardaba). Eliminados dos overrides erróneos de `getDrawerCapacity()` que recursaban a `0`; ahora se usa el del padre basado en `getStorageUnits()`. Añadido `BlockEntityDrawers.syncClientCount`.
+
+### Técnico
+- Adaptaciones de API 1.21 → 26.2 en los métodos portados: `Level.isClientSide` → `isClientSide()`, `Level.random` → `getRandom()`, `Inventory.selected` → `getSelectedSlot()`, `Player.displayClientMessage(Component, boolean)` → `sendSystemMessage(Component)`, `DataComponents.BLOCK_ENTITY_DATA` ahora es `TypedEntityData<>` (no `CustomData`) → `getUnsafe()`, instanciación de la clase interna `ContentProvider` con `be.new ContentProvider(...)`.
+- `Block#onRemove` no existe en 26.2: eliminado el método añadido durante el port; el drop de contenido en modo DROP y la preservación en modo KEEP vía `BLOCK_ENTITY_DATA` quedan como TODO para portar con `BlockEntity#preRemoveSideEffects`.
+
+### Pendiente (conocido, no portado)
+- Render del objeto almacenado en la cara del cajón (`BlockEntityDrawersRenderer`) y su registro cliente.
+- Lógica del Controlador de cajones (`BlockEntityController`): escaneo de bloques y agregación de inventarios.
+
 ## [0.0.0-beta.8] - 2026-08-29
 
 ### Corregido

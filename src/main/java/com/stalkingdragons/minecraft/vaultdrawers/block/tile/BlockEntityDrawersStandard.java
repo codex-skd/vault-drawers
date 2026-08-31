@@ -21,11 +21,7 @@ public class BlockEntityDrawersStandard extends BlockEntityDrawers
 
         int slotCount = getBlockState().getBlock() instanceof BlockDrawers ? ((BlockDrawers) getBlockState().getBlock()).getDrawerCount() : 2;
         group = new GroupData(slotCount);
-    }
-
-    @Override
-    public int getDrawerCapacity() {
-        return group.getDrawer(0).getMaxCapacity();
+        injectPortableData(group);
     }
 
     public StandardDrawerGroup getStandardGroup() {
@@ -38,7 +34,15 @@ public class BlockEntityDrawersStandard extends BlockEntityDrawers
     }
 
     public static BlockEntityType.BlockEntitySupplier<BlockEntityDrawersStandard> create(int slotCount) {
-        return (pos, state) -> new BlockEntityDrawersStandard(ModBlockEntities.STANDARD_DRAWERS_1.get(), pos, state);
+        return (pos, state) -> new BlockEntityDrawersStandard(typeForSlotCount(slotCount).get(), pos, state);
+    }
+
+    private static com.stalkingdragons.minecraft.vaultdrawers.chameleon.registry.RegistryEntry<BlockEntityType<BlockEntityDrawersStandard>> typeForSlotCount(int slotCount) {
+        return switch (slotCount) {
+            case 4 -> ModBlockEntities.STANDARD_DRAWERS_4;
+            case 2 -> ModBlockEntities.STANDARD_DRAWERS_2;
+            default -> ModBlockEntities.STANDARD_DRAWERS_1;
+        };
     }
 
     private class GroupData extends StandardDrawerGroup implements com.stalkingdragons.minecraft.vaultdrawers.api.storage.attribute.IProtectable, com.stalkingdragons.minecraft.vaultdrawers.api.storage.INetworked
@@ -93,8 +97,36 @@ public class BlockEntityDrawersStandard extends BlockEntityDrawers
         }
 
         private class GroupDrawerData extends StandardDrawerGroup.DrawerData {
+            private final int slot;
+
             GroupDrawerData(StandardDrawerGroup group, int slot) {
                 super(group, slot);
+                this.slot = slot;
+            }
+
+            @Override
+            protected int getStackCapacity () {
+                try {
+                    return Math.multiplyExact(upgrades().getStorageMultiplier(), getEffectiveDrawerCapacity());
+                } catch (ArithmeticException e) {
+                    return Integer.MAX_VALUE;
+                }
+            }
+
+            @Override
+            protected void onItemChanged () {
+                if (getLevel() != null && !getLevel().isClientSide()) {
+                    setChanged();
+                    markBlockForUpdate();
+                }
+            }
+
+            @Override
+            protected void onAmountChanged () {
+                if (getLevel() != null && !getLevel().isClientSide()) {
+                    syncClientCount(slot, getStoredItemCount());
+                    setChanged();
+                }
             }
         }
     }
