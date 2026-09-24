@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "vault_drawers:block/indicator/void_icon"
+    }
+}

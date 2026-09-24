@@ -1,0 +1,25 @@
+package com.stalkingdragons.minecraft.vaultdrawers.api.storage;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+
+import java.util.List;
+
+public interface IControlGroup
+{
+    IDrawerGroup getDrawerGroup();
+
+    IDrawerAttributesGroupControl getGroupControllableAttributes(Player player);
+
+    IControlGroup getBoundControlGroup();
+
+    List<INetworked> getBoundRemoteNodes();
+
+    void validateRemoteNode (INetworked node);
+
+    void invalidateRemoteNode (INetworked node);
+
+    boolean addRemoteNode (INetworked node);
+
+    boolean isSoftBindingValid (BlockPos pos, IDrawerGroup node);
+}

@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "vault_drawers:oak_trim",
+        "vault_drawers:spruce_trim",
+        "vault_drawers:birch_trim",
+        "vault_drawers:jungle_trim",
+        "vault_drawers:acacia_trim",
+        "vault_drawers:dark_oak_trim",
+        "vault_drawers:mangrove_trim",
+        "vault_drawers:cherry_trim",
+        "vault_drawers:bamboo_trim",
+        "vault_drawers:crimson_trim",
+        "vault_drawers:warped_trim"
+    ]
+}

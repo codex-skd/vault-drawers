@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "///",
+        "#X#",
+        "///"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "#": "minecraft:flint",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:one_stack_upgrade"
+    }
+}

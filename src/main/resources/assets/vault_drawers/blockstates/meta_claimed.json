@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,half=false": { "model": "vault_drawers:block/full_drawers_claim" },
+        "facing=east,half=false": { "model": "vault_drawers:block/full_drawers_claim", "y": 90 },
+        "facing=south,half=false": { "model": "vault_drawers:block/full_drawers_claim", "y": 180 },
+        "facing=west,half=false": { "model": "vault_drawers:block/full_drawers_claim", "y": 270 },
+        "facing=north,half=true": { "model": "vault_drawers:block/half_drawers_claim" },
+        "facing=east,half=true": { "model": "vault_drawers:block/half_drawers_claim", "y": 90 },
+        "facing=south,half=true": { "model": "vault_drawers:block/half_drawers_claim", "y": 180 },
+        "facing=west,half=true": { "model": "vault_drawers:block/half_drawers_claim", "y": 270 }
+    }
+}

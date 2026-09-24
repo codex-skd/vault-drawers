@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "vault_drawers:controller"
+        ]
+    },
+    "criteria": {
+        "has_chest": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "vault_drawers:drawers"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "vault_drawers:controller"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_chest",
+            "has_the_recipe"
+        ]
+    ]
+}
