@@ -1,0 +1,35 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "vault_drawers:compacting_drawers_2",
+            "vault_drawers:compacting_drawers_3",
+            "vault_drawers:compacting_half_drawers_2",
+            "vault_drawers:compacting_half_drawers_3"
+        ]
+    },
+    "criteria": {
+        "has_chest": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "vault_drawers:drawers"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "vault_drawers:compacting_drawers_3"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_chest",
+            "has_the_recipe"
+        ]
+    ]
+}

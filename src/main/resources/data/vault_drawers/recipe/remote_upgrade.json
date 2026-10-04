@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " E ",
+        "RXR",
+        "///"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "E": "minecraft:ender_pearl",
+        "R": "#c:dusts/redstone",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:remote_upgrade"
+    }
+}

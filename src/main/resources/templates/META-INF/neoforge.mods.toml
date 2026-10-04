@@ -1,0 +1,63 @@
+license="${mod_license}"
+issueTrackerURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers/-/issues"
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+iconFile="icon.png"
+displayURL="https://gitlab.com/stalking-dragons/minecraft/vault-drawers"
+credits="Original mod: Storage Drawers by Texelsaur (MIT). Port by Stalking Dragons."
+authors="${mod_authors}"
+description='''
+Interactive compartment storage for your workshops.
+
+A faithful port of Storage Drawers to Minecraft 26.2 / NeoForge 26.2.0.57.
+
+Features:
+- Storage Drawers (1/2/4 compartments, all wood types)
+- Full & Half block variants
+- Trim system (wood/metal)
+- Upgrades: Capacity, Void, Speed
+- Controller network (512 drawer limit)
+- JEI, Jade integration (tooltips)
+- Full configuration support
+'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+# JEI (Just Enough Items) is an optional integration for recipe display.
+[[dependencies.${mod_id}]]
+modId="jei"
+type="optional"
+versionRange="[${jei_version},)"
+ordering="AFTER"
+side="CLIENT"
+
+# Jade is an optional integration for block/entity information display.
+[[dependencies.${mod_id}]]
+modId="jade"
+type="optional"
+versionRange="[26.2.8,)"
+ordering="AFTER"
+side="BOTH"
+
+# Architectury is a transitive dependency of Jade (cross-loader abstraction).
+# Declared for load ordering only; no direct compile dependency.
+[[dependencies.${mod_id}]]
+modId="architectury"
+type="optional"
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

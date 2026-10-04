@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "key": {
+        "#": "#c:obsidians",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:void_upgrade"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "vault_drawers:framing_table",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "vault_drawers:framing_table",
+                    "conditions": [
+                        {
+                            "block": "vault_drawers:framing_table",
+                            "condition": "minecraft:block_state_property",
+                            "properties": {
+                                "part": "right"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ]
+        }
+    ],
+    "random_sequence": "minecraft:blocks/framing_table"
+}

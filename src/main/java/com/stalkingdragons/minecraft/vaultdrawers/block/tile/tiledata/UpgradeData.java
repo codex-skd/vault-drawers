@@ -1,0 +1,434 @@
+package com.stalkingdragons.minecraft.vaultdrawers.block.tile.tiledata;
+
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.IDrawerAttributesModifiable;
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.attribute.MagnetDim;
+import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.core.ModItems;
+import com.stalkingdragons.minecraft.vaultdrawers.item.*;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.util.Mth;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
+import com.mojang.serialization.DataResult;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import com.stalkingdragons.minecraft.vaultdrawers.inventory.ItemStackHelper;
+
+public class UpgradeData extends BlockEntityDataShim
+{
+    protected final ItemStack[] upgrades;
+    private int storageMultiplier;
+    private int[] magnetRange;
+    private int magnetActiveRate;
+    private int magnetIdleRate;
+    private EnumUpgradeRedstone redstoneType;
+
+    private boolean hasOneStack;
+    private boolean hasVoid;
+    private boolean hasUnlimited;
+    private boolean hasVending;
+    private boolean hasConversion;
+    private boolean hasIllumination;
+    private boolean hasFillLevel;
+    private boolean hasBalanceFill;
+    private boolean hasHopper;
+    private boolean hasMagnet;
+    private boolean hasRemote;
+
+    private IDrawerAttributesModifiable attrs;
+
+    public UpgradeData (int slotCount) {
+        upgrades = new ItemStack[slotCount];
+        Arrays.fill(upgrades, ItemStack.EMPTY);
+
+        syncStorageMultiplier();
+        syncMagnetRange();
+    }
+
+    public void setDrawerAttributes (IDrawerAttributesModifiable attrs) {
+        this.attrs = attrs;
+        syncUpgrades();
+    }
+
+    public int getSlotCount () {
+        return upgrades.length;
+    }
+
+    @NotNull
+    public ItemStack getUpgrade (int slot) {
+        slot = Mth.clamp(slot, 0, upgrades.length - 1);
+        return upgrades[slot];
+    }
+
+    public boolean hasEmptySlot() {
+        return getNextUpgradeSlot() != -1;
+    }
+
+    public boolean addUpgrade (@NotNull ItemStack upgrade) {
+        int slot = getNextUpgradeSlot();
+        if (slot == -1)
+            return false;
+
+        setUpgrade(slot, upgrade);
+        return true;
+    }
+
+    public boolean setUpgrade (int slot, @NotNull ItemStack upgrade) {
+        slot = Mth.clamp(slot, 0, upgrades.length - 1);
+
+        if (!upgrade.isEmpty()) {
+            upgrade = upgrade.copy();
+            upgrade.setCount(1);
+        }
+
+        ItemStack prevUpgrade = upgrades[slot];
+        if (!prevUpgrade.isEmpty() && !canRemoveUpgrade(slot)) {
+            if (!(prevUpgrade.getItem() instanceof ItemUpgradeStorage))
+                return false;
+            if (!(upgrade.getItem() instanceof ItemUpgradeStorage))
+                return false;
+
+            ItemUpgradeStorage target = (ItemUpgradeStorage)prevUpgrade.getItem();
+            ItemUpgradeStorage source = (ItemUpgradeStorage)upgrade.getItem();
+        }
+
+        upgrades[slot] = ItemStack.EMPTY;
+        syncStorageMultiplier();
+
+        if (!upgrade.isEmpty() && !canAddUpgrade(upgrade)) {
+            upgrades[slot] = prevUpgrade;
+            syncStorageMultiplier();
+            return false;
+        }
+
+        upgrades[slot] = upgrade;
+
+        syncUpgrades();
+        onUpgradeChanged(prevUpgrade, upgrade);
+
+        return true;
+    }
+
+    public boolean canAddUpgrade (@NotNull ItemStack upgrade) {
+        if (upgrade.isEmpty())
+            return false;
+        if (!(upgrade.getItem() instanceof ItemUpgrade candidate))
+            return false;
+        if (!candidate.isEnabled())
+            return false;
+
+        if (candidate.getAllowMultiple())
+            return true;
+
+        for (ItemStack stack : upgrades) {
+            if (stack.isEmpty())
+                continue;
+
+            if (!(stack.getItem() instanceof ItemUpgrade reference))
+                continue;
+
+            if (candidate.getUpgradeGroup() == reference.getUpgradeGroup())
+                return false;
+        }
+
+        return true;
+    }
+
+    public boolean canRemoveUpgrade (int slot) {
+        slot = Mth.clamp(slot, 0, upgrades.length - 1);
+        return !upgrades[slot].isEmpty();
+    }
+
+    public boolean canSwapUpgrade (int slot, @NotNull ItemStack add) {
+        return canAddUpgrade(add) && canRemoveUpgrade(slot);
+    }
+
+    public int getStorageMultiplier () {
+        return storageMultiplier;
+    }
+
+    public int getMagnetRange (MagnetDim dim) {
+        return switch (dim) {
+            case MagnetDim.HORIZONTAL -> magnetRange[0];
+            case MagnetDim.UP -> magnetRange[1];
+            case MagnetDim.DOWN -> magnetRange[2];
+        };
+    }
+
+    public int getMagnetActiveRate () {
+        return magnetActiveRate;
+    }
+
+    public int getMagnetIdleRate () {
+        return magnetIdleRate;
+    }
+
+    public EnumUpgradeRedstone getRedstoneType () {
+        return redstoneType;
+    }
+
+    public boolean hasOneStackUpgrade () {
+        return hasOneStack;
+    }
+
+    public boolean hasUnlimitedUpgrade () {
+        return hasUnlimited;
+    }
+
+    public boolean hasVendingUpgrade () {
+        return hasVending;
+    }
+
+    public boolean hasConversionUpgrade () {
+        return hasConversion;
+    }
+
+    public boolean hasIlluminationUpgrade () {
+        return hasIllumination;
+    }
+
+    public boolean hasbalancedFillUpgrade () {
+        return hasBalanceFill;
+    }
+
+    public boolean hasHopperUpgrade () { return hasHopper; }
+
+    public boolean hasMagnetUpgrade () { return hasMagnet; }
+
+    public boolean hasRemoteUpgrade () {
+        return hasRemote;
+    }
+
+    public boolean hasPortabilityUpgrade() {
+        for (ItemStack stack : upgrades) {
+            if (stack.getItem() == ModItems.PORTABILITY_UPGRADE.get())
+                return true;
+        }
+
+        return false;
+    }
+
+    private int getNextUpgradeSlot () {
+        for (int i = 0; i < upgrades.length; i++) {
+            if (upgrades[i].isEmpty())
+                return i;
+        }
+
+        return -1;
+    }
+
+    public ItemStack getRemoteUpgrade () {
+        if (!hasRemote)
+            return null;
+        for (ItemStack stack : upgrades) {
+            if (stack.getItem() instanceof ItemUpgradeRemote)
+                return stack;
+        }
+        return null;
+    }
+    public void unbindRemoteUpgrade () {
+        if (!hasRemote)
+            return;
+        for (int i = 0; i < upgrades.length; i++) {
+            ItemStack stack = upgrades[i];
+            if (stack.getItem() instanceof ItemUpgradeRemote remote && remote.isBound()) {
+                upgrades[i] = ItemUpgradeRemote.setUnbound(stack);
+                onUpgradeChanged(stack, upgrades[i]);
+            }
+        }
+    }
+    public void updateRemoteUpgradeBinding (ItemStack refStack) {
+        if (!hasRemote || refStack == null)
+            return;
+        for (int i = 0; i < upgrades.length; i++) {
+            ItemStack stack = upgrades[i];
+            if (stack.getItem() instanceof ItemUpgradeRemote) {
+                upgrades[i] = ItemUpgradeRemote.copyControllerBinding(refStack, upgrades[i]);
+                onUpgradeChanged(stack, upgrades[i]);
+            }
+        }
+    }
+
+    private void syncUpgrades () {
+        if (this.attrs == null)
+            return;
+
+        syncStorageMultiplier();
+        syncRedstoneLevel();
+        syncMagnetRange();
+
+        hasOneStack = false;
+        hasVoid = false;
+        hasUnlimited = false;
+        hasVending = false;
+        hasConversion = false;
+        hasIllumination = false;
+        hasFillLevel = false;
+        hasBalanceFill = false;
+        hasHopper = false;
+        hasRemote = false;
+
+        for (ItemStack stack : upgrades) {
+            Item item = stack.getItem();
+
+            if (item == ModItems.ONE_STACK_UPGRADE.get())
+                hasOneStack = ModCommonConfig.INSTANCE.UPGRADES.oneStackUpgrade.enableUpgrade.get();
+            else if (item == ModItems.VOID_UPGRADE.get())
+                hasVoid = ModCommonConfig.INSTANCE.UPGRADES.voidUgrade.enableUpgrade.get();
+            else if (item == ModItems.CONVERSION_UPGRADE.get())
+                hasConversion = ModCommonConfig.INSTANCE.UPGRADES.conversionUpgrade.enableUpgrade.get();
+            else if (item == ModItems.CREATIVE_STORAGE_UPGRADE.get())
+                hasUnlimited = ModCommonConfig.INSTANCE.UPGRADES.creativeStorageUpgrade.enableUpgrade.get();
+            else if (item == ModItems.CREATIVE_VENDING_UPGRADE.get())
+                hasVending = ModCommonConfig.INSTANCE.UPGRADES.creativeVendingUpgrade.enableUpgrade.get();
+            else if (item == ModItems.ILLUMINATION_UPGRADE.get())
+                hasIllumination = ModCommonConfig.INSTANCE.UPGRADES.illuminationUpgrade.enableUpgrade.get();
+            else if (item == ModItems.FILL_LEVEL_UPGRADE.get())
+                hasFillLevel = ModCommonConfig.INSTANCE.UPGRADES.fillLevelUpgrade.enableUpgrade.get();
+            else if (item == ModItems.BALANCE_FILL_UPGRADE.get())
+                hasBalanceFill = ModCommonConfig.INSTANCE.UPGRADES.balanceUpgrade.enableUpgrade.get();
+            else if (item == ModItems.HOPPER_UPGRADE.get())
+                hasHopper = ModCommonConfig.INSTANCE.UPGRADES.hopperUpgrade.enableUpgrade.get();
+            else if (item instanceof ItemUpgradeRemote remote) {
+                boolean enable = ModCommonConfig.INSTANCE.UPGRADES.remoteUpgrade.enableUpgrade.get();
+                hasRemote = remote.isGroupUpgrade()
+                    ? ModCommonConfig.INSTANCE.UPGRADES.remoteUpgrade.enableGroup.get() && enable
+                    : enable;
+            }
+        }
+
+        attrs.setIsVoid(hasVoid);
+        attrs.setHasFillLevel(hasFillLevel);
+        attrs.setIsDictConvertible(hasConversion);
+        attrs.setIsUnlimitedStorage(hasUnlimited);
+        attrs.setIsUnlimitedVending(hasVending);
+        attrs.setIsBalancedFill(hasBalanceFill);
+        attrs.setIsHopper(hasHopper);
+        attrs.setIsMagnet(hasMagnet);
+    }
+
+    private void syncStorageMultiplier () {
+        storageMultiplier = 0;
+
+        for (ItemStack stack : upgrades) {
+            if (stack.getItem() instanceof ItemUpgradeStorage) {
+                int level = ((ItemUpgradeStorage) stack.getItem()).level.getLevel();
+                storageMultiplier += ModCommonConfig.INSTANCE.UPGRADES.getLevelMult(level);
+            }
+        }
+
+        if (storageMultiplier == 0)
+            storageMultiplier = ModCommonConfig.INSTANCE.UPGRADES.getLevelMult(0);
+    }
+
+    private void syncMagnetRange () {
+        if (magnetRange == null || magnetRange.length != 3)
+            magnetRange = new int[3];
+
+        Arrays.fill(magnetRange, 0);
+        hasMagnet = false;
+
+        int highestTier = 0;
+        for (ItemStack stack : upgrades) {
+            if (stack.getItem() instanceof ItemUpgradeMagnet itemMagnet) {
+                if (!itemMagnet.isEnabled())
+                    continue;
+
+                hasMagnet = true;
+                if (ModCommonConfig.INSTANCE.UPGRADES.magnetUpgrade.additiveRange.get()) {
+                    magnetRange[0] += itemMagnet.getHorzRange();
+                    magnetRange[1] += itemMagnet.getUpRange();
+                    magnetRange[2] += itemMagnet.getDownRange();
+                } else {
+                    magnetRange[0] += Math.max(magnetRange[0], itemMagnet.getHorzRange());
+                    magnetRange[1] += Math.max(magnetRange[1], itemMagnet.getUpRange());
+                    magnetRange[2] += Math.max(magnetRange[2], itemMagnet.getDownRange());
+                }
+
+                if (itemMagnet.type.getLevel() > highestTier) {
+                    highestTier = itemMagnet.type.getLevel();
+                    magnetActiveRate = itemMagnet.getActiveSpeed();
+                    magnetIdleRate = itemMagnet.getIdleSpeed();
+                }
+            }
+        }
+
+        var maxRange = ModCommonConfig.INSTANCE.UPGRADES.magnetUpgrade.maxRange.get();
+        for (int i = 0, n = Math.min(maxRange.size(), magnetRange.length); i < n; i++)
+            magnetRange[i] = Math.min(magnetRange[i], maxRange.get(i));
+    }
+
+    private void syncRedstoneLevel () {
+        redstoneType = null;
+
+        for (ItemStack stack : upgrades) {
+            if (stack.getItem() instanceof ItemUpgradeRedstone) {
+                redstoneType = ((ItemUpgradeRedstone) stack.getItem()).type;
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void read (HolderLookup.Provider provider, CompoundTag tag) {
+        Arrays.fill(upgrades, ItemStack.EMPTY);
+
+        if (!tag.contains("Upgrades"))
+            return;
+
+        Optional<ListTag> tagListOpt = tag.getList("Upgrades");
+        if (tagListOpt.isPresent()) {
+            ListTag list = tagListOpt.get();
+            for (int i = 0; i < list.size(); i++) {
+                Optional<CompoundTag> upgradeTagOpt = list.getCompound(i);
+                if (upgradeTagOpt.isPresent()) {
+                    CompoundTag upgradeTag = upgradeTagOpt.get();
+
+                    var slotOpt = upgradeTag.getByte("Slot");
+                    if (slotOpt.isPresent()) {
+                        int slot = slotOpt.get();
+                        if (upgradeTag.contains("Item")) {
+                            Optional<CompoundTag> itemTagOpt = upgradeTag.getCompound("Item");
+                            if (itemTagOpt.isPresent()) {
+                                ItemStack stack = ItemStackHelper.parseOptional(provider, itemTagOpt.get());
+                                upgrades[slot] = stack.isEmpty() ? ItemStack.EMPTY : stack;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        syncUpgrades();
+    }
+
+    @Override
+    public CompoundTag write (HolderLookup.Provider provider, CompoundTag tag) {
+        ListTag tagList = new ListTag();
+        for (int i = 0; i < upgrades.length; i++) {
+            if (!upgrades[i].isEmpty()) {
+                CompoundTag upgradeTag = new CompoundTag();
+                // Use ItemStack.CODEC to serialize
+                com.mojang.serialization.DataResult<net.minecraft.nbt.Tag> result = ItemStack.CODEC.encodeStart(
+                    net.minecraft.nbt.NbtOps.INSTANCE, upgrades[i]);
+                result.resultOrPartial(error -> {}).ifPresent(itemTag -> {
+                    upgradeTag.put("Item", itemTag);
+                });
+                upgradeTag.putByte("Slot", (byte)i);
+                tagList.add(upgradeTag);
+            }
+        }
+
+        tag.put("Upgrades", tagList);
+        return tag;
+    }
+
+    protected void onUpgradeChanged (ItemStack oldUpgrade, ItemStack newUpgrade) { }
+}

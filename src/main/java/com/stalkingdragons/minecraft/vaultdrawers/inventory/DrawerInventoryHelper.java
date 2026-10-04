@@ -1,0 +1,77 @@
+package com.stalkingdragons.minecraft.vaultdrawers.inventory;
+
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.IDrawer;
+import com.stalkingdragons.minecraft.vaultdrawers.api.storage.IDrawerGroup;
+import com.stalkingdragons.minecraft.vaultdrawers.block.tile.tiledata.UpgradeData;
+import com.stalkingdragons.minecraft.vaultdrawers.config.ModCommonConfig;
+import com.stalkingdragons.minecraft.vaultdrawers.core.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import java.util.Random;
+
+public class DrawerInventoryHelper
+{
+    private static final Random RANDOM = new Random();
+
+    public static void dropUpgradeItems (Level level, BlockPos pos, UpgradeData upgrades) {
+        for (int i = 0; i < upgrades.getSlotCount(); i++) {
+            ItemStack stack = upgrades.getUpgrade(i);
+            if (!stack.isEmpty() && stack.getItem() != ModItems.CREATIVE_VENDING_UPGRADE.get())
+                spawnItemStack(level, pos.getX(), pos.getY(), pos.getZ(), stack);
+
+            upgrades.setUpgrade(i, ItemStack.EMPTY);
+        }
+    }
+
+    public static void dropInventoryItems (Level world, BlockPos pos, IDrawerGroup group) {
+        int remainingStacks = ModCommonConfig.INSTANCE.DRAWERS.storage.dropStackLimit.get();
+
+        while (remainingStacks > 0) {
+            int remainingStart = remainingStacks;
+            for (int i = 0; i < group.getDrawerCount(); i++) {
+                IDrawer drawer = group.getDrawer(i);
+                if (!drawer.isEnabled() || drawer.getStoredItemCount() == 0 || remainingStacks == 0)
+                    continue;
+
+                ItemStack stack = drawer.getStoredItemPrototype().copy();
+                int storedCount = drawer.getStoredItemCount();
+                int stackLimit = stack.getMaxStackSize();
+                int stackSize = Math.min(storedCount, stackLimit);
+
+                stack.setCount(stackSize);
+                if (stack.isEmpty())
+                    continue;
+
+                spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), stack);
+                drawer.adjustStoredItemCount(-stackSize);
+                remainingStacks -= 1;
+            }
+
+            if (remainingStart == remainingStacks)
+                break;
+        }
+    }
+
+    private static void spawnItemStack (Level world, double x, double y, double z, ItemStack stack)
+    {
+        float xOff = RANDOM.nextFloat() * 0.8F + 0.1F;
+        float yOff = RANDOM.nextFloat() * 0.8F + 0.1F;
+        float zOff = RANDOM.nextFloat() * 0.8F + 0.1F;
+
+        while (!stack.isEmpty()) {
+            ItemEntity entityitem = new ItemEntity(world, x + xOff, y + yOff, z + zOff, stack.split(RANDOM.nextInt(21) + 10));
+
+            float velocity = 0.05F;
+            entityitem.setDeltaMovement(
+                RANDOM.nextGaussian() * (double)velocity,
+                RANDOM.nextGaussian() * (double)velocity + 0.20000000298023224D,
+                RANDOM.nextGaussian() * (double)velocity
+            );
+
+            world.addFreshEntity(entityitem);
+        }
+    }
+}

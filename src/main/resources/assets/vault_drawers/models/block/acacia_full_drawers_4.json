@@ -1,0 +1,9 @@
+{
+    "parent": "vault_drawers:block/full_drawers_orientable",
+    "textures": {
+        "top": "vault_drawers:block/drawers_acacia_side",
+        "front": "vault_drawers:block/drawers_acacia_front_4",
+        "side": "vault_drawers:block/drawers_acacia_side",
+        "trim": "vault_drawers:block/drawers_acacia_trim"
+    }
+}

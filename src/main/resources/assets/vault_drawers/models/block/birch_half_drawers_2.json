@@ -1,0 +1,10 @@
+{
+    "parent": "vault_drawers:block/half_drawers_orientable",
+    "textures": {
+        "top": "vault_drawers:block/drawers_birch_side_h",
+        "front": "vault_drawers:block/drawers_birch_front_2",
+        "back": "vault_drawers:block/drawers_birch_side",
+        "side": "vault_drawers:block/drawers_birch_side_v",
+        "trim": "vault_drawers:block/drawers_birch_trim"
+    }
+}

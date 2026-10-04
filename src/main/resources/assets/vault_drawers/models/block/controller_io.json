@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "vault_drawers:block/drawers_comp_side",
+        "side": "vault_drawers:block/drawers_comp_side_2"
+    }
+}

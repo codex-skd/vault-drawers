@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X/X",
+        "///",
+        "X/X"
+    ],
+    "key": {
+        "/": "minecraft:acacia_slab",
+        "X": "#c:chests/wooden"
+    },
+    "result": {
+        "id": "vault_drawers:acacia_half_drawers_4",
+        "count": 4
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X/X",
+        "///",
+        "X/X"
+    ],
+    "key": {
+        "/": "minecraft:mangrove_slab",
+        "X": "#c:chests/wooden"
+    },
+    "result": {
+        "id": "vault_drawers:mangrove_half_drawers_4",
+        "count": 4
+    }
+}

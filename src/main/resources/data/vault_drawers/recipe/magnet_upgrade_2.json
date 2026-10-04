@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "C/C",
+        "/X/",
+        "C/C"
+    ],
+    "key": {
+        "/": "minecraft:iron_bars",
+        "C": "#c:ingots/copper",
+        "X": "vault_drawers:magnet_upgrade"
+    },
+    "result": {
+        "id": "vault_drawers:magnet_upgrade_2"
+    }
+}

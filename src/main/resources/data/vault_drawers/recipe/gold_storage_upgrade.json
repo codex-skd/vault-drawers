@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "///",
+        "#X#",
+        "///"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "#": "#c:ingots/gold",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:gold_storage_upgrade"
+    }
+}
