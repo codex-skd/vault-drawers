@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X/X",
+        "/X/",
+        "X/X"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "X": "minecraft:birch_planks"
+    },
+    "result": {
+        "id": "vault_drawers:birch_trim",
+        "count": 4
+    }
+}

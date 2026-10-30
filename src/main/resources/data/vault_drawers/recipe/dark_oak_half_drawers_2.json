@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/X/",
+        "///",
+        "/X/"
+    ],
+    "key": {
+        "/": "minecraft:dark_oak_slab",
+        "X": "#c:chests/wooden"
+    },
+    "result": {
+        "id": "vault_drawers:dark_oak_half_drawers_2",
+        "count": 2
+    }
+}

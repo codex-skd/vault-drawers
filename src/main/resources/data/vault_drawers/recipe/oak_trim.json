@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X/X",
+        "/X/",
+        "X/X"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "X": "minecraft:oak_planks"
+    },
+    "result": {
+        "id": "vault_drawers:oak_trim",
+        "count": 4
+    }
+}

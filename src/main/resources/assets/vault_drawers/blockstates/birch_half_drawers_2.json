@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "vault_drawers:block/birch_half_drawers_2" },
+        "facing=east": { "model": "vault_drawers:block/birch_half_drawers_2", "y": 90 },
+        "facing=south": { "model": "vault_drawers:block/birch_half_drawers_2", "y": 180 },
+        "facing=west": { "model": "vault_drawers:block/birch_half_drawers_2", "y": 270 }
+    }
+}

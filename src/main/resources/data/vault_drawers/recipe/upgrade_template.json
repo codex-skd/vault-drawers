@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "///",
+        "/X/",
+        "///"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "X": "#vault_drawers:drawers"
+    },
+    "result": {
+        "id": "vault_drawers:upgrade_template",
+        "count": 4
+    }
+}

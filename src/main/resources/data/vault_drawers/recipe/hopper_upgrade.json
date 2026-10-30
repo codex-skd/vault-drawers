@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " H ",
+        "/X/",
+        "///"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "H": "minecraft:hopper",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:hopper_upgrade"
+    }
+}

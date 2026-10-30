@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "///",
+        "/X/",
+        "RRR"
+    ],
+    "key": {
+        "/": "#c:rods/wooden",
+        "R": "#c:dusts/redstone",
+        "X": "vault_drawers:upgrade_template"
+    },
+    "result": {
+        "id": "vault_drawers:min_redstone_upgrade"
+    }
+}

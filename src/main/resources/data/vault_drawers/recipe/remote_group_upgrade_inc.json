@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "EXE"
+    ],
+    "key": {
+        "E": "minecraft:ender_pearl",
+        "X": "vault_drawers:remote_upgrade"
+    },
+    "result": {
+        "id": "vault_drawers:remote_group_upgrade"
+    }
+}

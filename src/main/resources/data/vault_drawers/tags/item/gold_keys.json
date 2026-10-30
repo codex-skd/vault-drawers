@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "vault_drawers:drawer_key",
+        "vault_drawers:quantify_key",
+        "vault_drawers:shroud_key",
+        "vault_drawers:personal_key",
+        "vault_drawers:personal_key_cofh",
+        "vault_drawers:personal_key_unlock",
+        "vault_drawers:priority_key",
+        "vault_drawers:priority_key_p1",
+        "vault_drawers:priority_key_p2",
+        "vault_drawers:priority_key_n1",
+        "vault_drawers:priority_key_n2"
+    ]
+}

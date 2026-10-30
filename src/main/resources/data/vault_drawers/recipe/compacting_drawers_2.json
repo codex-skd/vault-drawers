@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#T#",
+        "#X#",
+        "#I#"
+    ],
+    "key": {
+        "#": "minecraft:stone",
+        "T": "minecraft:piston",
+        "X": "#vault_drawers:full_drawers",
+        "I": "#c:ingots/iron"
+    },
+    "result": {
+        "id": "vault_drawers:compacting_drawers_2"
+    }
+}
